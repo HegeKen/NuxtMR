@@ -133,7 +133,7 @@ export default {
     this.site = await fetch(index).then(res => res.json())
     this.devices = await fetch(devices).then(res => res.json())
   },
-  fetchOnServer: false,
+  fetchOnServer: true,
   fetchKey: 'site-sidebar',
   fetchKey(getCounter) {
     return this.someOtherData + getCounter('sidebar')
