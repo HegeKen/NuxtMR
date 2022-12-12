@@ -1,0 +1,4 @@
+{
+    "nuxt.isNuxtApp": true,
+    "nuxt.portNumber": 3000
+}
