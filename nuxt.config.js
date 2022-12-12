@@ -21,7 +21,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '/assets/mdui/css/mdui.min.css' },
       { rel: 'stylesheet', href: 'https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin&display=swap' },
-      { rel: 'stylesheet', href: 'https://data.miuier.com/miuiroms.css' },
+      { rel: 'stylesheet', href: '/assets/miuiroms.css' },
       { rel: 'stylesheet', href: 'https://at.alicdn.com/t/c/font_2478867_iq2uuq05ql.css' }
     ],
     script: [
