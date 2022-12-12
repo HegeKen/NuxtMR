@@ -65,7 +65,7 @@
 
 <script>
 var codename = "";
-var baseurl = "https://data.miuier.com/data/devices/";
+var baseurl = "https://next.miuier.com/data/devices/";
 var url = "";
 var a = 0;
 var list = [

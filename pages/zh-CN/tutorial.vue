@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-let baseurl = "https://data.miuier.com/data/";
+let baseurl = "https://next.miuier.com/data/";
 let index = baseurl + "index.json";
 let devices = baseurl + "devices.json"
 export default {
