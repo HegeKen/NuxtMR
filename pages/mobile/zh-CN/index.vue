@@ -25,67 +25,67 @@
             <div>当前支持查询以下机型：</div>
             <ul>
               <li>小米系列：<span v-for="{ code, cnname } in devices.mi">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>小米SE系列：<span v-for="{ code, cnname } in devices.mise">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>小米CC系列：<span v-for="{ code, cnname } in devices.micc">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>小米Note系列：<span v-for="{ code, cnname } in devices.minote">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>小米MAX系列：<span v-for="{ code, cnname } in devices.mimax">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>小米MIX系列：<span v-for="{ code, cnname } in devices.mimix">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>小米平板系列：<span v-for="{ code, cnname } in devices.mipad">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>小米Civi系列：<span v-for="{ code, cnname } in devices.micivi">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>小米A系列：<span v-for="{ code, cnname } in devices.mia">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>其他小米手机：<span v-for="{ code, cnname } in devices.miothers">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>Redmi系列：<span v-for="{ code, cnname } in devices.rm">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>Redmi Note系列：<span v-for="{ code, cnname } in devices.rmnote">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>Redmi K系列：<span v-for="{ code, cnname } in devices.rmk">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>Redmi系列：<span v-for="{ code, cnname } in devices.rm">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>Redmi 平板：<span v-for="{ code, cnname } in devices.rmpad">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>Redmi 系列：<span v-for="{ code, cnname } in devices.rm">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>其余 Redmi 手机：<span v-for="{ code, cnname } in devices.rmothers">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>POCO C系列：<span v-for="{ code, cnname } in devices.pococ">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>POCO F系列：<span v-for="{ code, cnname } in devices.pocof">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>POCO M系列：<span v-for="{ code, cnname } in devices.pocom">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
               <li>POCO X系列：<span v-for="{ code, cnname } in devices.pocox">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+                  <NuxtLink :to="('zh-CN/devices/' + code)"> {{ cnname }} /</NuxtLink></span>
               </li>
             </ul>
           </div>

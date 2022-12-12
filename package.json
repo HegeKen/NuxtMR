@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nuxt/http": "^0.6.4",
+    "@nuxt/kit": "^3.0.0",
     "@nuxtjs/i18n": "^7.3.0",
     "core-js": "^3.25.3",
     "mdui": "^1.0.2",
