@@ -3,7 +3,7 @@
     <CnMobileNav />
     <br />
     <div class="mdui-container-fluid">
-      <div class="mdui-panel mdui-panel-gapless mdui-shadow-1">
+      <div class="mdui-panel mdui-panel-gapless mdui-shadow-1" mdui-panel="">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-orange">注意：</div>

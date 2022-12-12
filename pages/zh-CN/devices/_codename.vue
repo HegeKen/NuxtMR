@@ -3,7 +3,7 @@
     <CnPcNav />
     <br />
     <div class="mdui-container-fluid">
-      <div class="mdui-panel mdui-panel-gapless mdui-shadow-1">
+      <div class="mdui-panel mdui-panel-gapless mdui-shadow-1" mdui-panel="">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-orange">注意：</div>
@@ -21,7 +21,7 @@
     <br />
     <div id="STABLE">
       <div v-for="{ cnname, show , links } in roms.branches" class="mdui-container-fluid" v-show="show==1">
-      <div mdui-panel class="mdui-panel mdui-panel-gapless">
+      <div mdui-panel="" class="mdui-panel mdui-panel-gapless">
         <div class="mdui-panel-item">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title">{{ cnname }}</div>

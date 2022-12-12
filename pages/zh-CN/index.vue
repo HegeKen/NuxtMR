@@ -3,7 +3,7 @@
     <CnPcNav />
     <br />
     <div class="mdui-container-fluid">
-      <div class="mdui-panel mdui-panel-gapless">
+      <div class="mdui-panel mdui-panel-gapless" mdui-panel="">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header mdui-text-color-orange">
             更新时间：{{ site.date }}

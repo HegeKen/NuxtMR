@@ -3,7 +3,7 @@
     <EnMobileNav />
     <br />
     <div class="mdui-container-fluid" id="Xiaomi">
-      <div class="mdui-panel mdui-panel-gapless mdui-shadow-0" mdui-panel>
+      <div class="mdui-panel mdui-panel-gapless mdui-shadow-0" mdui-panel="">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title">Xiaomi Phones</div>
@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="mdui-container-fluid" id="Redmi">
-      <div class="mdui-panel mdui-panel-gapless mdui-shadow-0" mdui-panel>
+      <div class="mdui-panel mdui-panel-gapless mdui-shadow-0" mdui-panel="">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title">Redmi Phones</div>
@@ -87,7 +87,7 @@
       </div>
     </div>
     <div class="mdui-container-fluid" id="POCO">
-      <div class="mdui-panel mdui-panel-gapless mdui-shadow-0" mdui-panel>
+      <div class="mdui-panel mdui-panel-gapless mdui-shadow-0" mdui-panel="">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title">POCO Phones</div>
