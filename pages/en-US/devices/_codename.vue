@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CnPcNav />
+    <EnPcNav />
     <br />
     <div class="mdui-container-fluid">
       <div class="mdui-panel mdui-panel-gapless mdui-shadow-1">
@@ -59,7 +59,7 @@
     </div>
 
 
-    <CnPcFooter />
+    <EnPcFooter />
   </div>
 
 </template>
