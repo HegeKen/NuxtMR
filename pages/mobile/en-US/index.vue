@@ -25,67 +25,67 @@
             <div>Our site currently supports following devices：</div>
             <ul>
               <li>Mi Series：<span v-for="{ code, enname } in devices.mi">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Mi SE Series：<span v-for="{ code, enname } in devices.mise">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Mi CC Series：<span v-for="{ code, enname } in devices.micc">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Mi Note Series：<span v-for="{ code, enname } in devices.minote">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Mi MAX Series：<span v-for="{ code, enname } in devices.mimax">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Mi MIX Series：<span v-for="{ code, enname } in devices.mimix">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Mi Pad Series：<span v-for="{ code, enname } in devices.mipad">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Xiaomi Civi Series：<span v-for="{ code, enname } in devices.micivi">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Mi A Series：<span v-for="{ code, enname } in devices.mia">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Other Mi Phones：<span v-for="{ code, enname } in devices.miothers">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Redmi Series：<span v-for="{ code, enname } in devices.rm">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Redmi Note Series：<span v-for="{ code, enname } in devices.rmnote">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Redmi K Series：<span v-for="{ code, enname } in devices.rmk">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Redmi Series：<span v-for="{ code, enname } in devices.rm">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Redmi Pad：<span v-for="{ code, enname } in devices.rmpad">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Redmi Series：<span v-for="{ code, enname } in devices.rm">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>Other Redmi Phones：<span v-for="{ code, enname } in devices.rmothers">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>POCO C Series：<span v-for="{ code, enname } in devices.pococ">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>POCO F Series：<span v-for="{ code, enname } in devices.pocof">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>POCO M Series：<span v-for="{ code, enname } in devices.pocom">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
               <li>POCO X Series：<span v-for="{ code, enname } in devices.pocox">
-                <a :href="('en-US/devices/' + code)"> {{ enname }} /</a></span>
+                <a :href="('/mobile/en-US/devices/' + code)"> {{ enname }} /</a></span>
               </li>
             </ul>
           </div>
