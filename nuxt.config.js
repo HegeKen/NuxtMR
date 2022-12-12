@@ -1,7 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  ssr: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'MIUIROMS',
