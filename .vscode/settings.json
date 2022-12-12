@@ -1,4 +1,3 @@
 {
-    "nuxt.isNuxtApp": true,
-    "nuxt.portNumber": 3000
+    "nuxt.isNuxtApp": true
 }
