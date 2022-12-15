@@ -1,6 +1,7 @@
 <template>
   <div>
     <CnPcNav />
+    <div class="mdui-center PNF">该页面正在建造中</div>
     <CnPcFooter />
   </div>
 </template>

@@ -1,6 +1,7 @@
 <template>
   <div>
     <EnPcNav />
+    <div class="mdui-center PNF">This Page is under construction.</div>
     <EnPcFooter />
   </div>
 </template>
