@@ -14,7 +14,7 @@
               <li><b>机型代号：</b>{{ roms.codename }}</li>
               <li><b>感谢网站：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></li>
               <li><b>手机解锁：</b>所有线刷都以解锁Bootloader为前提，并且解锁Bootloader时会清除数据，请提前做好备份工作，<a href="https://www.miui.com/unlock" class="milink">传送门</a></li>
-              <li v-for="{ cn } in roms.attentions">{{ cn }}</li>
+              <li v-for="{ cn } in roms.attentions" v-show="cn!=''">{{ cn }}</li>
             </ol>
           </div>
         </div>
