@@ -9,11 +9,13 @@
             <div class="mdui-panel-item-title mdui-text-color-orange">Attentions：</div>
           </div>
           <div class="mdui-panel-item-body">
-            <div><b>Device Name：</b>{{ roms.enname }}</div>
-            <div><b>Codename：</b>{{ roms.codename }}</div>
-            <div><b>Thanks to：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></div>
-            <div><b>Unlock Your Bootloader：</b>You need to unlock your phone's bootloader if you want to flash a rom into your phone via fastboot method, and your data could be deleted as you choose, please make sure you have backed up your personal data. <a href="https://www.miui.com/unlock" class="milink">Apply for Bootloader Unlock here.</a></div>
-            <div v-for="{ en } in roms.attentions">{{ en }}</div>
+            <ol>
+              <li><b>Device Name：</b>{{ roms.enname }}</li>
+              <li><b>Codename：</b>{{ roms.codename }}</li>
+              <li><b>Thanks to：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></li>
+              <li><b>Unlock Your Bootloader：</b>You need to unlock your phone's bootloader if you want to flash a rom into your phone via fastboot method, and your data could be deleted as you choose, please make sure you have backed up your personal data. <a href="https://www.miui.com/unlock" class="milink">Apply for Bootloader Unlock here.</a></li>
+              <li v-for="{ en } in roms.attentions">{{ en }}</li>
+            </ol>
           </div>
         </div>
       </div>
