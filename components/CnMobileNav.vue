@@ -12,16 +12,32 @@
           <a href="/mobile/zh-CN/tutorial"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">adb</i><div class="mdui-list-item-content">刷机教程</div></li></a>
           <a href="/mobile/zh-CN/weekly"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">developer_mode</i><div class="mdui-list-item-content">橙色星期五</div></li></a>
           <a href="/mobile/zh-CN/devices"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">devices</i><div class="mdui-list-item-content">机型列表</div></li></a>
-          <a href="/mobile/zh-CN/recovery"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">usb</i><div class="mdui-list-item-content">Recovery</div></li></a>
+          <a href="https://recovery.miuier.com/recovery/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">usb</i><div class="mdui-list-item-content">Recovery</div></li></a>
           <a href="/mobile/zh-CN/tools"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">computer</i><div class="mdui-list-item-content">刷机工具</div></li></a>
           <a href="/mobile/zh-CN/thanks"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">favorites</i><div class="mdui-list-item-content">衷心感谢</div></li></a>
           <a href="/mobile/zh-CN/sitelog"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">update</i><div class="mdui-list-item-content">站点日志</div></li></a>
           <a href="/mobile/zh-CN/friendly"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">folder_special</i><div class="mdui-list-item-content">友情链接</div></li></a>
           <a href="/mobile/zh-CN/about"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">perm_identity</i><div class="mdui-list-item-content">关于本站</div></li></a>
-          <a href="/mobile/zh-CN/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon icon-zh-cn fic"></i><div class="mdui-list-item-content">中文</div></li></a>
-          <a href="/mobile/en-US/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon icon-en-us fic"></i><div class="mdui-list-item-content">English</div></li></a>
+          <a :href="(zh)"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon icon-zh-cn fic"></i><div class="mdui-list-item-content">中文</div></li></a>
+          <a :href="(en)"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon icon-en-us fic"></i><div class="mdui-list-item-content">English</div></li></a>
         </ul>
       </div>
     </div>
   </div>
 </template>
+<script>
+let path="";
+export default {
+  data() {
+    return {
+      zh:"",
+      en:""
+    }
+  },
+  created() {
+    path = this.$route.path;
+    this.zh = path.replace(/en-US/, "zh-CN");
+    this.en = path.replace(/zh-CN/, "en-US");
+  }
+}
+</script>

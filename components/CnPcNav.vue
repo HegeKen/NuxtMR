@@ -8,10 +8,10 @@
         <a class="mdui-text-capitalize lang" mdui-menu="{target: '#lang'}"><label>Language：<i class="mdui-icon material-icons">translate</i></label></a>
         <ul class="mdui-menu mdui-text-center" id="lang">
           <li class="mdui-menu-item">
-            <a href="/zh-CN/" class="mdui-ripple">中文&emsp;<i class="mdui-icon icon-zh-cn fic"></i></a>
+            <a :href="(zh)">中文&emsp;<i class="mdui-icon icon-zh-cn fic"></i></a>
           </li>
           <li class="mdui-menu-item">
-            <a href="/en-US/" class="mdui-ripple">English&emsp;<i class="mdui-icon icon-en-us fic"></i></a>
+            <a :href="(en)">English&emsp;<i class="mdui-icon icon-en-us fic"></i></a>
           </li>
         </ul>
       </div>
@@ -20,7 +20,7 @@
         <NuxtLink to="/zh-CN/tutorial" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">adb</i><label>刷机教程</label></NuxtLink>
         <NuxtLink to="/zh-CN/weekly" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">developer_mode</i><label>橙色星期五</label></NuxtLink>
         <a href="/zh-CN/devices" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">devices</i><label>机型列表</label></a>
-        <a href="/zh-CN/recovery" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">usb</i><label>Recovery</label></a>
+        <a href="https://recovery.miuier.com/recovery/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">usb</i><label>Recovery</label></a>
         <a href="/zh-CN/tools" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">computer</i><label>刷机工具</label></a>
         <NuxtLink to="/zh-CN/thanks" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">favorites</i><label>衷心感谢</label></NuxtLink>
         <NuxtLink to="/zh-CN/sitelog" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">update</i><label>站点日志</label></NuxtLink>
@@ -30,3 +30,19 @@
     </div><br /><br /><br /><br /><br /><br /><br /><br />
   </div>
 </template>
+<script>
+let path="";
+export default {
+  data() {
+    return {
+      zh:"",
+      en:""
+    }
+  },
+  created() {
+    path = this.$route.path;
+    this.zh = path.replace(/en-US/, "zh-CN");
+    this.en = path.replace(/zh-CN/, "en-US");
+  }
+}
+</script>

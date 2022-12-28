@@ -24,68 +24,99 @@
           <div class="mdui-panel-item-body">
             <div>Our site currently supports following devices：</div>
             <ul>
-              <li>Mi Series：<span v-for="{ code, enname } in devices.mi">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Mi Series：<span v-for="(data, index) in devices.mi">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mi.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.mi.length - 1"> {{ data.enname }} </a>
+                </span></li>
+              <li>Mi SE Series：<span v-for="(data, index) in devices.mise">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mise.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.mise.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Mi SE Series：<span v-for="{ code, enname } in devices.mise">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Mi CC Series：<span v-for="(data, index) in devices.micc">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.micc.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.micc.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Mi CC Series：<span v-for="{ code, enname } in devices.micc">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Mi Note Series：<span v-for="(data, index) in devices.minote">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.minote.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.minote.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Mi Note Series：<span v-for="{ code, enname } in devices.minote">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Mi MAX Series：<span v-for="(data, index) in devices.mimax">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mimax.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.mimax.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Mi MAX Series：<span v-for="{ code, enname } in devices.mimax">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Mi MIX Series：<span v-for="(data, index) in devices.mimix">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mimix.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.mimix.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Mi MIX Series：<span v-for="{ code, enname } in devices.mimix">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Mi Pad Series：<span v-for="(data, index) in devices.mipad">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mipad.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.mipad.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Mi Pad Series：<span v-for="{ code, enname } in devices.mipad">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Xiaomi Civi Series：<span v-for="(data, index) in devices.micivi">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mipad.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.mipad.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Xiaomi Civi Series：<span v-for="{ code, enname } in devices.micivi">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Mi A Series：<span v-for="(data, index) in devices.mia">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mia.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.mia.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Mi A Series：<span v-for="{ code, enname } in devices.mia">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Other Mi Phones：<span v-for="(data, index) in devices.miothers">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mia.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.mia.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Other Mi Phones：<span v-for="{ code, enname } in devices.miothers">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Redmi Series：<span v-for="(data, index) in devices.rm">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mia.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.mia.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Redmi Series：<span v-for="{ code, enname } in devices.rm">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Redmi Note Series：<span v-for="(data, index) in devices.rmnote">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.rmnote.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.rmnote.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Redmi Note Series：<span v-for="{ code, enname } in devices.rmnote">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Redmi K Series：<span v-for="(data, index) in devices.rmk">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.rmk.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.rmk.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Redmi K Series：<span v-for="{ code, enname } in devices.rmk">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Redmi Pad：<span v-for="(data, index) in devices.rmpad">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.rmpad.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.rmpad.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Redmi Series：<span v-for="{ code, enname } in devices.rm">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>Other Redmi Phones：<span v-for="(data, index) in devices.rmothers">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.rmothers.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.rmothers.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Redmi Pad：<span v-for="{ code, enname } in devices.rmpad">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>POCO C Series：<span v-for="(data, index) in devices.pococ">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.pococ.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.pococ.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Redmi Series：<span v-for="{ code, enname } in devices.rm">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>POCO F Series：<span v-for="(data, index) in devices.pocof">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.pocof.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.pocof.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>Other Redmi Phones：<span v-for="{ code, enname } in devices.rmothers">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>POCO M Series：<span v-for="(data, index) in devices.pocom">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.pocom.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.pocom.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
-              <li>POCO C Series：<span v-for="{ code, enname } in devices.pococ">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
-              </li>
-              <li>POCO F Series：<span v-for="{ code, enname } in devices.pocof">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
-              </li>
-              <li>POCO M Series：<span v-for="{ code, enname } in devices.pocom">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
-              </li>
-              <li>POCO X Series：<span v-for="{ code, enname } in devices.pocox">
-                <a :href="('/en-US/devices/' + code)"> {{ enname }} /</a></span>
+              <li>POCO X Series：<span v-for="(data, index) in devices.pocox">
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.pocox.length - 1"> {{ data.enname }} /</a>
+                  <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index == devices.pocox.length - 1"> {{ data.enname }} </a>
+                </span>
               </li>
             </ul>
           </div>

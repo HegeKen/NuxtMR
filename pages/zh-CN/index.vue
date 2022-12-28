@@ -24,68 +24,81 @@
           <div class="mdui-panel-item-body">
             <div>当前支持查询以下机型：</div>
             <ul>
-              <li>小米系列：<span v-for="{ code, cnname } in devices.mi">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>小米系列：<span v-for="(data, index) in devices.mi">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.mi.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.mi.length - 1"> {{ data.cnname }} </a>
+                </span></li>
+              <li>小米SE 系列：<span v-for="(data, index) in devices.mise">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.mise.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.mise.length - 1"> {{ data.cnname }} </a>
+                </span></li>
+              <li>小米CC 系列：<span v-for="(data, index) in devices.micc">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.micc.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.micc.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>小米SE系列：<span v-for="{ code, cnname } in devices.mise">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>小米Note 系列：<span v-for="(data, index) in devices.minote">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.minote.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.minote.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>小米CC系列：<span v-for="{ code, cnname } in devices.micc">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>小米MAX 系列：<span v-for="(data, index) in devices.mimax">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.mimax.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.mimax.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>小米Note系列：<span v-for="{ code, cnname } in devices.minote">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>小米MIX 系列：<span v-for="(data, index) in devices.mimix">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.mimix.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.mimix.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>小米MAX系列：<span v-for="{ code, cnname } in devices.mimax">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>小米平板 系列：<span v-for="(data, index) in devices.mipad">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.mipad.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.mipad.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>小米MIX系列：<span v-for="{ code, cnname } in devices.mimix">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>小米Civi 系列：<span v-for="(data, index) in devices.micivi">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.micivi.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.micivi.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>小米平板系列：<span v-for="{ code, cnname } in devices.mipad">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>小米A 系列：<span v-for="(data, index) in devices.mia">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.mia.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.mia.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>小米Civi系列：<span v-for="{ code, cnname } in devices.micivi">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>其他小米手机：<span v-for="(data, index) in devices.miothers">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.miothers.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.miothers.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>小米A系列：<span v-for="{ code, cnname } in devices.mia">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>Redmi 系列：<span v-for="(data, index) in devices.rm">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.rm.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.rm.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>其他小米手机：<span v-for="{ code, cnname } in devices.miothers">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>Redmi Note系列：<span v-for="(data, index) in devices.rmnote">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.rmnote.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.rmnote.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>Redmi系列：<span v-for="{ code, cnname } in devices.rm">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>Redmi K系列：<span v-for="(data, index) in devices.rmk">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.rmk.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.rmk.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>Redmi Note系列：<span v-for="{ code, cnname } in devices.rmnote">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>Redmi 平板：<span v-for="(data, index) in devices.rmpad">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.rmpad.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.rmpad.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>Redmi K系列：<span v-for="{ code, cnname } in devices.rmk">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>其余 Redmi 手机：<span v-for="(data, index) in devices.rmothers">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.rmothers.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.rmothers.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>Redmi系列：<span v-for="{ code, cnname } in devices.rm">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>POCO C系列：<span v-for="(data, index) in devices.pococ">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.pococ.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.pococ.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>Redmi 平板：<span v-for="{ code, cnname } in devices.rmpad">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>POCO F系列：<span v-for="(data, index) in devices.pocof">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.pocof.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.pocof.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>Redmi 系列：<span v-for="{ code, cnname } in devices.rm">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>POCO M系列：<span v-for="(data, index) in devices.pocom">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.pocom.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.pocom.length - 1"> {{ data.cnname }} </a></span>
               </li>
-              <li>其余 Redmi 手机：<span v-for="{ code, cnname } in devices.rmothers">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
-              </li>
-              <li>POCO C系列：<span v-for="{ code, cnname } in devices.pococ">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
-              </li>
-              <li>POCO F系列：<span v-for="{ code, cnname } in devices.pocof">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
-              </li>
-              <li>POCO M系列：<span v-for="{ code, cnname } in devices.pocom">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
-              </li>
-              <li>POCO X系列：<span v-for="{ code, cnname } in devices.pocox">
-                  <a :href="('/zh-CN/devices/' + code)"> {{ cnname }} /</a></span>
+              <li>POCO X系列：<span v-for="(data, index) in devices.pocox">
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index != devices.pocox.length - 1"> {{ data.cnname }} /</a>
+                  <a :href="('/zh-CN/devices/' + data.code)" v-show="index == devices.pocox.length - 1"> {{ data.cnname }} </a></span>
               </li>
             </ul>
           </div>

@@ -3,7 +3,7 @@
     <CnPcNav />
     <br />
     <div class="mdui-container-fluid">
-      <div class="mdui-panel mdui-panel-gapless mdui-shadow-1" mdui-panel="">
+      <div class="mdui-panel mdui-panel-gapless mdui-shadow-1">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-orange">注意：</div>
@@ -22,7 +22,7 @@
     </div>
     <br />
     <div id="STABLE">
-      <div v-for="{ cnname, show , links } in roms.branches" class="mdui-container-fluid" v-show="show==1">
+      <div v-for="{ branch , cnname, show , links } in roms.branches" class="mdui-container-fluid" v-show="show==1">
       <div mdui-panel="" class="mdui-panel mdui-panel-gapless">
         <div class="mdui-panel-item">
           <div class="mdui-panel-item-header">
@@ -34,9 +34,10 @@
               <table class="mdui-table">
                 <thead>
                   <tr>
-                    <th class="mdui-text-center">No.</th>
-                    <th class="mdui-text-center">MIUI</th>
-                    <th class="mdui-text-center">Android</th>
+                    <th class="mdui-text-center">序号</th>
+                    <th class="mdui-text-center" v-show="branch=='msap'">版本</th>
+                    <th class="mdui-text-center" v-show="branch!='msap'">米柚</th>
+                    <th class="mdui-text-center">安卓</th>
                     <th>卡刷包</th>
                     <th>线刷包</th>
                   </tr>
@@ -70,214 +71,6 @@
 var codename = "";
 var baseurl = "https://data.miuier.com/data/devices/";
 var url = "";
-var a = 0;
-var list = [
-  "mione_plus",
-  "aries",
-  "taurus",
-  "wt93007",
-  "pisces",
-  "lcsh92_wet_xm_td",
-  "lcsh92_wet_jb9",
-  "mocha",
-  "armani",
-  "wt93807",
-  "wt96007",
-  "cancro",
-  "dior",
-  "gucci",
-  "wt86047",
-  "wt88047",
-  "wt86047_pro",
-  "wt88047_pro",
-  "virgo",
-  "virgo_lte_ct",
-  "leo",
-  "lte26007",
-  "ferrari",
-  "hermes",
-  "libra",
-  "hennessy",
-  "kenzo",
-  "latte",
-  "ido_xhdpi",
-  "aqua",
-  "gemini",
-  "kate",
-  "hydrogen",
-  "helium",
-  "land",
-  "omega",
-  "nikel",
-  "capricorn",
-  "natrium",
-  "lithium",
-  "scorpio",
-  "prada",
-  "markw",
-  "rolex",
-  "mido",
-  "santoni",
-  "meri",
-  "cappu",
-  "sagit",
-  "oxygen",
-  "tiffany",
-  "ugglite",
-  "ugg",
-  "tissot",
-  "chiron",
-  "jason",
-  "riva",
-  "rosy",
-  "vince",
-  "whyred",
-  "polaris",
-  "wayne",
-  "ysl",
-  "dipper",
-  "sirius",
-  "equuleus",
-  "ursa",
-  "cereus",
-  "cactus",
-  "sakura",
-  "clover",
-  "nitrogen",
-  "jasmine",
-  "daisy",
-  "beryllium",
-  "platina",
-  "tulip",
-  "perseus",
-  "lotus",
-  "violet",
-  "lavender",
-  "cepheus",
-  "grus",
-  "andromeda",
-  "onclite",
-  "tiare",
-  "onc",
-  "pine",
-  "davinci",
-  "raphael",
-  "vela",
-  "pyxis",
-  "laurus",
-  "laurel",
-  "ginkgo",
-  "begonia",
-  "raphaels",
-  "crux",
-  "olive",
-  "olivelite",
-  "tucana",
-  "willow",
-  "phoenix",
-  "picasso",
-  "olivewood",
-  "umi",
-  "cmi",
-  "excalibur",
-  "lmi",
-  "monet",
-  "vangogh",
-  "toco",
-  "joyeuse",
-  "picasso",
-  "merlin",
-  "atom",
-  "bomb",
-  "picasso_48m",
-  "lancelot",
-  "dandelion",
-  "dandelion_c3l2",
-  "gram",
-  "cezanne",
-  "cas",
-  "angelica",
-  "angelican",
-  "surya",
-  "shiva",
-  "apollo",
-  "citrus",
-  "lime",
-  "cannon",
-  "gauguin",
-  "venus",
-  "haydn",
-  "alioth",
-  "mojito",
-  "sweet",
-  "rosemary",
-  "rosemary_p",
-  "thyme",
-  "vayu",
-  "courbet",
-  "star",
-  "renoir",
-  "cetus",
-  "ares",
-  "biloba",
-  "camellia",
-  "chopin",
-  "lilac",
-  "odin",
-  "nabu",
-  "elish",
-  "enuma",
-  "selene",
-  "vili",
-  "cattail",
-  "mona",
-    "curtana",
-  "curtana_rf",
-  "selenes",
-  "evergo",
-  "pissarro",
-  "evergreen",
-  "lisa",
-  "cupid",
-  "zeus",
-  "psyche",
-  "pissarroin",
-  "spes",
-  "spesn",
-  "vida",
-  "veux",
-  "fleur",
-  "ingres",
-  "viva",
-  "light",
-  "munch",
-  "rubens",
-  "matisse",
-  "fog",
-  "opal",
-  "zijin",
-  "xaga",
-  "angelicain",
-  "frost",
-  "daumier",
-  "mayfly",
-  "fuxi",
-  "nvwa",
-  "unicorn",
-  "thor",
-  "taoyao",
-  "diting",
-  "agate",
-  "zizhan",
-  "dagu",
-  "rock",
-  "ice",
-  "ziyi",
-  "plato",
-  "sunstone",
-  "ruby",
-  "yunluo"
-];
 export default {
   data() {
     return {
@@ -287,14 +80,6 @@ export default {
   },
   created() {
     codename = this.$route.params.codename;
-    for (var i = 0; i < list.length; i++) {
-      if (list[i] === codename) {
-        a = 1;
-      }
-    }
-    if (a == 0) {
-      this.$router.replace('/zh-CN/404');
-    }
     url = baseurl + codename + ".json";
   },
   async fetch() {
