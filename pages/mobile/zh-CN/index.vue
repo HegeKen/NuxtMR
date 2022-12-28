@@ -10,7 +10,11 @@
           </div>
           <div class="mdui-panel-item-body">
             <div>站点版本：{{ site.ver }}</div>
+            <br />
             <div>新增机型：{{ site.newDeviceCn }}</div>
+            <br />
+            <div v-show="site.log['0'].cn!=''">更新日志：</div>
+            <div v-for="( log, index ) in site.log" v-show="site.log['0'].cn!=''"><p>{{ index + 1 }} . {{ log.cn }}</p></div>
             <div>稳定版收录：{{ site.update }}</div>
             <p v-if="$fetchState.pending">正在读取....</p>
             <p v-else-if="$fetchState.error">读取失败</p>

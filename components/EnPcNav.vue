@@ -18,10 +18,10 @@
       <div class="mdui-tab mdui-tab-centered">
         <NuxtLink to="/en-US/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">home</i><label>HomePage</label></NuxtLink>
         <NuxtLink to="/en-US/tutorial" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">adb</i><label>Tutorial</label></NuxtLink>
-        <NuxtLink to="/en-US/weekly" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">developer_mode</i><label>Changelogs</label></NuxtLink>
+        <a href="https://old.miuier.com/weekly/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">developer_mode</i><label>Changelogs</label></a>
         <a href="/en-US/devices" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">devices</i><label>Devices</label></a>
         <a href="https://recovery.miuier.com/recovery/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">usb</i><label>Recovery</label></a>
-        <a href="/en-US/tools" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">computer</i><label>Tools</label></a>
+        <a href="https://old.miuier.com/tools" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">computer</i><label>Tools</label></a>
         <NuxtLink to="/en-US/thanks" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">favorites</i><label>Deeply Thanking</label></NuxtLink>
         <NuxtLink to="/en-US/sitelog" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">update</i><label>Site Logs</label></NuxtLink>
         <NuxtLink to="/en-US/friendly" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">folder_special</i><label>Friendly Links</label></NuxtLink>

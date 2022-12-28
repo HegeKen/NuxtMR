@@ -10,7 +10,11 @@
           </div>
           <div class="mdui-panel-item-body">
             <div>Site Version：{{ site.ver }}</div>
+            <br />
             <div>Newly Added Devices：{{ site.newDeviceEn }}</div>
+            <br />
+            <div v-show="site.log['0'].en!=''">Update Log：</div>
+            <div v-for="( log, index ) in site.log" v-show="site.log['0'].en!=''"><p>{{ index + 1 }} . {{ log.en }}</p></div>
             <div>Newly Added Stable ROM：{{ site.update }}</div>
             <p v-if="$fetchState.pending">Fetching Data....</p>
             <p v-else-if="$fetchState.error">Fetching Failed.</p>

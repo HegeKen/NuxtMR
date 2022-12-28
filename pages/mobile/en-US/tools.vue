@@ -1,7 +1,7 @@
 <template>
   <div>
     <EnMobileNav />
-    <div class="mdui-center PNF">This Page is under construction.</div>
+    <div class="mdui-center PNF">This Page is under development.</div>
     <EnMobileFooter />
   </div>
 </template>
