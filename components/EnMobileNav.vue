@@ -26,9 +26,6 @@
   </div>
 </template>
 <script>
-
-</script>
-<script>
 let path="";
 export default {
   data() {
