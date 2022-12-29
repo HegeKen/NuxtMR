@@ -16,16 +16,16 @@
         </ul>
       </div>
       <div class="mdui-tab mdui-tab-centered">
-        <NuxtLink to="/en-US/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">home</i><label>HomePage</label></NuxtLink>
-        <NuxtLink to="/en-US/tutorial" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">adb</i><label>Tutorial</label></NuxtLink>
+        <a href="/en-US/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">home</i><label>HomePage</label></a>
+        <a href="/en-US/tutorial" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">adb</i><label>Tutorial</label></a>
         <a href="https://old.miuier.com/weekly/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">developer_mode</i><label>Changelogs</label></a>
         <a href="/en-US/devices" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">devices</i><label>Devices</label></a>
         <a href="https://recovery.miuier.com/recovery/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">usb</i><label>Recovery</label></a>
         <a href="https://old.miuier.com/tools" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">computer</i><label>Tools</label></a>
-        <NuxtLink to="/en-US/thanks" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">favorites</i><label>Deeply Thanking</label></NuxtLink>
-        <NuxtLink to="/en-US/sitelog" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">update</i><label>Site Logs</label></NuxtLink>
-        <NuxtLink to="/en-US/friendly" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">folder_special</i><label>Friendly Links</label></NuxtLink>
-        <NuxtLink to="/en-US/about" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">perm_identity</i><label>About US</label></NuxtLink>
+        <a href="/en-US/thanks" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">favorites</i><label>Deeply Thanking</label></a>
+        <a href="/en-US/sitelog" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">update</i><label>Site Logs</label></a>
+        <a href="/en-US/friendly" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">folder_special</i><label>Friendly Links</label></a>
+        <a href="/en-US/about" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">perm_identity</i><label>About US</label></a>
       </div>
     </div><br /><br /><br /><br /><br /><br /><br /><br />
   </div>

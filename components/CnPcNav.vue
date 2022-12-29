@@ -16,16 +16,16 @@
         </ul>
       </div>
       <div class="mdui-tab mdui-tab-centered mdui-text-color-white">
-        <NuxtLink to="/zh-CN/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">home</i><label>首页</label></NuxtLink>
-        <NuxtLink to="/zh-CN/tutorial" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">adb</i><label>刷机教程</label></NuxtLink>
+        <a href="/zh-CN/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">home</i><label>首页</label></a>
+        <a href="/zh-CN/tutorial" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">adb</i><label>刷机教程</label></a>
         <a href="https://old.miuier.com/weekly/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">developer_mode</i><label>橙色星期五</label></a>
         <a href="/zh-CN/devices" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">devices</i><label>机型列表</label></a>
         <a href="https://recovery.miuier.com/recovery/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">usb</i><label>Recovery</label></a>
         <a href="https://old.miuier.com/tools" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">computer</i><label>刷机工具</label></a>
-        <NuxtLink to="/zh-CN/thanks" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">favorites</i><label>衷心感谢</label></NuxtLink>
-        <NuxtLink to="/zh-CN/sitelog" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">update</i><label>站点日志</label></NuxtLink>
-        <NuxtLink to="/zh-CN/friendly" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">folder_special</i><label>友情链接</label></NuxtLink>
-        <NuxtLink to="/zh-CN/about" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">perm_identity</i><label>关于本站</label></NuxtLink>
+        <a href="/zh-CN/thanks" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">favorites</i><label>衷心感谢</label></a>
+        <a href="/zh-CN/sitelog" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">update</i><label>站点日志</label></a>
+        <a href="/zh-CN/friendly" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">folder_special</i><label>友情链接</label></a>
+        <a href="/zh-CN/about" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">perm_identity</i><label>关于本站</label></a>
       </div>
     </div><br /><br /><br /><br /><br /><br /><br /><br />
   </div>
