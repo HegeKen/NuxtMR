@@ -125,7 +125,7 @@ img {
   padding-left: 0px;
 }
 .PNF {
-  line-height: 200px; /*垂直居中关键*/
+  line-height: 100px; /*垂直居中关键*/
   text-align: center;
   height: 100%;
   font-size: 36px;

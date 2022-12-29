@@ -1,7 +1,14 @@
 <template>
   <div>
     <CnPcNav />
-    <div class="mdui-center PNF">该页面正在构建中</div>
+    <br />
+    <br />
+    <br />
+    <div class="mdui-container">
+      <p><a href="https://sj.biada.cn/">MIUI相关资源导航站</a></p>
+      <br />
+      <p><a href="https://www.uotan.cn/">柚坛社区</a></p>
+    </div>
     <CnPcFooter />
   </div>
 </template>
