@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en-US/recovery/virgo_lte_ct", {data:[{}],fetch:{NaN:{site:[],devices:[],title:"MIUI Official ROMs"}},mutations:void 0});

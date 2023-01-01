@@ -11,44 +11,44 @@
           </div>
           <div class="mdui-panel-item-body">
             <div class="series">Mi Series：</div>
-            <div v-for="{ code, enname } in devices.mi" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.mi" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Mi SE Series：</div>
-            <div v-for="{ code, enname } in devices.mise" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.mise" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Mi CC Series：</div>
-            <div v-for="{ code, enname } in devices.micc" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.micc" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Mi Note Series：</div>
-            <div v-for="{ code, enname } in devices.minote" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.minote" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Mi MAX Series：</div>
-            <div v-for="{ code, enname } in devices.mimax" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.mimax" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">小米MIXSeries：</div>
-            <div v-for="{ code, enname } in devices.mimix" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.mimix" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Xiaomi Civi Series：</div>
-            <div v-for="{ code, enname } in devices.micivi" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.micivi" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Mi A Series：</div>
-            <div v-for="{ code, enname } in devices.mia" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.mia" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Mi Pad Series：</div>
-            <div v-for="{ code, enname } in devices.mipad" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.mipad" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Other Xiaomi Phones：</div>
-            <div v-for="{ code, enname } in devices.miothers" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.miothers" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
           </div>
         </div>
@@ -63,24 +63,24 @@
           </div>
           <div class="mdui-panel-item-body">
             <div class="series">RedmiSeries：</div>
-            <div v-for="{ code, enname } in devices.rm" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.rm" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Redmi Note Series：</div>
-            <div v-for="{ code, enname } in devices.rmnote" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.rmnote" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Redmi K Series：</div>
-            <div v-for="{ code, enname } in devices.rmk" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.rmk" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Redmi Pad Series：</div>
-            <div v-for="{ code, enname } in devices.rmpad" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.rmpad" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">Other Redmi Phones：</div>
-            <div v-for="{ code, enname } in devices.rmothers" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.rmothers" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
           </div>
         </div>
@@ -95,20 +95,20 @@
           </div>
           <div class="mdui-panel-item-body">
             <div class="series">POCO C Series：</div>
-            <div v-for="{ code, enname } in devices.pococ" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.pococ" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">POCO F Series：</div>
-            <div v-for="{ code, enname } in devices.pocof" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.pocof" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">POCO M Series：</div>
-            <div v-for="{ code, enname } in devices.pocom" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.pocom" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
             <div class="series">POCO X Series：</div>
-            <div v-for="{ code, enname } in devices.pocox" class="mdui-chip">
-              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ enname }}({{code}}) </span></a>
+            <div v-for="{ code, NameEn } in devices.pocox" class="mdui-chip">
+              <a :href="('/en-US/devices/' + code )"><span class="mdui-chip-title"> {{ NameEn }}({{code}}) </span></a>
             </div>
           </div>
         </div>

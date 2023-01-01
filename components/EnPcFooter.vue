@@ -12,7 +12,7 @@
       <a href="#top" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">arrow_upward</i><label>Back to Top</label></a>
     </div>
     <div class="mdui-bottom-nav footer mdui-color-grey-100 fs">
-      <div class="mdui-center mdui-text-center">2019-2022 -- This Website is NOT A Xiaomi Website. We are not affiliated with Xiaomi Inc. or MIUI ROM Development Team in any way.</div>
+      <div class="mdui-center mdui-text-center">2019-2023 -- This Website is NOT A Xiaomi Website. We are not affiliated with Xiaomi Inc. or MIUI ROM Development Team in any way.</div>
     </div>
   </div>
 </template>

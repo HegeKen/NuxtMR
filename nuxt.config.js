@@ -22,22 +22,22 @@ export default {
       { name: "format-detection", content: "telephone" },
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "stylesheet", href: "/assets/mdui/css/mdui.min.css" },
+      { rel: "icon", type: "image/x-icon", href: "https://data.miuier.com/assets/logo/favicon.ico" },
+      { rel: "stylesheet", href: "https://data.miuier.com/assets/mdui/css/mdui.min.css" },
       {
         rel: "stylesheet",
         href: "https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin&display=swap",
       },
-      { rel: "stylesheet", href: "/assets/miuiroms.css" },
+      { rel: "stylesheet", href: "https://data.miuier.com/assets/miuiroms.css" },
       {
         rel: "stylesheet",
         href: "https://at.alicdn.com/t/c/font_2478867_iq2uuq05ql.css",
       },
     ],
     script: [
-      { src: "/assets/mdui/js/mdui.min.js" },
-      { src: "/assets/jquery/jquery.min.js" },
-      { src: "/assets/miuiroms.js" },
+      { src: "https://data.miuier.com/assets/mdui/js/mdui.min.js" },
+      { src: "https://data.miuier.com/assets/jquery/jquery.min.js" },
+      { src: "https://data.miuier.com/assets/miuiroms.js" },
       {
         body: true,
         defer: true,

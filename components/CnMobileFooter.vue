@@ -14,7 +14,7 @@
         <a href="#top"><i class="mdui-icon material-icons">arrow_upward</i><label>返回顶部</label></a>
       </div>
       <div class="mdui-bottom-nav footer mdui-color-grey-100 fsm">
-        <div class="mdui-center mdui-text-center">2019-2022</div>
+        <div class="mdui-center mdui-text-center">2019-2023</div>
       </div>
       <div class="mdui-bottom-nav footer mdui-color-grey-100 ftm"><br />
         <div class="mdui-center mdui-text-center">非小米旗下网站</div>
