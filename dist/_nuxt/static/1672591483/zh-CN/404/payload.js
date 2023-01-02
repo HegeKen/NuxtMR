@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/404", {data:[{}],fetch:{},mutations:void 0});

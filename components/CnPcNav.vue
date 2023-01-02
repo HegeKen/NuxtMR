@@ -30,13 +30,14 @@
     </div><br /><br /><br /><br /><br /><br /><br /><br />
   </div>
 </template>
+
 <script>
-let path="";
+let path = "";
 export default {
   data() {
     return {
-      zh:"",
-      en:""
+      zh: "",
+      en: ""
     }
   },
   created() {

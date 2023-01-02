@@ -5,6 +5,7 @@
     <EnMobileFooter />
   </div>
 </template>
+
 <script>
 let baseurl = "https://data.miuier.com/data/";
 let index = baseurl + "index.json";

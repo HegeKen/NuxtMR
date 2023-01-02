@@ -13,8 +13,10 @@
             <br />
             <div>新增机型：{{ site.newDeviceCn }}</div>
             <br />
-            <div v-show="site.log['0'].cn!=''">更新日志：</div>
-            <div v-for="( log, index ) in site.log" v-show="site.log['0'].cn!=''"><p>{{ index + 1 }} . {{ log.cn }}</p></div>
+            <div v-show="site.log['0'].cn != ''">更新日志：</div>
+            <div v-for="( log, index ) in site.log" v-show="site.log['0'].cn != ''">
+              <p>{{ index + 1 }} . {{ log.cn }}</p>
+            </div>
             开发版收录：<span v-for="(data, index) in site.beta">
               <span v-show="index != site.beta.length - 1">{{ data.ver }};</span>
               <span v-show="index == site.beta.length - 1">{{ data.ver }}</span>

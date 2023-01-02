@@ -13,8 +13,10 @@
             <br />
             <div>Newly Added Devices：{{ site.newDeviceEn }}</div>
             <br />
-            <div v-show="site.log['0'].en!=''">Update Log：</div>
-            <div v-for="( log, index ) in site.log" v-show="site.log['0'].en!=''"><p>{{ index + 1 }} . {{ log.en }}</p></div>
+            <div v-show="site.log['0'].en != ''">Update Log：</div>
+            <div v-for="( log, index ) in site.log" v-show="site.log['0'].en != ''">
+              <p>{{ index + 1 }} . {{ log.en }}</p>
+            </div>
             China Beta Update：<span v-for="(data, index) in site.beta">
               <span v-show="index != site.beta.length - 1">{{ data.ver }};</span>
               <span v-show="index == site.beta.length - 1">{{ data.ver }}</span>
