@@ -6,7 +6,7 @@
       <div class="mdui-panel mdui-panel-gapless" mdui-panel="">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header mdui-text-color-orange">
-            更新时间：{{ site.date }}
+            更新时间：{{ site.sudate }}
           </div>
           <div class="mdui-panel-item-body">
             <div>站点版本：{{ site.ver }}</div>
@@ -17,19 +17,19 @@
             <div v-for="( log, index ) in site.log" v-show="site.log['0'].cn != ''">
               <p>{{ index + 1 }} . {{ log.cn }}</p>
             </div>
-            开发版收录：<span v-for="(data, index) in site.beta">
+            开发版更新日期：{{ site.btdate }}<br /><br />收录版本：<span v-for="(data, index) in site.beta">
               <span v-show="index != site.beta.length - 1">{{ data.ver }};</span>
               <span v-show="index == site.beta.length - 1">{{ data.ver }}</span>
             </span>
             <br />
             <br />
-            开发版支持：<span v-for="(data, index) in site.devices">
+            上述开发版支持：<span v-for="(data, index) in site.devices">
               <span v-show="index != site.devices.length - 1">{{ data.NameCn }};</span>
               <span v-show="index == site.devices.length - 1">{{ data.NameCn }}</span>
             </span>
             <br />
             <br />
-            <div>稳定版收录：{{ site.update }}</div>
+            <div>稳定版收录：{{ site.stdate }}</div>
             <p v-if="$fetchState.pending">正在读取....</p>
             <p v-else-if="$fetchState.error">读取失败</p>
             <ul v-else>
@@ -39,7 +39,7 @@
             </ul>
           </div>
           <div class="mdui-panel-item-body">
-            <div>当前支持查询以下机型：</div>
+            <div>当前支持查询以下{{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length - 1 + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 20 }}款机型：</div>
             <ul>
               <li>小米系列：<span v-for="(data, index) in devices.mi">
                   <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mi.length - 1"> {{ data.NameCn }} /</a>

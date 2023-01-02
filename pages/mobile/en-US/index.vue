@@ -6,7 +6,7 @@
       <div class="mdui-panel mdui-panel-gapless" mdui-panel="">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header mdui-text-color-orange">
-            Updated at：{{ site.date }}
+            Updated at：{{ site.sudate }}
           </div>
           <div class="mdui-panel-item-body">
             <div>Site Version：{{ site.ver }}</div>
@@ -17,7 +17,7 @@
             <div v-for="( log, index ) in site.log" v-show="site.log['0'].en != ''">
               <p>{{ index + 1 }} . {{ log.en }}</p>
             </div>
-            China Beta Update：<span v-for="(data, index) in site.beta">
+            China Beta Updated At：{{ site.btdate }}<br /><br /> Versions: <span v-for="(data, index) in site.beta">
               <span v-show="index != site.beta.length - 1">{{ data.ver }};</span>
               <span v-show="index == site.beta.length - 1">{{ data.ver }}</span>
             </span>
@@ -29,7 +29,7 @@
             </span>
             <br />
             <br />
-            <div>Newly Added Stable ROM：{{ site.update }}</div>
+            <div>Newly Added Stable ROM：{{ site.stdate }}</div>
             <p v-if="$fetchState.pending">Fetching Data....</p>
             <p v-else-if="$fetchState.error">Fetching Failed.</p>
             <ul v-else>
@@ -39,7 +39,7 @@
             </ul>
           </div>
           <div class="mdui-panel-item-body">
-            <div>Our site currently supports following devices：</div>
+            <div>Our site currently supports following {{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length - 1 + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 20 }} devices：</div>
             <ul>
               <li>Mi Series：<span v-for="(data, index) in devices.mi">
                   <a :href="('/mobile/en-US/devices/' + data.code)" v-show="index != devices.mi.length - 1"> {{ data.NameEn }} /</a>
