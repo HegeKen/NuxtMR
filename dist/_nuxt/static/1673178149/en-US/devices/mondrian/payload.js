@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/devices/mondrian", {data:[{}],fetch:{},mutations:void 0});

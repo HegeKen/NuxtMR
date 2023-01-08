@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/zh-CN/devices/lcsh92_wet_jb9", {data:[{}],fetch:{},mutations:void 0});

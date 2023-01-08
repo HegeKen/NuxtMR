@@ -25,7 +25,7 @@ export default {
   async fetch() {
     this.roms = await fetch(url).then(res => res.json());
   },
-  fetchOnServer: false,
+  fetchOnServer: true,
   fetchKey: 'site-sidebar',
   fetchKey(getCounter) {
     return this.someOtherData + getCounter('sidebar')

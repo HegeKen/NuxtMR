@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/en-US/recovery/umi", {data:[{}],fetch:{},mutations:void 0});

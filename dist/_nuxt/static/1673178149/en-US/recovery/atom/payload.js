@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/recovery/atom", {data:[{}],fetch:{},mutations:void 0});

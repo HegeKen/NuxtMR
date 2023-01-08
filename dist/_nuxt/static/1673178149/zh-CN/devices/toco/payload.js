@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/devices/toco", {data:[{}],fetch:{},mutations:void 0});

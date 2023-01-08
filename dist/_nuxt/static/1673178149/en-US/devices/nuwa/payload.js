@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/devices/nuwa", {data:[{}],fetch:{},mutations:void 0});

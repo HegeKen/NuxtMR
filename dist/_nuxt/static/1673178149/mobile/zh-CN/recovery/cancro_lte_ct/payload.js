@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/zh-CN/recovery/cancro_lte_ct", {data:[{}],fetch:{},mutations:void 0});

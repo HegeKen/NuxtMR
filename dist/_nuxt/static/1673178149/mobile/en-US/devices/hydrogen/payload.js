@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/en-US/devices/hydrogen", {data:[{}],fetch:{},mutations:void 0});

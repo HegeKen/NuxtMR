@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/recovery/vayu", {data:[{}],fetch:{},mutations:void 0});

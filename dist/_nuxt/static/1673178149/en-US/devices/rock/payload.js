@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/devices/rock", {data:[{}],fetch:{},mutations:void 0});

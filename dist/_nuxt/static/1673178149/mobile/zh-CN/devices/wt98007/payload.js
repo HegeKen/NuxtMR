@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/zh-CN/devices/wt98007", {data:[{}],fetch:{},mutations:void 0});

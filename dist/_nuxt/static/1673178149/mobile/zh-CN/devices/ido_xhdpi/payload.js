@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/zh-CN/devices/ido_xhdpi", {data:[{}],fetch:{},mutations:void 0});

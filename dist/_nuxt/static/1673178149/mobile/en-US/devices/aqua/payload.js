@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/en-US/devices/aqua", {data:[{}],fetch:{},mutations:void 0});

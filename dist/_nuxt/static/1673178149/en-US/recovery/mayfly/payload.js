@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/recovery/mayfly", {data:[{}],fetch:{},mutations:void 0});

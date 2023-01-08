@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/en-US/devices/virgo_lte_ct", {data:[{}],fetch:{},mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/recovery/andromeda", {data:[{}],fetch:{},mutations:void 0});

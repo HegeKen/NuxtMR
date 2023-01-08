@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/en-US/devices/libra", {data:[{}],fetch:{},mutations:void 0});

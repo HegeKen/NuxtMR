@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/en-US/recovery/mocha", {data:[{}],fetch:{NaN:{site:[],devices:[],title:"MIUI Official ROMs"}},mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/recovery/cattail", {data:[{}],fetch:{},mutations:void 0});

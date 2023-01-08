@@ -84,7 +84,7 @@ export default {
     this.roms = await fetch(url).then(res => res.json());
     this.branch = this.roms.branch;
   },
-  fetchOnServer: false,
+  fetchOnServer: true,
   fetchKey: 'site-sidebar',
   fetchKey(getCounter) {
     return this.someOtherData + getCounter('sidebar')

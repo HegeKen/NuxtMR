@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/zh-CN/recovery/fog", {data:[{}],fetch:{},mutations:void 0});

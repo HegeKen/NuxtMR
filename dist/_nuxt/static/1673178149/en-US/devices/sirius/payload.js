@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/devices/sirius", {data:[{}],fetch:{},mutations:void 0});

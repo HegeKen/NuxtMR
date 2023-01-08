@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/devices/laurus", {data:[{}],fetch:{},mutations:void 0});

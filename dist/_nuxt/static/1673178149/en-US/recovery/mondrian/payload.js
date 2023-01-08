@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/recovery/mondrian", {data:[{}],fetch:{},mutations:void 0});

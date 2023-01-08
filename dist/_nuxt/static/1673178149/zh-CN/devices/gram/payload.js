@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/devices/gram", {data:[{}],fetch:{},mutations:void 0});

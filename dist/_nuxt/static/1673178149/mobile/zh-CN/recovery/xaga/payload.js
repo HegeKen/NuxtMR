@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/zh-CN/recovery/xaga", {data:[{}],fetch:{},mutations:void 0});

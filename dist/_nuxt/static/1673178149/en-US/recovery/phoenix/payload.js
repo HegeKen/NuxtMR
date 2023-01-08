@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/recovery/phoenix", {data:[{}],fetch:{},mutations:void 0});

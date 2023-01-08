@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/zh-CN/recovery/gauguin", {data:[{}],fetch:{},mutations:void 0});

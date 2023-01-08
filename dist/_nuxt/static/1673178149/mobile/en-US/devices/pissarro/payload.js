@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/en-US/devices/pissarro", {data:[{}],fetch:{},mutations:void 0});

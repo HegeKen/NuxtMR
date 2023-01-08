@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/devices/lavender", {data:[{}],fetch:{},mutations:void 0});

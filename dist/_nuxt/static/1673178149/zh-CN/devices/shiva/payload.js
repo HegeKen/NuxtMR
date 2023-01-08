@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/devices/shiva", {data:[{}],fetch:{},mutations:void 0});

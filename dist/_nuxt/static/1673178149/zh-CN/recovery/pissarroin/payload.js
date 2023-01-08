@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/recovery/pissarroin", {data:[{}],fetch:{},mutations:void 0});

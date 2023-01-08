@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/recovery/sirius", {data:[{}],fetch:{},mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/zh-CN/recovery/mido", {data:[{}],fetch:{},mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/devices/venus", {data:[{}],fetch:{},mutations:void 0});

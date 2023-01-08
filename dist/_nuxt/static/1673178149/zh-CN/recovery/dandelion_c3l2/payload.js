@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/recovery/dandelion_c3l2", {data:[{}],fetch:{},mutations:void 0});

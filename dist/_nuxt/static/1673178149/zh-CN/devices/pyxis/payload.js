@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/devices/pyxis", {data:[{}],fetch:{},mutations:void 0});

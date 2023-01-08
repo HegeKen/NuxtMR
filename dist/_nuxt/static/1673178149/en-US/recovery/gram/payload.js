@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/recovery/gram", {data:[{}],fetch:{},mutations:void 0});

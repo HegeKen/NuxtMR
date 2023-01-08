@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/recovery/laurel", {data:[{}],fetch:{},mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/recovery/sakura", {data:[{}],fetch:{},mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/devices/mocha", {data:[{}],fetch:{},mutations:void 0});

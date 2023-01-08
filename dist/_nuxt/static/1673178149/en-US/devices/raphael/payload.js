@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/devices/raphael", {data:[{}],fetch:{},mutations:void 0});

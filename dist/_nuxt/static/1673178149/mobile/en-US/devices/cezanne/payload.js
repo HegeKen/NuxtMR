@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/en-US/devices/cezanne", {data:[{}],fetch:{},mutations:void 0});

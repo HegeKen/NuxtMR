@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/recovery/mona", {data:[{}],fetch:{},mutations:void 0});

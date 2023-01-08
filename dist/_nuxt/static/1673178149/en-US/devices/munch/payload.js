@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/devices/munch", {data:[{}],fetch:{},mutations:void 0});

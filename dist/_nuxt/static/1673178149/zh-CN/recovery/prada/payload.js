@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-CN/recovery/prada", {data:[{}],fetch:{},mutations:void 0});

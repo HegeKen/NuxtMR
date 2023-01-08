@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mobile/en-US/recovery/tucana", {data:[{}],fetch:{},mutations:void 0});

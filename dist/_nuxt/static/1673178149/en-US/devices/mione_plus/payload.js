@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/devices/mione_plus", {data:[{}],fetch:{},mutations:void 0});
