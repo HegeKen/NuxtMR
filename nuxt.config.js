@@ -5,9 +5,6 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "MIUIROMS",
-    htmlAttrs: {
-      lang: "zh-CN",
-    },
     injectScripts:false,
     crossorigin:"anonymous",
     meta: [
@@ -72,8 +69,5 @@ export default {
   loading: {
     color: "#fe7700",
     height: "5px",
-  },
-  generate: {
-    fallback: true,
-  },
+  }
 };
