@@ -1,12 +1,12 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
-  ssr:true,
+  ssr: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "MIUIROMS",
-    injectScripts:false,
-    crossorigin:"anonymous",
+    injectScripts: false,
+    crossorigin: "anonymous",
     meta: [
       { charset: "utf-8" },
       { name: "author", Content: "HegeKen" },
@@ -20,13 +20,23 @@ export default {
       { name: "format-detection", content: "telephone" },
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "https://data.miuier.com/assets/logo/favicon.ico" },
-      { rel: "stylesheet", href: "https://data.miuier.com/assets/mdui/css/mdui.min.css" },
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "https://data.miuier.com/assets/logo/favicon.ico",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://data.miuier.com/assets/mdui/css/mdui.min.css",
+      },
       {
         rel: "stylesheet",
         href: "https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin&display=swap",
       },
-      { rel: "stylesheet", href: "https://data.miuier.com/assets/miuiroms.css" },
+      {
+        rel: "stylesheet",
+        href: "https://data.miuier.com/assets/miuiroms.css",
+      },
       {
         rel: "stylesheet",
         href: "https://at.alicdn.com/t/c/font_2478867_iq2uuq05ql.css",
@@ -69,5 +79,5 @@ export default {
   loading: {
     color: "#fe7700",
     height: "5px",
-  }
+  },
 };
