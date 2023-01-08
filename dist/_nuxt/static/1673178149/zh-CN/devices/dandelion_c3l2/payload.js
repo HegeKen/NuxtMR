@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/devices/dandelion_c3l2", {data:[{}],fetch:{},mutations:void 0});

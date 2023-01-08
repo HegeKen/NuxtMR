@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/zh-CN/recovery/raphaels", {data:[{}],fetch:{},mutations:void 0});

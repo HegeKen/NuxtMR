@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/devices/aqua", {data:[{}],fetch:{},mutations:void 0});

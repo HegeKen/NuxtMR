@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/recovery/gemini", {data:[{}],fetch:{},mutations:void 0});

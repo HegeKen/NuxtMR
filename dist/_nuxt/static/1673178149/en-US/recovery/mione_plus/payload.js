@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en-US/recovery/mione_plus", {data:[{}],fetch:{},mutations:void 0});

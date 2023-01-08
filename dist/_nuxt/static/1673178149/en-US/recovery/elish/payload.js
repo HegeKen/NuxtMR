@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en-US/recovery/elish", {data:[{}],fetch:{},mutations:void 0});

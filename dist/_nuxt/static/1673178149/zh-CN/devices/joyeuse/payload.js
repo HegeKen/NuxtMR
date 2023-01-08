@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/devices/joyeuse", {data:[{}],fetch:{},mutations:void 0});

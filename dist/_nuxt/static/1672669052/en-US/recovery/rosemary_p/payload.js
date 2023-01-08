@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-US/recovery/rosemary_p", {data:[{}],fetch:{NaN:{site:[],devices:[],title:"MIUI Official ROMs"}},mutations:void 0});

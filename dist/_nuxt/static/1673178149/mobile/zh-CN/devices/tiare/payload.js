@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/zh-CN/devices/tiare", {data:[{}],fetch:{},mutations:void 0});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en-US/recovery/odin", {data:[{}],fetch:{},mutations:void 0});

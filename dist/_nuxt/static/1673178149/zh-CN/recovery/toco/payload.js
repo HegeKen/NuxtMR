@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/recovery/toco", {data:[{}],fetch:{},mutations:void 0});

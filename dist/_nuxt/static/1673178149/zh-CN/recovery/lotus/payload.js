@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/recovery/lotus", {data:[{}],fetch:{},mutations:void 0});

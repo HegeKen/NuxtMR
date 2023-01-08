@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/devices/kate", {data:[{}],fetch:{},mutations:void 0});

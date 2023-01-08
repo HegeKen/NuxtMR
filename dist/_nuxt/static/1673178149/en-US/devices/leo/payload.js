@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en-US/devices/leo", {data:[{}],fetch:{},mutations:void 0});

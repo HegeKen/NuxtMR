@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/zh-CN/devices/olivewood", {data:[{}],fetch:{},mutations:void 0});

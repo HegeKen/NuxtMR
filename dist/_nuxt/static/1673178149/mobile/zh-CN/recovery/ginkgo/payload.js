@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/zh-CN/recovery/ginkgo", {data:[{}],fetch:{},mutations:void 0});

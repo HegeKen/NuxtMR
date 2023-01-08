@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/zh-CN/devices/virgo", {data:[{}],fetch:{},mutations:void 0});

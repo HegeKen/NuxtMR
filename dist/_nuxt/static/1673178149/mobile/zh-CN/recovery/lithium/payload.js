@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/zh-CN/recovery/lithium", {data:[{}],fetch:{},mutations:void 0});

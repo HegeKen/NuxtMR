@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/zh-CN/recovery/ugg", {data:[{}],fetch:{},mutations:void 0});

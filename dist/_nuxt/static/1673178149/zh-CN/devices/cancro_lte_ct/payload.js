@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/devices/cancro_lte_ct", {data:[{}],fetch:{},mutations:void 0});

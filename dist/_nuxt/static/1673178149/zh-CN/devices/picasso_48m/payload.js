@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/devices/picasso_48m", {data:[{}],fetch:{},mutations:void 0});

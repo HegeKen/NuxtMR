@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/zh-CN/devices/angelicain", {data:[{}],fetch:{},mutations:void 0});

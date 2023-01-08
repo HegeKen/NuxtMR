@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/recovery/curtana_rf", {data:[{}],fetch:{},mutations:void 0});

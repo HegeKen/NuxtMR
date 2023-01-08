@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en-US/recovery/cezanne", {data:[{}],fetch:{},mutations:void 0});

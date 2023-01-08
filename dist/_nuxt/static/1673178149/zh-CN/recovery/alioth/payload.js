@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/recovery/alioth", {data:[{}],fetch:{},mutations:void 0});

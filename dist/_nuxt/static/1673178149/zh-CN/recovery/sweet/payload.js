@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-CN/recovery/sweet", {data:[{}],fetch:{},mutations:void 0});

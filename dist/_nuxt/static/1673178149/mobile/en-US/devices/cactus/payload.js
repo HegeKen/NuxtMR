@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/en-US/devices/cactus", {data:[{}],fetch:{},mutations:void 0});
