@@ -4,7 +4,7 @@
 export default {
   head() {
     return {
-      title: '语言判定中 - Detecting Language'
+      title: 'MIUI官方ROM仓库 - MIUI Official ROMS'
     }
   }
 }
