@@ -12,7 +12,7 @@
           <a href="/mobile/zh-CN/tutorial"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">adb</i><div class="mdui-list-item-content">刷机教程</div></li></a>
           <a href="https://old.miuier.com/weekly/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">developer_mode</i><div class="mdui-list-item-content">橙色星期五</div></li></a>
           <a href="/mobile/zh-CN/devices"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">devices</i><div class="mdui-list-item-content">机型列表</div></li></a>
-          <a href="https://recovery.miuier.com/recovery/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">usb</i><div class="mdui-list-item-content">Recovery</div></li></a>
+          <a href="https://files.miuier.com/recovery/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">usb</i><div class="mdui-list-item-content">Recovery</div></li></a>
           <a href="https://old.miuier.com/tools"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">computer</i><div class="mdui-list-item-content">刷机工具</div></li></a>
           <a href="/mobile/zh-CN/thanks"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">favorites</i><div class="mdui-list-item-content">衷心感谢</div></li></a>
           <a href="/mobile/zh-CN/sitelog"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">update</i><div class="mdui-list-item-content">站点日志</div></li></a>

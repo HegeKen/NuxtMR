@@ -20,7 +20,7 @@
         <a href="/zh-CN/tutorial" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">adb</i><label>刷机教程</label></a>
         <a href="https://old.miuier.com/weekly/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">developer_mode</i><label>橙色星期五</label></a>
         <a href="/zh-CN/devices" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">devices</i><label>机型列表</label></a>
-        <a href="https://recovery.miuier.com/recovery/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">usb</i><label>Recovery</label></a>
+        <a href="https://files.miuier.com/recovery/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">usb</i><label>Recovery</label></a>
         <a href="https://old.miuier.com/tools" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">computer</i><label>刷机工具</label></a>
         <a href="/zh-CN/thanks" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">favorites</i><label>衷心感谢</label></a>
         <a href="/zh-CN/sitelog" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">update</i><label>站点日志</label></a>
