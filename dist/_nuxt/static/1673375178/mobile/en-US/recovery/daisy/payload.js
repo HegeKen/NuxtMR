@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/mobile/en-US/recovery/daisy", {data:[{}],fetch:{NaN:{site:[],devices:[],title:"MIUI Official ROMs"}},mutations:void 0});
