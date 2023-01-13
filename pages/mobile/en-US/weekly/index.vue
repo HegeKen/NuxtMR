@@ -7,8 +7,8 @@
         <div style="padding-left:15px;">{{ data.version }}</div>
         <br />
         <button class="mdui-btn mdui-text-capitalize" v-for="(data) in data.weeks">
-          <a :href="('/en-US/mobile/weekly/week-' + data+ '-cn')" v-if="data == weeks.latest"><i class="mdui-icon material-icons">fiber_new</i>Week {{ data }}</a>
-          <a :href="('/en-US/mobile/weekly/week-' + data+ '-cn')" v-else>Week {{ data }}</a>
+          <a :href="('/mobile/en-US/weekly/week-' + data+ '-cn')" v-if="data == weeks.latest"><i class="mdui-icon material-icons">fiber_new</i>Week {{ data }}</a>
+          <a :href="('/mobile/en-US/weekly/week-' + data+ '-cn')" v-else>Week {{ data }}</a>
         </button>
       </div>
 
