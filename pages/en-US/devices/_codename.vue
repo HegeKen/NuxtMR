@@ -6,7 +6,7 @@
       <div class="mdui-panel mdui-panel-gapless mdui-shadow-1">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
-            <div class="mdui-panel-item-title mdui-text-color-orange">Attentions：</div>
+            <div class="mdui-panel-item-title mdui-text-color-orange">Notes：</div>
           </div>
           <div class="mdui-panel-item-body">
             <ol>
@@ -87,15 +87,11 @@ export default {
     this.branch = this.roms.branch;
   },
   fetchOnServer: true,
-  fetchKey: 'site-sidebar',
-  fetchKey(getCounter) {
-    return this.someOtherData + getCounter('sidebar')
-  },
   head() {
     return {
       title: this.roms.enname + "(" + this.roms.codename + ") - MIUI Official ROMs",
       htmlAttrs: {
-        lang: "zh-CN",
+        lang: "en-US",
       }
     }
   }

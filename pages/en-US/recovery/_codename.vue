@@ -26,10 +26,6 @@ export default {
     this.roms = await fetch(url).then(res => res.json());
   },
   fetchOnServer: true,
-  fetchKey: 'site-sidebar',
-  fetchKey(getCounter) {
-    return this.someOtherData + getCounter('sidebar')
-  },
   head() {
     return {
       title: this.title,

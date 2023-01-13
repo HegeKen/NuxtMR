@@ -7,7 +7,7 @@
     <div>
       <div class="mdui-bottom-nav footer mdui-color-grey-100 ffm">
         <a href="/mobile/zh-CN/" class="mdui-ripple"><i class="mdui-icon material-icons">home</i><label>首页</label></a>
-        <a href="https://old.miuier.com/weekly/" class="mdui-ripple"><i class="mdui-icon material-icons">developer_mode</i><label>橙色星期五</label></a>
+        <a href="/mobile/zh-CN/weekly/" class="mdui-ripple"><i class="mdui-icon material-icons">developer_mode</i><label>橙色星期五</label></a>
         <a href="/mobile/zh-CN/devices/" class="mdui-ripple"><i class="mdui-icon material-icons">devices</i><label>机型列表</label></a>
         <a href="https://old.miuier.com/tools" class="mdui-ripple"><i class="mdui-icon material-icons">computer</i><label>刷机工具</label></a>
         <a href="https://files.miuier.com/recovery/" class="mdui-ripple"><i class="mdui-icon material-icons">usb</i><label>Recovery</label></a>

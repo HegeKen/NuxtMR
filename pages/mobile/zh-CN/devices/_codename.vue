@@ -85,10 +85,6 @@ export default {
     this.branch = this.roms.branch;
   },
   fetchOnServer: true,
-  fetchKey: 'site-sidebar',
-  fetchKey(getCounter) {
-    return this.someOtherData + getCounter('sidebar')
-  },
   head() {
     return {
       title: this.roms.cnname + "(" + this.roms.codename + ") - MIUI官方ROM仓库",

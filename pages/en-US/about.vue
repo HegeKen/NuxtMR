@@ -12,23 +12,16 @@ let devices = baseurl + "devices.json"
 export default {
   data() {
     return {
-      site: [],
-      devices: [],
-      title: "About US - MIUI Official ROMs"
+      devices: []
     }
   },
   async fetch() {
-    this.site = await fetch(index).then(res => res.json())
     this.devices = await fetch(devices).then(res => res.json())
   },
   fetchOnServer: true,
-  fetchKey: 'site-sidebar',
-  fetchKey(getCounter) {
-    return this.someOtherData + getCounter('sidebar')
-  },
   head() {
     return {
-      title: this.title,
+      title: "About US - MIUI Official ROMs",
       htmlAttrs: {
         lang: "en-US",
       }

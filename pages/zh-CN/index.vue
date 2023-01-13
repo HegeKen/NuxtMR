@@ -3,10 +3,10 @@
     <CnPcNav />
     <br />
     <div class="mdui-container-fluid">
-      <div class="mdui-panel mdui-panel-gapless" mdui-panel="">
+      <div class="mdui-panel mdui-panel-gapless">
         <div class="mdui-panel-item mdui-panel-item-open">
-          <div class="mdui-panel-item-header mdui-text-color-orange">
-            更新时间：{{ site.sudate }}
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-orange">更新时间：{{ site.sudate }}</div>
           </div>
           <div class="mdui-panel-item-body">
             <div>站点版本：{{ site.ver }}</div>
@@ -127,26 +127,25 @@
 </template>
 
 <script>
-let baseurl = "https://data.miuier.com/data/";
-let index = baseurl + "index.json";
-let devices = baseurl + "devices.json"
+let index = "https://data.miuier.com/data/index.json";
+let devices = "https://data.miuier.com/data/devices.json";
 export default {
   data() {
     return {
       site: [],
       devices: [],
+      weeks : [],
+      beta:[],
       title: "MIUI官方ROM仓库 - 由米柚发烧友整理维护"
     }
   },
   async fetch() {
     this.site = await fetch(index).then(res => res.json())
     this.devices = await fetch(devices).then(res => res.json())
+    this.site = await fetch(index).then(res => res.json())
+    this.devices = await fetch(devices).then(res => res.json())
   },
   fetchOnServer: true,
-  fetchKey: 'site-sidebar',
-  fetchKey(getCounter) {
-    return this.someOtherData + getCounter('sidebar')
-  },
   head() {
     return {
       title: this.title,

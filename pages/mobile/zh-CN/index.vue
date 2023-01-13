@@ -3,10 +3,10 @@
     <CnMobileNav />
     <br />
     <div class="mdui-container-fluid">
-      <div class="mdui-panel mdui-panel-gapless" mdui-panel="">
+      <div class="mdui-panel mdui-panel-gapless">
         <div class="mdui-panel-item mdui-panel-item-open">
-          <div class="mdui-panel-item-header mdui-text-color-orange">
-            更新时间：{{ site.sudate }}
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-orange">更新时间：{{ site.sudate }}</div>
           </div>
           <div class="mdui-panel-item-body">
             <div>站点版本：{{ site.ver }}</div>
@@ -143,10 +143,6 @@ export default {
     this.devices = await fetch(devices).then(res => res.json())
   },
   fetchOnServer: true,
-  fetchKey: 'site-sidebar',
-  fetchKey(getCounter) {
-    return this.someOtherData + getCounter('sidebar')
-  },
   head() {
     return {
       title: this.title,

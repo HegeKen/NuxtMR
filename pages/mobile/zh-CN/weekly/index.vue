@@ -1,31 +1,40 @@
 <template>
   <div>
-    <CnMobileNav />
-    <div class="mdui-center PNF">该页面正在构建中</div>
-    <CnMobileFooter />
+    <CnPcNav />
+    <div class="mdui-container-fluid" v-for="(data) in weeks.versions">
+      <div v-if="data.version =='MIUI 14'">
+        <br />
+        <div style="padding-left:15px;">{{ data.version }}</div>
+        <br />
+        <button class="mdui-btn" v-for="(data) in data.weeks">
+          <a :href="('/zh-CN/weekly/week-' + data+ '-cn')" v-if="data == weeks.latest"><i class="mdui-icon material-icons">fiber_new</i>第{{ data }}周</a>
+          <a :href="('/zh-CN/weekly/week-' + data+ '-cn')" v-else>第{{ data }}周</a>
+        </button>
+      </div>
+
+      <div v-else>
+        <br />
+        <div style="padding-left:15px;">{{ data.version }}</div>
+        <br />
+        <button class="mdui-btn" v-for="(data) in data.weeks"><a :href="('https://old.miuier.com/weekly/logs/week-' + data+ '-cn')" target="_blank">第{{ data }}周</a></button>
+      </div>
+    </div>
+    <CnPcFooter />
   </div>
 </template>
 <script>
-let baseurl = "https://data.miuier.com/data/";
-let index = baseurl + "index.json";
-let devices = baseurl + "devices.json"
+let url = "https://data.miuier.com/data/weekly.json";
 export default {
   data() {
     return {
-      site: [],
-      devices: [],
+      weeks: [],
       title: "橙色星期五 - MIUI官方ROM仓库"
     }
   },
   async fetch() {
-    this.site = await fetch(index).then(res => res.json())
-    this.devices = await fetch(devices).then(res => res.json())
+    this.weeks = await fetch(url).then(res => res.json())
   },
   fetchOnServer: true,
-  fetchKey: 'site-sidebar',
-  fetchKey(getCounter) {
-    return this.someOtherData + getCounter('sidebar')
-  },
   head() {
     return {
       title: this.title,

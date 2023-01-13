@@ -126,8 +126,7 @@ export default {
   data() {
     return {
       site: [],
-      devices: [],
-      title: "机型列表 - MIUI官方ROM仓库"
+      devices: []
     }
   },
   async fetch() {
@@ -135,13 +134,9 @@ export default {
     this.devices = await fetch(devices).then(res => res.json())
   },
   fetchOnServer: true,
-  fetchKey: 'site-sidebar',
-  fetchKey(getCounter) {
-    return this.someOtherData + getCounter('sidebar')
-  },
   head() {
     return {
-      title: this.title,
+      title: 机型列表 - MIUI官方ROM仓库,
       htmlAttrs: {
         lang: "zh-CN",
       }
