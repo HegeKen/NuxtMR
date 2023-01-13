@@ -1,8 +1,7 @@
 <template>
-  <!-- <div>{{ $route.params.week }}</div> -->
   <div>
+    <EnMobileNav />
     <div class="mdui-container-fluid">
-      <EnMobileNav />
       <div class="mdui-panel">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
@@ -39,7 +38,7 @@
           </div>
         </div>
       </div>
-      <div class="mdui-table-fluid" v-show="week.showdevices !='0'">
+      <div class="mdui-table-fluid" v-show="week.showdevices != '0'">
         <table class="mdui-table">
           <thead>
             <tr>
@@ -63,8 +62,8 @@
           </tbody>
         </table>
       </div>
-      <EnMobileFooter />
     </div>
+    <EnMobileFooter />
   </div>
 
 </template>
