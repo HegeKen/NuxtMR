@@ -42,11 +42,11 @@
         <table class="mdui-table">
           <thead>
             <tr>
-              <th>Devices</th>
-              <th>MIUI</th>
-              <th>Android</th>
-              <th>Recovery</th>
-              <th>Fastboot</th>
+              <th class="mdui-text-center">Devices</th>
+              <th class="mdui-text-center">MIUI</th>
+              <th class="mdui-text-center">Android</th>
+              <th class="mdui-text-center">Recovery</th>
+              <th class="mdui-text-center">Fastboot</th>
             </tr>
           </thead>
           <tbody v-for="(data) in week.devices">

@@ -43,11 +43,11 @@
         <table class="mdui-table">
           <thead>
             <tr>
-              <th>机型</th>
-              <th>米柚</th>
-              <th>安卓</th>
-              <th>卡刷包</th>
-              <th>线刷包</th>
+              <th class="mdui-text-center">机型</th>
+              <th class="mdui-text-center">米柚</th>
+              <th class="mdui-text-center">安卓</th>
+              <th class="mdui-text-center">卡刷包</th>
+              <th class="mdui-text-center">线刷包</th>
             </tr>
           </thead>
           <tbody v-for="(data) in week.devices">
