@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{ reurl }}
   </div>
 </template>
 <script>

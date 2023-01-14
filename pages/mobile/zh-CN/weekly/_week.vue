@@ -51,7 +51,7 @@
           </thead>
           <tbody v-for="(data) in week.devices">
             <tr>
-              <td class="mdui-text-center">{{ data.NameCn }}</td>
+              <td class="mdui-text-center">{{ data.NameCn }}({{ data.code }})</td>
               <td class="mdui-text-center">{{ data.miui }}</td>
               <td class="mdui-text-center">{{ data.android }}</td>
               <td v-if="data.recovery == ''">未公布</td>
