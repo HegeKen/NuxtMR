@@ -16,7 +16,7 @@
         <br />
         <div style="padding-left:15px;">{{ data.version }}</div>
         <br />
-        <button class="mdui-btn" v-for="(data) in data.weeks"><a :href="('https://old.miuier.com/weekly/logs/week-' + data+ '-cn')" target="_blank">第{{ data }}周</a></button>
+        <button class="mdui-btn" v-for="(data) in data.weeks"><a :href="('/weekly/logs/week-' + data+ '-cn')" target="_blank">第{{ data }}周</a></button>
       </div>
     </div>
     <CnPcFooter />

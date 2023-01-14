@@ -3,7 +3,7 @@ $(document).ready(function () {
   var pathName = window.document.location.pathname;
   var height = $(document).width();
   var lang = navigator.language.substr(0, 2);
-  if (pathName == "" || pathName == "/") {
+  if (pathName == "" || pathName == "/" || pathName =="/index.html") {
     if (height < "550") {
       if (lang === "zh") {
         window.location = "/mobile/zh-CN/";
