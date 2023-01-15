@@ -17,7 +17,11 @@
             <div v-for="( log, index ) in site.log" v-show="site.log['0'].cn != ''">
               <p>{{ index + 1 }} . {{ log.cn }}</p>
             </div>
-            <b>开发版更新日期 ：</b>{{ weeks.update }}<br /><br /><b>收录版本 ：</b><span>{{ weeks.versions }}</span>
+            <b>开发版更新日期 ：</b>{{ weeks.update }}<br /><br />
+            <b>收录版本 ：</b><span>{{ weeks.versions }}</span>
+            <br />
+            <br />
+            <b>第{{site.latest}}周日志 ：</b><span><a :href="('/zh-CN/weekly/week-' + site.latest + '-cn')" target="_blank">{{ weeks.titleCn }}</a></span>
             <br />
             <br />
             <b>上述开发版支持 ：</b><span v-for="(data, index) in weeks.devices">
@@ -29,11 +33,11 @@
             <div><b>稳定版收录 ：</b>{{ site.stdate }}</div>
             <p v-if="$fetchState.pending">正在读取....</p>
             <p v-else-if="$fetchState.error">读取失败</p>
-            <ul v-else>
+            <ol v-else>
               <li v-for="{ NameCn, rom } in site.stable">
                 {{ NameCn }} :{{ rom }}
               </li>
-            </ul>
+            </ol>
           </div>
           <div class="mdui-panel-item-body">
             <div><b>当前支持查询以下{{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length - 1 + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 20 }}款机型：</b></div>

@@ -21,6 +21,9 @@
             <b>Beta Versions ：</b><span>{{ weeks.versions }}</span>
             <br />
             <br />
+            <b>Weekly Changelog ：</b><span><a :href="('/mobile/en-US/weekly/week-' + site.latest + '-cn')" target="_blank">{{ weeks.titleEn }}</a></span>
+            <br />
+            <br />
             <b>This Weeks China Beta Supports ：</b><span v-for="(data, index) in weeks.devices">
               <span v-show="index != weeks.devices.length - 1">{{ data.NameEn }};</span>
               <span v-show="index == weeks.devices.length - 1">{{ data.NameEn }}</span>
@@ -30,11 +33,11 @@
             <div><b></b>Newly Added Stable ROM ：{{ site.stdate }}</div>
             <p v-if="$fetchState.pending">Fetching Data....</p>
             <p v-else-if="$fetchState.error">Fetching Failed.</p>
-            <ul v-else>
+            <ol v-else>
               <li v-for="{ NameEn, rom } in site.stable">
                 {{ NameEn }} :{{ rom }}
               </li>
-            </ul>
+            </ol>
           </div>
           <div class="mdui-panel-item-body">
             <b><div>Our site currently supports following {{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length - 1 + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 20 }} devices：</div></b>
