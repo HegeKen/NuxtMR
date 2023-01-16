@@ -10,9 +10,9 @@
           <p><b>本周版本：</b>{{ week.versions }}</p>
           <p><b>发布日期：</b>{{ week.redate }}</p>
           <p><b>收录日期：</b>{{ week.update }}</p>
-          <p v-show="week.CnBBSID != ''"><b>论坛链接：</b><a :href="('https://www.miui.com/thread-' + week.CnBBSID + '-1-1.html')" target="_blank">{{ week.CommTitle }}</a></p>
-          <p v-show="week.CnComID != ''"><b>社区链接：</b><a :href="('https://www.xiaomi.cn/post/' + week.CnComID)" target="_blank">{{ week.CommTitle }}</a></p>
-          <p v-show="week.GbBBSID != ''"><b>Global Forum：</b><a :href="('https://www.xiaomi.cn/post/' + week.GbBBSID)" target="_blank">{{ week.CommTitle }}</a></p>
+          <p v-show="week.CnBBSID != ''"><b>论坛链接：</b><a :href="('https://www.miui.com/thread-' + week.CnBBSID + '-1-1.html')" target="_blank">{{ week.titleCn }}</a></p>
+          <p v-show="week.CnComID != ''"><b>社区链接：</b><a :href="('https://www.xiaomi.cn/post/' + week.CnComID)" target="_blank">{{ week.titleCn }}</a></p>
+          <p v-show="week.GbBBSID != ''"><b>Global Forum：</b><a :href="('https://www.xiaomi.cn/post/' + week.GbBBSID)" target="_blank">{{ week.titleCn }}</a></p>
           <br />
           <div class="mdui-panel-item-body" v-for="(data) in week.addons">
             <span><b>▍{{ data.titleCn }}</b></span>
