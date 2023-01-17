@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/weekly/logs/week-278-cn", {data:[{}],fetch:{},mutations:void 0});

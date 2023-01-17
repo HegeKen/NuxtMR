@@ -16,7 +16,10 @@
         <br />
         <div style="padding-left:15px;">{{ data.version }}</div>
         <br />
-        <button class="mdui-btn mdui-text-capitalize" v-for="(data) in data.weeks"><a :href="('https://old.miuier.com/weekly/logs/week-' + data+ '-cn')" target="_blank">Week {{ data }}</a></button>
+        <button class="mdui-btn mdui-text-capitalize" v-for="(data) in data.weeks">
+          <a :href="('/mobile/en-US/weekly/week-' + data+ '-cn')" target="_blank" v-if="data >= weeks.oldest-1">Week {{ data }}</a>
+          <a :href="('https://old.miuier.com/weekly/logs/week-' + data+ '-cn')" target="_blank" v-else>Week {{ data }}</a>
+        </button>
       </div>
     </div>
     <EnMobileFooter />
