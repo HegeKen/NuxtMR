@@ -2,16 +2,27 @@
   <div>
     <CnPcNav />
     <br />
-    <div class="mdui-tab mdui-tab-full-width" mdui-tab>
+    <div class="mdui-tab" mdui-tab>
+      <a href="#MiFlash" class="mdui-ripple mdui-text-capitalize tools mdui-text-color-black-text mdui-tab-active">MiFlash</a>
       <a href="#MiPCSuite" class="mdui-ripple mdui-text-capitalize tools mdui-text-color-black-text">小米助手</a>
-      <a href="#MiFlash" class="mdui-ripple mdui-text-capitalize tools mdui-text-color-black-text">MiFlash</a>
+    </div>
+    <div id="MiFlash" class="mdui-container-fluid">
+      <br />
+      <div v-for="(data) in tools.miflash">
+        <p><b>MiFlash版本：</b>{{ data.version }}</p>
+        <p><b>文件名称：</b>{{ data.FileName }}</p>
+        <p><b>下载链接：</b>
+          <span v-if="data.url == '' && data.FileName == ''">无该版本链接信息。</span>
+          <span v-else-if="data.url != '' && data.FileName == ''"><a :href="(data.url)">小米官方链接</a></span>
+          <span v-else-if="data.url == '' && data.FileName != ''"><a :href="('https://files.miuier.com/tools/MiFlash/' + data.FileName)" class="mdui-text-capitalize">MIUIROMS网盘链接</a></span>
+          <span v-else-if="data.url != '' && data.FileName != ''"><a :href="(data.url)">小米官方链接</a> | <a :href="('https://files.miuier.com/tools/MiFlash/' + data.FileName)" class="mdui-text-capitalize">MIUIROMS网盘链接</a></span>
+        </p>
+      </div>
     </div>
     <div id="MiPCSuite" class="mdui-container-fluid">
       <br />
-      <div class="mdui-valign"><span class="mdui-center">中文版</span><span class="mdui-center">中文版</span></div>
-
-      <div v-for="(data) in tools.miassistant" class="mdui-container-fluid">
-        <p><b>助手版本：</b>{{ data.version }}</p>
+      <div v-for="(data) in tools.miassistant" class="mdui-container-fluid" id="miassistant">
+        <p><b>助手版本：</b>{{ data.version }}(中文版)</p>
         <p><b>更新日期：</b>{{ data.date }}</p>
         <p><b>文件名称：</b>{{ data.FileName }}</p>
         <p><b>下载链接：</b>
@@ -33,11 +44,10 @@
           <li v-for="(data) in data.logs" v-show="data.Cn != ''">{{ data.Cn }}</li>
         </ol>
         </p>
-
-        <hr />
       </div>
-      <div v-for="(data) in tools.mipcsuite" class="mdui-container-fluid">
-        <p><b>助手版本：</b>{{ data.version }}</p>
+      <hr />
+      <div v-for="(data) in tools.mipcsuite" class="mdui-container-fluid" id="pcsuite">
+        <p><b>助手版本：</b>{{ data.version }}(English)</p>
         <p><b>更新日期：</b>{{ data.date }}</p>
         <p><b>文件名称：</b>{{ data.FileName }}</p>
         <p><b>下载链接：</b>
@@ -45,7 +55,6 @@
           <span v-else-if="data.url != '' && data.FileName == ''"><a :href="(data.url)">小米官方链接</a></span>
           <span v-else-if="data.url == '' && data.FileName != ''"><a :href="('https://files.miuier.com/tools/MiAssistant/' + data.FileName)" class="mdui-text-capitalize">MIUIROMS网盘链接</a></span>
           <span v-else-if="data.url != '' && data.FileName != ''"><a :href="(data.url)">小米官方链接</a> | <a :href="('https://files.miuier.com/tools/MiAssistant/' + data.FileName)" class="mdui-text-capitalize">MIUIROMS网盘链接</a></span>
-
         </p>
         <p v-show="data.showattentions == 'true'">
           <b>注意事项：</b>
@@ -59,12 +68,7 @@
           <li v-for="(data) in data.logs" v-show="data.Cn != ''">{{ data.Cn }}</li>
         </ol>
         </p>
-
-        <hr />
       </div>
-    </div>
-    <div id="MiFlash" class="mdui-container-fluid">
-
     </div>
     <CnPcFooter />
   </div>

@@ -15,13 +15,13 @@
           </li>
         </ul>
       </div>
-      <div class="mdui-tab mdui-tab-centered">
+      <div class="mdui-tab mdui-tab-centered mdui-text-color-white main-tab">
         <a href="/en-US/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">home</i><label>HomePage</label></a>
         <a href="/en-US/tutorial" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">adb</i><label>Tutorial</label></a>
         <a href="/en-US/weekly/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">developer_mode</i><label>Changelogs</label></a>
         <a href="/en-US/devices" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">devices</i><label>Devices</label></a>
         <a href="https://files.miuier.com/recovery/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">usb</i><label>Recovery</label></a>
-        <a href="https://old.miuier.com/tools" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">computer</i><label>Tools</label></a>
+        <a href="/en-US/tools" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">computer</i><label>Tools</label></a>
         <a href="/en-US/thanks" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">favorites</i><label>Deeply Thanking</label></a>
         <a href="/en-US/sitelog" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">update</i><label>Site Logs</label></a>
         <a href="/en-US/friendly" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">folder_special</i><label>Friendly Links</label></a>

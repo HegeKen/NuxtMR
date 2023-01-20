@@ -136,7 +136,7 @@ export default {
   fetchOnServer: true,
   head() {
     return {
-      title: 机型列表 - MIUI官方ROM仓库,
+      title: '机型列表 - MIUI官方ROM仓库',
       htmlAttrs: {
         lang: "zh-CN",
       }

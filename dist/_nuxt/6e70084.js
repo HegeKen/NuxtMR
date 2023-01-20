@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[26],{322:function(t,e,n){"use strict";n.r(e);var r={head:function(){return{title:"MIUI官方ROM仓库 - MIUI Official ROMS",meta:[{"http-equiv":"refresh",content:"0;url= https://roms.miuier.com/"}]}}},c=n(43),component=Object(c.a)(r,(function(){return(0,this._self._c)("div")}),[],!1,null,null,null);e.default=component.exports}}]);
