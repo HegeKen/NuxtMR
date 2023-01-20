@@ -15,7 +15,7 @@
           </li>
         </ul>
       </div>
-      <div class="mdui-tab mdui-tab-centered mdui-text-color-white">
+      <div class="mdui-tab mdui-tab-centered mdui-text-color-white main-tab">
         <a href="/zh-CN/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">home</i><label>首页</label></a>
         <a href="/zh-CN/tutorial" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">adb</i><label>刷机教程</label></a>
         <a href="/zh-CN/weekly/" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">developer_mode</i><label>橙色星期五</label></a>
