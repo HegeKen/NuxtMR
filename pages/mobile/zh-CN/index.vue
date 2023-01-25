@@ -26,7 +26,7 @@
             <b>上述开发版支持 ：</b><span v-for="(data, index) in weeks.devices">
               <span v-show="index != weeks.devices.length - 1">{{ data.NameCn }};</span>
               <span v-show="index == weeks.devices.length - 1">{{ data.NameCn }}</span>
-            </span><b>等{{ weeks.devices.length - 1 }}款机型。</b>
+            </span><b>等{{ weeks.devices.length }}款机型。</b>
             <br />
             <br />
             <div><b>稳定版收录 ：</b>{{ site.stdate }}</div>
@@ -39,7 +39,7 @@
             </ol>
           </div>
           <div class="mdui-panel-item-body">
-            <div><b>当前支持查询以下{{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length - 1 + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 20 }}款机型：</b></div>
+            <div><b>当前支持查询以下{{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 7 }}款机型：</b></div>
             <ul>
               <li>小米系列 ：<span v-for="(data, index) in devices.mi">
                   <a :href="('/mobile/zh-CN/devices/' + data.code)" v-show="index != devices.mi.length - 1"> {{ data.NameCn }} /</a>

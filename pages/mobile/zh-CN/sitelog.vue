@@ -1,26 +1,40 @@
 <template>
   <div>
     <CnMobileNav />
-    <div class="mdui-center PNF">该页面正在构建中</div>
+    <div class="mdui-container-fluid">
+      <div class="mdui-panel">
+        <div class="mdui-panel-item mdui-panel-item-open" v-for="(data) in site.log">
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-red">更新日期：{{ data.sudate }}</div>
+          </div>
+          <div class="mdui-panel-item-body">
+            <p><b>站点版本：</b>{{ data.ver }}</p>
+            <p><b>新增机型：</b>{{ data.newDeviceCn }}</p>
+            <div v-if="data.log.length == 0"></div>
+            <div v-else><b>更新日志：</b>
+              <ol>
+                <li v-for="(data) in data.log">{{ data.Cn }}</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <CnMobileFooter />
   </div>
 </template>
 
 <script>
-let baseurl = "https://data.miuier.com/data/";
-let index = baseurl + "index.json";
-let devices = baseurl + "devices.json"
+let sitelog = "https://data.miuier.com/data/sitelog.json";
 export default {
   data() {
     return {
       site: [],
-      devices: [],
       title: "站点日志 - MIUI官方ROM仓库"
     }
   },
   async fetch() {
-    this.site = await fetch(index).then(res => res.json())
-    this.devices = await fetch(devices).then(res => res.json())
+    this.site = await fetch(sitelog).then(res => res.json())
   },
   fetchOnServer: true,
   head() {

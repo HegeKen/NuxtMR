@@ -24,7 +24,7 @@
             <b>Weekly Changelog ：</b><span><a :href="('/en-US/weekly/week-' + site.latest + '-cn')" target="_blank">{{ weeks.titleEn }}</a></span>
             <br />
             <br />
-            <b>This Weeks China Beta Supports Following {{ weeks.devices.length - 1 }} devices ：</b><span v-for="(data, index) in weeks.devices">
+            <b>This Weeks China Beta Supports Following {{ weeks.devices.length }} devices ：</b><span v-for="(data, index) in weeks.devices">
               <span v-show="index != weeks.devices.length - 1">{{ data.NameEn }};</span>
               <span v-show="index == weeks.devices.length - 1">{{ data.NameEn }}</span>
             </span>
@@ -40,7 +40,7 @@
             </ol>
           </div>
           <div class="mdui-panel-item-body">
-            <b><div>Our site currently supports following {{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length - 1 + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 20 }} devices：</div></b>
+            <b><div>Our site currently supports following {{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 7 }} devices：</div></b>
             <ul>
               <li>Mi Series ：<span v-for="(data, index) in devices.mi">
                   <a :href="('/en-US/devices/' + data.code)" v-show="index != devices.mi.length - 1"> {{ data.NameEn }} /</a>
