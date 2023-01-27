@@ -79,7 +79,7 @@
 		<lastmod>2023-01-26</lastmod>
 	</url>
 	<url>
-		<loc>https://roms.miuier.com/zh-CN/mitools</loc>
+		<loc>https://roms.miuier.com/zh-CN/tools</loc>
 		<priority>0.60</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-01-26</lastmod>
@@ -145,7 +145,7 @@
 		<lastmod>2023-01-26</lastmod>
 	</url>
 	<url>
-		<loc>https://roms.miuier.com/en-US/mitools</loc>
+		<loc>https://roms.miuier.com/en-US/tools</loc>
 		<priority>0.60</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-01-26</lastmod>
@@ -2779,7 +2779,7 @@
 		<lastmod>2023-01-26</lastmod>
 	</url>
 	<url>
-		<loc>https://roms.miuier.com/mobile/zh-CN/mitools</loc>
+		<loc>https://roms.miuier.com/mobile/zh-CN/tools</loc>
 		<priority>0.40</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-01-26</lastmod>
@@ -2833,7 +2833,7 @@
 		<lastmod>2023-01-26</lastmod>
 	</url>
 	<url>
-		<loc>https://roms.miuier.com/mobile/en-US/mitools</loc>
+		<loc>https://roms.miuier.com/mobile/en-US/tools</loc>
 		<priority>0.40</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-01-26</lastmod>
