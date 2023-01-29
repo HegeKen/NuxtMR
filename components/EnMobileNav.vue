@@ -12,7 +12,7 @@
           <a href="/mobile/en-US/tutorial"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">adb</i><div class="mdui-list-item-content">Tutorial</div></li></a>
           <a href="/mobile/en-US/weekly/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">developer_mode</i><div class="mdui-list-item-content">Changelogs</div></li></a>
           <a href="/mobile/en-US/devices"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">devices</i><div class="mdui-list-item-content">Devices</div></li></a>
-          <a href="https://files.miuier.com/recovery/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">usb</i><div class="mdui-list-item-content">Recovery</div></li></a>
+          <a href="https://files.miuier.com/recovery/"><li class="mdui-list-item mdui-hidden"><i class="mdui-list-item-icon mdui-icon material-icons">usb</i><div class="mdui-list-item-content">Recovery</div></li></a>
           <a href="/mobile/en-US/tools"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">computer</i><div class="mdui-list-item-content">Tools</div></li></a>
           <a href="/mobile/en-US/thanks"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">favorites</i><div class="mdui-list-item-content">Deeply Thanking</div></li></a>
           <a href="/mobile/en-US/sitelog"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">update</i><div class="mdui-list-item-content">Site Log</div></li></a>
