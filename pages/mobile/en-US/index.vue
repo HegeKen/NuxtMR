@@ -11,9 +11,9 @@
           <div class="mdui-panel-item-body">
             <div><b>Site Version ：</b>{{ site.ver }}</div>
             <br />
-            <div><b>Newly Added Devices ：</b>{{ site.newDeviceEn }}</div>
+            <div v-if="site.newDeviceEn !=''"><b>Newly Added Devices ：</b>{{ site.newDeviceEn }}</div>
             <br />
-            <div v-show="site.log['0'].en != ''"><b>Update Log ：</b></div>
+            <div v-show="site.log.length > 0"><b>Update Log ：</b></div>
             <div v-for="( log, index ) in site.log" v-show="site.log['0'].en != ''">
               <p>{{ index + 1 }} . {{ log.en }}</p>
             </div>

@@ -11,9 +11,9 @@
           <div class="mdui-panel-item-body">
             <div><b>站点版本 ：</b>{{ site.ver }}</div>
             <br />
-            <div><b>新增机型 ：</b>{{ site.newDeviceCn }}</div>
+            <div v-if="site.newDeviceCn !=''"><b>新增机型 ：</b>{{ site.newDeviceCn }}</div>
             <br />
-            <div v-show="site.log['0'].cn != ''"><b>更新日志 ：</b></div>
+            <div v-show="site.log.length > 0"><b>更新日志 ：</b></div>
             <div v-for="( log, index ) in site.log" v-show="site.log['0'].cn != ''">
               <p>{{ index + 1 }} . {{ log.cn }}</p>
             </div>
