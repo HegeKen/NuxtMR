@@ -18,7 +18,7 @@
               <p>{{ index + 1 }} . {{ log.en }}</p>
             </div>
             <b>China Beta Updated At : </b>{{ weeks.update }}<br /><br />
-            <b>Beta Versions ：</b><span>{{ weeks.versions }}</span>
+            <b>China Beta Versions ：</b><span>{{ weeks.versions }}</span>
             <br />
             <br />
             <b>Weekly Changelog ：</b><span><a :href="('/mobile/en-US/weekly/week-' + site.latest + '-cn')" target="_blank">{{ weeks.titleEn }}</a></span>
@@ -34,8 +34,8 @@
             <p v-if="$fetchState.pending">Fetching Data....</p>
             <p v-else-if="$fetchState.error">Fetching Failed.</p>
             <ol v-else>
-              <li v-for="{ NameEn, rom } in site.stable">
-                {{ NameEn }} :{{ rom }}
+              <li v-for="{ NameEn, rom, code } in site.stable">
+                {{ NameEn }}({{ code }}) :{{ rom }}
               </li>
             </ol>
           </div>

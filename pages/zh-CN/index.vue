@@ -34,8 +34,8 @@
             <p v-if="$fetchState.pending">正在读取....</p>
             <p v-else-if="$fetchState.error">读取失败</p>
             <ol v-else>
-              <li v-for="{ NameCn, rom } in site.stable">
-                {{ NameCn }} :{{ rom }}
+              <li v-for="{ NameCn, rom, code } in site.stable">
+                {{ NameCn }}({{ code }}) :{{ rom }}
               </li>
             </ol>
           </div>
