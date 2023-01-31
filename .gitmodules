@@ -1,6 +1,3 @@
-[submodule "static/data"]
-	path = static/data
-	url = https://github.com/HegeKen/MRData.git
 [submodule "static"]
 	path = static
 	url = https://github.com/HegeKen/MRData.git
