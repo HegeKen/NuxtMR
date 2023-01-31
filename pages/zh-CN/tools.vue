@@ -3,7 +3,7 @@
     <CnPcNav />
     <br />
     <div class="mdui-container-fluid">
-      <div mdui-panel="" class="mdui-panel">
+      <div mdui-panel="{accordion: true}" class="mdui-panel">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-red">MiFlash</div>
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-      <div mdui-panel="" class="mdui-panel">
+      <div mdui-panel="{accordion: true}" class="mdui-panel">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-red">小米助手(中文版)</div>
@@ -57,7 +57,7 @@
           </div>
         </div>
       </div>
-      <div mdui-panel="" class="mdui-panel">
+      <div mdui-panel="{accordion: true}" class="mdui-panel">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-red">小米助手(英文版)</div>
