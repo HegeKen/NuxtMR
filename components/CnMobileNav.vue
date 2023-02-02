@@ -9,7 +9,7 @@
       <div class="mdui-drawer mdui-drawer-left mdui-text-color-black-text" id="main-drawer">
         <ul class="mdui-list">
           <a href="/mobile/zh-CN/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">home</i><div class="mdui-list-item-content">首页</div></li></a>
-          <a href="/mobile/zh-CN/tutorial"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">adb</i><div class="mdui-list-item-content">刷机教程</div></li></a>
+          <a href="/mobile/zh-CN/tutorial"><li class="mdui-list-item mdui-hidden"><i class="mdui-list-item-icon mdui-icon material-icons">adb</i><div class="mdui-list-item-content">刷机教程</div></li></a>
           <a href="/mobile/zh-CN/weekly/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">developer_mode</i><div class="mdui-list-item-content">橙色星期五</div></li></a>
           <a href="/mobile/zh-CN/devices"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">devices</i><div class="mdui-list-item-content">机型列表</div></li></a>
           <a href="https://files.miuier.com/recovery/"><li class="mdui-list-item mdui-hidden"><i class="mdui-list-item-icon mdui-icon material-icons">usb</i><div class="mdui-list-item-content">Recovery</div></li></a>
