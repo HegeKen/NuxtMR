@@ -8,8 +8,7 @@
             <div class="mdui-panel-item-title mdui-text-color-orange">Notes：</div>
           </div>
           <p><b>Versions：</b>{{ week.versions }}</p>
-          <p><b>Release Date：</b>{{ week.redate }}</p>
-          <p><b>Publish Date：</b>{{ week.update }}</p>
+          <p><b>Release Date：</b>{{ week.update }}</p>
           <p v-show="week.CnBBSID != ''"><b>See Changelogs at China MIUI Forum：</b><a :href="('https://www.miui.com/thread-' + week.CnBBSID + '-1-1.html')" target="_blank">{{ week.titleEn }}</a></p>
           <p v-show="week.CnComID != ''"><b>See Changelogs at Xiaomi Community(China)：</b><a :href="('https://www.xiaomi.cn/post/' + week.CnComID)" target="_blank">{{ week.titleEn }}</a></p>
           <p v-show="week.GbBBSID != ''"><b>See Changelogs at Global Forum：</b><a :href="('https://www.xiaomi.cn/post/' + week.GbBBSID)" target="_blank">{{ week.titleEn }}</a></p>
