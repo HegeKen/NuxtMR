@@ -13,8 +13,8 @@
             <div v-if="site.newDeviceCn !=''"><b>新增机型 ：</b>{{ site.newDeviceCn }}</div>
             <br />
             <div v-show="site.log.length > 0"><b>更新日志 ：</b></div>
-            <div v-for="( log, index ) in site.log" v-show="site.log['0'].cn != ''">
-              <p>{{ index + 1 }} . {{ log.cn }}</p>
+            <div v-for="( log, index ) in site.log" v-show="site.log['0'].Cn != ''">
+              <p>{{ index + 1 }} . {{ log.Cn }}</p>
             </div>
           </div>
         </div>

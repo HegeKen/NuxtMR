@@ -13,8 +13,8 @@
             <div v-if="site.newDeviceEn !=''"><b>Newly Added Devices ：</b>{{ site.newDeviceEn }}</div>
             <br />
             <div v-show="site.log.length > 0"><b>Update Log ：</b></div>
-            <div v-for="( log, index ) in site.log" v-show="site.log['0'].en != ''">
-              <p>{{ index + 1 }} . {{ log.en }}</p>
+            <div v-for="( log, index ) in site.log" v-show="site.log['0'].En != ''">
+              <p>{{ index + 1 }} . {{ log.En }}</p>
             </div>
           </div>
         </div>
