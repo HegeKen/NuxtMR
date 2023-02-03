@@ -1,15 +1,14 @@
 <template>
   <div>
     <EnPcNav />
-    <br />
     <div class="mdui-container-fluid">
-      <div class="mdui-panel mdui-panel-gapless">
+      <div class="mdui-panel">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
-            <div class="mdui-panel-item-title mdui-text-color-orange">Updated at：{{ site.sudate }}</div>
+            <div class="mdui-panel-item-title mdui-text-color-orange">Site Version {{ site.ver }}</div>
           </div>
           <div class="mdui-panel-item-body">
-            <div><b>Site Version ：</b>{{ site.ver }}</div>
+            <div><b>Updated at：</b>{{ site.sudate }}</div>
             <br />
             <div v-if="site.newDeviceEn !=''"><b>Newly Added Devices ：</b>{{ site.newDeviceEn }}</div>
             <br />
@@ -17,6 +16,13 @@
             <div v-for="( log, index ) in site.log" v-show="site.log['0'].en != ''">
               <p>{{ index + 1 }} . {{ log.en }}</p>
             </div>
+          </div>
+        </div>
+        <div class="mdui-panel-item mdui-panel-item-open">
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-orange">MIUI China Beta Updates</div>
+          </div>
+          <div class="mdui-panel-item-body">
             <b>China Beta Updated At : </b>{{ weeks.update }}<br /><br />
             <b>China Beta Versions ：</b><span>{{ weeks.versions }}</span>
             <br />
@@ -30,6 +36,13 @@
             </span>
             <br />
             <br />
+          </div>
+        </div>
+        <div class="mdui-panel-item mdui-panel-item-open">
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-orange">Stable Rom Updates</div>
+          </div>
+          <div class="mdui-panel-item-body">
             <div><b>Newly Added Stable ROM：</b>{{ site.stdate }}</div>
             <p v-if="$fetchState.pending">Fetching Data....</p>
             <p v-else-if="$fetchState.error">Fetching Failed.</p>
@@ -38,6 +51,11 @@
                 {{ NameEn }}({{ code }}) :{{ rom }}
               </li>
             </ol>
+          </div>
+        </div>
+        <div class="mdui-panel-item mdui-panel-item-open">
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-orange">Site's Supporting devices</div>
           </div>
           <div class="mdui-panel-item-body">
             <b><div>Our site currently supports following {{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 7 }} devices：</div></b>

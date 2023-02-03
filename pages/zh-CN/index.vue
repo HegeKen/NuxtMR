@@ -1,15 +1,14 @@
 <template>
   <div>
     <CnPcNav />
-    <br />
     <div class="mdui-container-fluid">
-      <div class="mdui-panel mdui-panel-gapless">
+      <div class="mdui-panel">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
-            <div class="mdui-panel-item-title mdui-text-color-orange">更新时间：{{ site.sudate }}</div>
+            <div class="mdui-panel-item-title mdui-text-color-orange">站点： {{ site.ver }} </div>
           </div>
           <div class="mdui-panel-item-body">
-            <div><b>站点版本 ：</b>{{ site.ver }}</div>
+            <div><b>更新时间：</b>{{ site.sudate }}</div>
             <br />
             <div v-if="site.newDeviceCn !=''"><b>新增机型 ：</b>{{ site.newDeviceCn }}</div>
             <br />
@@ -17,6 +16,13 @@
             <div v-for="( log, index ) in site.log" v-show="site.log['0'].cn != ''">
               <p>{{ index + 1 }} . {{ log.cn }}</p>
             </div>
+          </div>
+        </div>
+        <div class="mdui-panel-item mdui-panel-item-open">
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-orange">开发版更新</div>
+          </div>
+          <div class="mdui-panel-item-body">
             <b>开发版更新日期 ：</b>{{ weeks.update }}<br /><br />
             <b>收录版本 ：</b><span>{{ weeks.versions }}</span>
             <br />
@@ -29,8 +35,15 @@
               <span v-show="index == weeks.devices.length - 1">{{ data.NameCn }}</span>
             </span><b>等{{ weeks.devices.length }}款机型。</b>
             <br />
-            <br />
-            <div><b>稳定版收录 ：</b>{{ site.stdate }}</div>
+          </div>
+        </div>
+        <div class="mdui-panel-item mdui-panel-item-open">
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-orange">稳定版/正式版更新</div>
+          </div>
+          <div class="mdui-panel-item-body">
+            <div><b>收录日期 ：</b>{{ site.stdate }}</div>
+            <div><b>收录内容：</b></div>
             <p v-if="$fetchState.pending">正在读取....</p>
             <p v-else-if="$fetchState.error">读取失败</p>
             <ol v-else>
@@ -38,6 +51,11 @@
                 {{ NameCn }}({{ code }}) :{{ rom }}
               </li>
             </ol>
+          </div>
+        </div>
+        <div class="mdui-panel-item mdui-panel-item-open">
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-orange">站点支持</div>
           </div>
           <div class="mdui-panel-item-body">
             <div><b>当前支持查询以下{{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 7 }}款机型：</b></div>
