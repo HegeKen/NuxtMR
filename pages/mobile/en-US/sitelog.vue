@@ -9,7 +9,7 @@
           </div>
           <div class="mdui-panel-item-body">
             <p><b>Site Version：</b>{{ data.ver }}</p>
-            <p><b>Newly Added devices ：</b>{{ data.newDeviceEn }}</p>
+            <p v-show="data.newDeviceEn !=''"><b>Newly Added devices ：</b>{{ data.newDeviceEn }}</p>
             <div v-if="data.log.length == 0"></div>
             <div v-else><b>Update Log：</b>
               <ol>

@@ -9,7 +9,7 @@
           </div>
           <div class="mdui-panel-item-body">
             <p><b>站点版本：</b>{{ data.ver }}</p>
-            <p><b>新增机型：</b>{{ data.newDeviceCn }}</p>
+            <p v-show="data.newDeviceCn !=''"><b>新增机型：</b>{{ data.newDeviceCn }}</p>
             <div v-if="data.log.length == 0"></div>
             <div v-else><b>更新日志：</b>
               <ol>
