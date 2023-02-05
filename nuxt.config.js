@@ -18,6 +18,7 @@ export default {
         content: "1eNyA6u9gVIE5LzXP0FGw3I6yT9JnVNt0DVo4ujE-8Q",
       },
       { name: "format-detection", content: "telephone" },
+      { name: "yandex-verification", content: "fdd09793a3436dce" },
     ],
     link: [
       {
