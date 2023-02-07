@@ -1,5 +1,6 @@
 {
     "nuxt.isNuxtApp": true,
     "git.ignoreLimitWarning": true,
-    "files.eol": "\r\n"
+    "files.eol": "\r\n",
+    "python.analysis.typeCheckingMode": "basic"
 }
