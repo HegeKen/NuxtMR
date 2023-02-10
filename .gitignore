@@ -86,3 +86,5 @@ sw.*
 
 # Vim swap files
 *.swp
+/static/data/updater/devlist.db3
+/static/data/updater/download.db3
