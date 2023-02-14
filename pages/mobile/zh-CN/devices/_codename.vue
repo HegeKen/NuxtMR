@@ -21,6 +21,8 @@
       </div>
     </div>
     <br />
+    <CnAd />
+    <br />
     <div id="STABLE">
       <div v-for="{ branch, cnname, show, links } in roms.branches" class="mdui-container-fluid" v-show="show == 1">
         <div mdui-panel class="mdui-panel mdui-panel-gapless">

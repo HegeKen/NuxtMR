@@ -22,6 +22,7 @@
           </div>
         </div>
       </div>
+      <CnAd />
       <div class="mdui-panel" v-for="(data) in week.logs">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
@@ -38,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="mdui-table-fluid" v-show="week.showdevices !='0'">
+      <div class="mdui-table-fluid" v-show="week.showdevices != '0'">
         <table class="mdui-table">
           <thead>
             <tr>
@@ -63,6 +64,7 @@
         </table>
       </div>
       <CnPcFooter />
+
     </div>
   </div>
 
