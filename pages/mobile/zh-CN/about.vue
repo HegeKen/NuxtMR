@@ -2,6 +2,8 @@
   <div>
     <CnMobileNav />
     <div class="mdui-center PNF">该页面正在构建中</div>
+    <br />
+    <CnMobileDisclaimer />
     <CnMobileFooter />
   </div>
 </template>

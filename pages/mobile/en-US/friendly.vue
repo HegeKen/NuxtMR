@@ -8,6 +8,8 @@
       <br />
       <p><a href="https://www.uotan.cn/">Outan Forum</a></p>
     </div>
+    <br />
+    <EnMobileDisclaimer />
     <EnMobileFooter />
   </div>
 </template>

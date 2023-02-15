@@ -36,7 +36,8 @@
         </div>
       </div>
     </div>
-
+    <br />
+    <EnPcDisclaimer />
     <EnPcFooter />
   </div>
 </template>

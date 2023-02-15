@@ -8,6 +8,8 @@
       <br />
       <p><a href="https://www.uotan.cn/">柚坛社区</a></p>
     </div>
+    <br />
+    <CnMobileDisclaimer />
     <CnMobileFooter />
   </div>
 </template>

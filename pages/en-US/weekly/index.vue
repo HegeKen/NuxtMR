@@ -2,13 +2,13 @@
   <div>
     <EnPcNav />
     <div class="mdui-container-fluid" v-for="(data) in weeks.versions">
-      <div v-if="data.version =='MIUI 14'">
+      <div v-if="data.version == 'MIUI 14'">
         <br />
         <div style="padding-left:15px;">{{ data.version }}</div>
         <br />
         <button class="mdui-btn mdui-text-capitalize" v-for="(data) in data.weeks">
-          <a :href="('/en-US/weekly/week-' + data+ '-cn')" v-if="data == weeks.latest"><i class="mdui-icon material-icons">fiber_new</i>Week {{ data }}</a>
-          <a :href="('/en-US/weekly/week-' + data+ '-cn')" v-else>Week {{ data }}</a>
+          <a :href="('/en-US/weekly/week-' + data + '-cn')" v-if="data == weeks.latest"><i class="mdui-icon material-icons">fiber_new</i>Week {{ data }}</a>
+          <a :href="('/en-US/weekly/week-' + data + '-cn')" v-else>Week {{ data }}</a>
         </button>
       </div>
 
@@ -17,11 +17,12 @@
         <div style="padding-left:15px;">{{ data.version }}</div>
         <br />
         <button class="mdui-btn mdui-text-capitalize" v-for="(data) in data.weeks">
-          <a :href="('/en-US/weekly/week-' + data+ '-cn')" target="_blank" v-if="data >= weeks.oldest-1">Week {{ data }}</a>
-          <a :href="('https://old.miuier.com/weekly/logs/week-' + data+ '-cn')" target="_blank" v-else>Week {{ data }}</a>
+          <a :href="('/en-US/weekly/week-' + data + '-cn')" target="_blank" v-if="data >= weeks.oldest - 1">Week {{ data }}</a>
+          <a :href="('https://old.miuier.com/weekly/logs/week-' + data + '-cn')" target="_blank" v-else>Week {{ data }}</a>
         </button>
       </div>
-    </div>
+    </div> <br />
+    <EnPcDisclaimer />
     <EnPcFooter />
   </div>
 </template>

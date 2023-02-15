@@ -2,6 +2,7 @@
   <div>
     <EnPcNav />
     <div class="mdui-center PNF">This Page is under development.</div>
+    <EnPcDisclaimer />
     <EnPcFooter />
   </div>
 </template>

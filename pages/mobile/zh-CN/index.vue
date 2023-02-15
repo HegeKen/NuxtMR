@@ -141,7 +141,8 @@
         </div>
       </div>
     </div>
-    <CnMobileFooter />
+    <CnMobileDisclaimer />
+<CnMobileFooter />
   </div>
 </template>
 

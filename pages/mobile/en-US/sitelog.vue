@@ -1,23 +1,26 @@
 <template>
-  <div class="mdui-container-fluid">
+  <div>
     <EnMobileNav />
-    <div class="mdui-panel">
-      <div class="mdui-panel-item mdui-panel-item-open" v-for="(data) in site.log">
-        <div class="mdui-panel-item-header">
-          <div class="mdui-panel-item-title mdui-text-color-red">Updated At：{{ data.sudate }}</div>
-        </div>
-        <div class="mdui-panel-item-body">
-          <p><b>Site Version：</b>{{ data.ver }}</p>
-          <p v-show="data.newDeviceEn != ''"><b>Newly Added devices ：</b>{{ data.newDeviceEn }}</p>
-          <div v-if="data.log.length == 0"></div>
-          <div v-else><b>Update Log：</b>
-            <ol>
-              <li v-for="(data) in data.log">{{ data.En }}</li>
-            </ol>
+    <div class="mdui-container-fluid">
+      <div class="mdui-panel">
+        <div class="mdui-panel-item mdui-panel-item-open" v-for="(data) in site.log">
+          <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-red">Updated At：{{ data.sudate }}</div>
+          </div>
+          <div class="mdui-panel-item-body">
+            <p><b>Site Version：</b>{{ data.ver }}</p>
+            <p v-show="data.newDeviceEn != ''"><b>Newly Added devices ：</b>{{ data.newDeviceEn }}</p>
+            <div v-if="data.log.length == 0"></div>
+            <div v-else><b>Update Log：</b>
+              <ol>
+                <li v-for="(data) in data.log">{{ data.En }}</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <EnMobileDisclaimer />
     <EnMobileFooter />
   </div>
 </template>

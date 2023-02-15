@@ -18,6 +18,7 @@
         </div>
       </div>
     </div>
+    <EnPcDisclaimer />
     <EnPcFooter />
   </div>
 </template>

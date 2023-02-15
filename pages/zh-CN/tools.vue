@@ -89,6 +89,8 @@
         </div>
       </div>
     </div>
+    <br />
+    <CnPcDisclaimer />
     <CnPcFooter />
   </div>
 </template>

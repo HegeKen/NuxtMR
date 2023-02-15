@@ -38,7 +38,7 @@
           </div>
         </div>
       </div>
-      <div class="mdui-table-fluid" v-show="week.showdevices !='0'">
+      <div class="mdui-table-fluid" v-show="week.showdevices != '0'">
         <table class="mdui-table">
           <thead>
             <tr>
@@ -62,6 +62,8 @@
           </tbody>
         </table>
       </div>
+      <br />
+      <EnPcDisclaimer />
       <EnPcFooter />
     </div>
   </div>

@@ -14,7 +14,7 @@
               <li><b>Codename：</b>{{ roms.codename }}</li>
               <li><b>Thanks to：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></li>
               <li><b>Unlock Your Bootloader：</b>You need to unlock your phone's bootloader if you want to flash a rom into your phone via fastboot method, and your data could be deleted as you choose, please make sure you have backed up your personal data. <a href="https://en.miui.com/unlock/download_en.html" class="milink">Apply for Bootloader Unlock here.</a></li>
-              <li v-for="{ en } in roms.attentions" v-show="en!=''">{{ en }}</li>
+              <li v-for="{ en } in roms.attentions" v-show="en != ''">{{ en }}</li>
             </ol>
           </div>
         </div>
@@ -22,46 +22,47 @@
     </div>
     <br />
     <div id="STABLE">
-      <div v-for="{ branch, enname, show , links } in roms.branches" class="mdui-container-fluid" v-show="show==1">
-      <div mdui-panel="{accordion: true}" class="mdui-panel mdui-panel-gapless">
-        <div class="mdui-panel-item">
-          <div class="mdui-panel-item-header">
-            <div class="mdui-panel-item-title">{{ enname }}</div>
-            <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-          </div>
-          <div class="mdui-panel-item-body">
-            <div class="mdui-table-fluid">
-              <table class="mdui-table">
-                <thead>
-                  <tr>
-                    <th class="mdui-text-center">No.</th>
-                      <th class="mdui-text-center" v-show="branch=='msap'">Version</th>
-                      <th class="mdui-text-center" v-show="branch!='msap'">MIUI</th>
+      <div v-for="{ branch, enname, show, links } in roms.branches" class="mdui-container-fluid" v-show="show == 1">
+        <div mdui-panel="{accordion: true}" class="mdui-panel mdui-panel-gapless">
+          <div class="mdui-panel-item">
+            <div class="mdui-panel-item-header">
+              <div class="mdui-panel-item-title">{{ enname }}</div>
+              <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-panel-item-body">
+              <div class="mdui-table-fluid">
+                <table class="mdui-table">
+                  <thead>
+                    <tr>
+                      <th class="mdui-text-center">No.</th>
+                      <th class="mdui-text-center" v-show="branch == 'msap'">Version</th>
+                      <th class="mdui-text-center" v-show="branch != 'msap'">MIUI</th>
                       <th class="mdui-text-center">Android</th>
-                    <th>Recovery</th>
-                    <th>Fastboot</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(data,index) in links">
-                    <td class="mdui-text-center">{{links.length - index }}</td>
-                    <td class="mdui-text-center">{{data.miui}}</td>
-                    <td class="mdui-text-center">{{data.android}}</td>
-                    <td v-if="data.recovery==''">N/A</td>
-                    <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">{{data.recovery}}</a></td>
-                    <td v-if="data.fastboot==''">N/A</td>
-                    <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">{{data.fastboot}}</a></td>
-                  </tr>
-                </tbody>
-              </table>
+                      <th>Recovery</th>
+                      <th>Fastboot</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(data, index) in links">
+                      <td class="mdui-text-center">{{ links.length - index }}</td>
+                      <td class="mdui-text-center">{{ data.miui }}</td>
+                      <td class="mdui-text-center">{{ data.android }}</td>
+                      <td v-if="data.recovery == ''">N/A</td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">{{ data.recovery }}</a></td>
+                      <td v-if="data.fastboot == ''">N/A</td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">{{ data.fastboot }}</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
 
-
+    <br />
+    <EnPcDisclaimer />
     <EnPcFooter />
   </div>
 

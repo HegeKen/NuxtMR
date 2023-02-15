@@ -2,13 +2,13 @@
   <div>
     <CnMobileNav />
     <div class="mdui-container-fluid" v-for="(data) in weeks.versions">
-      <div v-if="data.version =='MIUI 14'">
+      <div v-if="data.version == 'MIUI 14'">
         <br />
         <div style="padding-left:15px;">{{ data.version }}</div>
         <br />
         <button class="mdui-btn" v-for="(data) in data.weeks">
-          <a :href="('/mobile/zh-CN/weekly/week-' + data+ '-cn')" v-if="data == weeks.latest"><i class="mdui-icon material-icons">fiber_new</i>第{{ data }}周</a>
-          <a :href="('/mobile/zh-CN/weekly/week-' + data+ '-cn')" v-else>第{{ data }}周</a>
+          <a :href="('/mobile/zh-CN/weekly/week-' + data + '-cn')" v-if="data == weeks.latest"><i class="mdui-icon material-icons">fiber_new</i>第{{ data }}周</a>
+          <a :href="('/mobile/zh-CN/weekly/week-' + data + '-cn')" v-else>第{{ data }}周</a>
         </button>
       </div>
 
@@ -17,11 +17,13 @@
         <div style="padding-left:15px;">{{ data.version }}</div>
         <br />
         <button class="mdui-btn" v-for="(data) in data.weeks">
-          <a :href="('/mobile/zh-CN/weekly/week-' + data+ '-cn')" target="_blank" v-if="data >= weeks.oldest-1">第{{ data }}周</a>
-          <a :href="('https://old.miuier.com/weekly/logs/week-' + data+ '-cn')" target="_blank" v-else>第{{ data }}周</a>
+          <a :href="('/mobile/zh-CN/weekly/week-' + data + '-cn')" target="_blank" v-if="data >= weeks.oldest - 1">第{{ data }}周</a>
+          <a :href="('https://old.miuier.com/weekly/logs/week-' + data + '-cn')" target="_blank" v-else>第{{ data }}周</a>
         </button>
       </div>
     </div>
+    <br />
+    <CnMobileDisclaimer />
     <CnMobileFooter />
   </div>
 </template>

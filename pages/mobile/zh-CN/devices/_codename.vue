@@ -14,14 +14,16 @@
               <li><b>机型代号：</b>{{ roms.codename }}</li>
               <li><b>感谢网站：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></li>
               <li><b>手机解锁：</b>所有线刷都以解锁Bootloader为前提，并且解锁Bootloader时会清除数据，请提前做好备份工作，<a href="https://www.miui.com/unlock" class="milink">传送门</a></li>
-              <li v-for="{ cn } in roms.attentions" v-show="cn!=''">{{ cn }}</li>
+              <li v-for="{ cn } in roms.attentions" v-show="cn != ''">{{ cn }}</li>
             </ol>
           </div>
         </div>
       </div>
     </div>
     <br />
-    <CnAd />
+    <div class="mdui-container-fluid" id="Advertisement">
+      <CnAd />
+    </div>
     <br />
     <div id="STABLE">
       <div v-for="{ branch, cnname, show, links } in roms.branches" class="mdui-container-fluid" v-show="show == 1">
@@ -37,9 +39,9 @@
                   <thead>
                     <tr>
                       <th class="mdui-text-center">序号</th>
-                    <th class="mdui-text-center" v-show="branch=='msap'">版本</th>
-                    <th class="mdui-text-center" v-show="branch!='msap'">米柚</th>
-                    <th class="mdui-text-center">安卓</th>
+                      <th class="mdui-text-center" v-show="branch == 'msap'">版本</th>
+                      <th class="mdui-text-center" v-show="branch != 'msap'">米柚</th>
+                      <th class="mdui-text-center">安卓</th>
                       <th>卡刷包</th>
                       <th>线刷包</th>
                     </tr>
@@ -62,6 +64,8 @@
         </div>
       </div>
     </div>
+    <br />
+    <CnMobileDisclaimer />
     <CnMobileFooter />
   </div>
 

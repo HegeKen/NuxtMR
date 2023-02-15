@@ -114,6 +114,8 @@
         </div>
       </div>
     </div>
+    <br />
+    <EnMobileDisclaimer />
     <EnMobileFooter />
   </div>
 </template>

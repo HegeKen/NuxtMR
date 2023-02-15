@@ -1,6 +1,7 @@
 <template>
-  <div class="mdui-container-fluid">
+  <div>
     <CnMobileNav />
+    <div class="mdui-container-fluid">
     <div class="mdui-panel">
       <div class="mdui-panel-item mdui-panel-item-open" v-for="(data) in site.log">
         <div class="mdui-panel-item-header">
@@ -18,7 +19,9 @@
         </div>
       </div>
     </div>
-    <CnMobileFooter />
+    </div>
+    <CnMobileDisclaimer />
+<CnMobileFooter />
   </div>
 </template>
 

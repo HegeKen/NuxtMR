@@ -63,6 +63,8 @@
         </table>
       </div>
     </div>
+    <br />
+    <CnMobileDisclaimer />
     <CnMobileFooter />
   </div>
 </template>

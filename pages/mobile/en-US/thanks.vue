@@ -5,10 +5,9 @@
     <div class="mdui-container-fluid">
       <div class="mdui-panel mdui-panel-gapless">
         <div class="mdui-panel-item mdui-panel-item-open">
-          <div class="mdui-panel-item-header mdui-text-color-red">
-            With development of this site, we used partial data from folowwing persons and websites（ List Not in perticular order ）,I thank you all with the support.
-          </div>
+          <div class="mdui-panel-item-header mdui-text-color-red">Thank you all!</div>
           <div class="mdui-panel-item-body">
+            <p>With development of this site, we used partial data from folowwing persons and websites（ List Not in perticular order ）,I thank you all with the support.</p>
             <p><a href="https://github.com/KHwang9883">Kevin Huang</a></p>
             <p><a href="https://github.com/mooseIre">moose</a></p>
             <p><a href="https://github.com/wzsx150">wzsx150</a></p>
@@ -36,7 +35,8 @@
         </div>
       </div>
     </div>
-
+    <br />
+    <EnMobileDisclaimer />
     <EnMobileFooter />
   </div>
 </template>

@@ -9,6 +9,8 @@
       <br />
       <p><a href="https://www.uotan.cn/">Outan Forum</a></p>
     </div>
+    <br />
+    <EnPcDisclaimer />
     <EnPcFooter />
   </div>
 </template>

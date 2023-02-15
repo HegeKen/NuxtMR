@@ -14,7 +14,7 @@
               <li><b>Codename：</b>{{ roms.codename }}</li>
               <li><b>Thanks to：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></li>
               <li><b>Unlock Your Bootloader：</b>You need to unlock your phone's bootloader if you want to flash a rom into your phone via fastboot method, and your data could be deleted as you choose, please make sure you have backed up your personal data. <a href="https://en.miui.com/unlock/download_en.html" class="milink">Apply for Bootloader Unlock here.</a></li>
-              <li v-for="{ en } in roms.attentions" v-show="en!=''">{{ en }}</li>
+              <li v-for="{ en } in roms.attentions" v-show="en != ''">{{ en }}</li>
             </ol>
           </div>
         </div>
@@ -35,8 +35,8 @@
                   <thead>
                     <tr>
                       <th class="mdui-text-center">No.</th>
-                      <th class="mdui-text-center" v-show="branch=='msap'">Version</th>
-                      <th class="mdui-text-center" v-show="branch!='msap'">MIUI</th>
+                      <th class="mdui-text-center" v-show="branch == 'msap'">Version</th>
+                      <th class="mdui-text-center" v-show="branch != 'msap'">MIUI</th>
                       <th class="mdui-text-center">Android</th>
                       <th>Recovery</th>
                       <th>Fastboot</th>
@@ -60,7 +60,8 @@
         </div>
       </div>
     </div>
-
+    <br />
+    <EnMobileDisclaimer />
     <EnMobileFooter />
   </div>
 

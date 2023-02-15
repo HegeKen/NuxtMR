@@ -2,6 +2,7 @@
   <div>
     <CnPcNav />
     <div class="mdui-center PNF">该页面正在构建中</div>
+        <CnPcDisclaimer />
     <CnPcFooter />
   </div>
 </template>

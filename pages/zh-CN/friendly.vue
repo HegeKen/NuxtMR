@@ -4,11 +4,12 @@
     <br />
     <br />
     <br />
-    <div class="mdui-container">
+    <div class="mdui-container-fluid">
       <p><a href="https://sj.biada.cn/">MIUI相关资源导航站</a></p>
       <br />
       <p><a href="https://www.uotan.cn/">柚坛社区</a></p>
     </div>
+        <CnPcDisclaimer />
     <CnPcFooter />
   </div>
 </template>

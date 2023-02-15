@@ -18,6 +18,7 @@
         </div>
       </div>
     </div>
+        <CnPcDisclaimer />
     <CnPcFooter />
   </div>
 </template>

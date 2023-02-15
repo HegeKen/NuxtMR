@@ -2,7 +2,8 @@
   <div>
     <EnMobileNav />
     <div class="mdui-center PNF">This Page is under development.</div>
-    <EnMobileFooter />
+    <EnMobileDisclaimer />
+<EnMobileFooter />
   </div>
 </template>
 <script>

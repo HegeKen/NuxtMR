@@ -10,7 +10,7 @@
           <div class="mdui-panel-item-body">
             <div><b>Updated at：</b>{{ site.sudate }}</div>
             <br />
-            <div v-if="site.newDeviceEn !=''"><b>Newly Added Devices ：</b>{{ site.newDeviceEn }}</div>
+            <div v-if="site.newDeviceEn != ''"><b>Newly Added Devices ：</b>{{ site.newDeviceEn }}</div>
             <br />
             <div v-show="site.log.length > 0"><b>Update Log ：</b></div>
             <div v-for="( log, index ) in site.log" v-show="site.log['0'].En != ''">
@@ -58,7 +58,9 @@
             <div class="mdui-panel-item-title mdui-text-color-orange">Site's Supporting devices</div>
           </div>
           <div class="mdui-panel-item-body">
-            <b><div>Our site currently supports following {{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 7 }} devices：</div></b>
+            <b>
+              <div>Our site currently supports following {{ devices.mi.length + devices.mise.length + devices.micc.length + devices.minote.length + devices.minote.length + devices.mimax.length + devices.mimix.length + devices.mipad.length + devices.micivi.length + devices.mia.length + devices.miothers.length + devices.rm.length + devices.rmnote.length + devices.rmk.length + devices.rmpad.length + devices.rmothers.length + devices.pococ.length + devices.pocof.length + devices.pocom.length + devices.pocox.length - 7 }} devices：</div>
+            </b>
             <ul>
               <li>Mi Series ：<span v-for="(data, index) in devices.mi">
                   <a :href="('/en-US/devices/' + data.code)" v-show="index != devices.mi.length - 1"> {{ data.NameEn }} /</a>
@@ -159,6 +161,7 @@
         </div>
       </div>
     </div>
+    <EnPcDisclaimer />
     <EnPcFooter />
   </div>
 </template>

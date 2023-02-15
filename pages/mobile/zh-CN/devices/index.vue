@@ -114,6 +114,8 @@
         </div>
       </div>
     </div>
+    <br />
+    <CnMobileDisclaimer />
     <CnMobileFooter />
   </div>
 </template>

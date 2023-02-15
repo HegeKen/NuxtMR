@@ -69,6 +69,7 @@
         </p>
       </div>
     </div>
+        <CnPcDisclaimer />
     <CnPcFooter />
   </div>
 </template>

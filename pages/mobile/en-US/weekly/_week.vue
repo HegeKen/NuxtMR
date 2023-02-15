@@ -62,6 +62,8 @@
         </table>
       </div>
     </div>
+    <br />
+    <EnMobileDisclaimer />
     <EnMobileFooter />
   </div>
 

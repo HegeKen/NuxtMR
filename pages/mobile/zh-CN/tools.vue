@@ -1,7 +1,8 @@
 <template>
-  <div class="mdui-container-fluid">
+  <div>
     <CnMobileNav />
     <br />
+    <div class="mdui-container-fluid">
     <div mdui-panel="{accordion: true}" class="mdui-panel">
       <div class="mdui-panel-item mdui-panel-item-open">
         <div class="mdui-panel-item-header">
@@ -89,7 +90,9 @@
         </div>
       </div>
     </div>
-    <CnMobileFooter />
+    </div><br />
+    <CnMobileDisclaimer />
+<CnMobileFooter />
   </div>
 </template>
 <script>

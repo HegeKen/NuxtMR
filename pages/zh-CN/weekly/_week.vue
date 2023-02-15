@@ -22,7 +22,9 @@
           </div>
         </div>
       </div>
-      <CnAd />
+      <div class="mdui-container-fluid" id="Advertisement">
+        <CnAd />
+      </div>
       <div class="mdui-panel" v-for="(data) in week.logs">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
@@ -63,8 +65,9 @@
           </tbody>
         </table>
       </div>
+      <br />
+      <CnPcDisclaimer />
       <CnPcFooter />
-
     </div>
   </div>
 

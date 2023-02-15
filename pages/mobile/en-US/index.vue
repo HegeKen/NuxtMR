@@ -159,7 +159,8 @@
         </div>
       </div>
     </div>
-    <EnMobileFooter />
+    <EnMobileDisclaimer />
+<EnMobileFooter />
   </div>
 </template>
 
