@@ -2,11 +2,11 @@
   <div>
     <div class="mdui-color-deep-orange-accent mdui-text-color-white">
       <div class="mdui-toolbar">
-        <div><a href="javascript:;" class="mdui-btn mdui-btn-icon tri" mdui-drawer="{target:'#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></a><span class="mdui-typo-title">MIUI官方ROM仓库</span></div>
+        <div><a href="javascript:;" class="mdui-btn mdui-btn-icon tri" mdui-drawer="{target:'#main-drawer', swipe: true}" mdui-drawer-close><i class="mdui-icon material-icons">menu</i></a><span class="mdui-typo-title">MIUI官方ROM仓库</span></div>
         <div class="mdui-toolbar-spacer"></div>
         <img src="/assets/logo/Logo-Str-White.png" title="SiteLogo" width="150px">
       </div>
-      <div class="mdui-drawer mdui-drawer-left mdui-text-color-black-text" id="main-drawer">
+      <div class="mdui-drawer mdui-drawer-close mdui-drawer-left mdui-text-color-black-text" id="main-drawer">
         <ul class="mdui-list">
           <a href="/mobile/zh-CN/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">home</i><div class="mdui-list-item-content">首页</div></li></a>
           <a href="/mobile/zh-CN/tutorial"><li class="mdui-list-item mdui-hidden"><i class="mdui-list-item-icon mdui-icon material-icons">adb</i><div class="mdui-list-item-content">刷机教程</div></li></a>

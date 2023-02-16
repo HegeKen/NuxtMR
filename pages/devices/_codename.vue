@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CnPcNav />
+    <CnMobileNav />
     <br />
     <div class="mdui-container-fluid">
       <div class="mdui-panel mdui-panel-gapless mdui-shadow-1">
@@ -21,9 +21,13 @@
       </div>
     </div>
     <br />
+    <div class="mdui-container-fluid" id="Advertisement">
+      <CnAd />
+    </div>
+    <br />
     <div id="STABLE">
       <div v-for="{ branch, cnname, show, links } in roms.branches" class="mdui-container-fluid" v-show="show == 1">
-        <div mdui-panel="{accordion: true}" class="mdui-panel mdui-panel-gapless">
+        <div mdui-panel class="mdui-panel mdui-panel-gapless">
           <div class="mdui-panel-item">
             <div class="mdui-panel-item-header">
               <div class="mdui-panel-item-title">{{ cnname }}</div>
@@ -48,9 +52,9 @@
                       <td class="mdui-text-center">{{ data.miui }}</td>
                       <td class="mdui-text-center">{{ data.android }}</td>
                       <td v-if="data.recovery == ''">未公布</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">{{ data.recovery }}</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
                       <td v-if="data.fastboot == ''">未公布</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">{{ data.fastboot }}</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -60,10 +64,9 @@
         </div>
       </div>
     </div>
-
     <br />
-    <CnPcDisclaimer />
-    <CnPcFooter />
+    <CnMobileDisclaimer />
+    <CnMobileFooter />
   </div>
 
 </template>
