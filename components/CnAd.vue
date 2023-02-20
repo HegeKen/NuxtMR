@@ -6,6 +6,11 @@
         <i class="mdui-panel-item-arrow mdui-icon material-icons">format_list_bulleted</i>
       </div>
       <div class="mdui-panel-item-body">
+        <div><b>进入店铺选购</b></div>
+        <div><a href="https://u.jd.com/KQyw7O6">小米手机官方旗舰店</a></div>
+        <br />
+        <br />
+        <div><b>选购手机</b></div>
         <div><a href="https://u.jd.com/Mbl1YWp">在京东选购小米13</a></div>
         <br />
         <div><a href="https://u.jd.com/Mzlq2Sd">在京东选购小米13 Pro</a></div>
