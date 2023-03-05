@@ -1,3 +1,4 @@
+import sitemap from './config/sitemap'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -73,8 +74,10 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
-
+  modules: [
+    // '@nuxtjs/sitemap'
+  ],
+  sitemap:sitemap,
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   loading: {
