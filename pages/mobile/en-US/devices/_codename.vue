@@ -14,6 +14,7 @@
               <li><b>Codename：</b>{{ roms.codename }}</li>
               <li><b>Thanks to：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></li>
               <li><b>Unlock Your Bootloader：</b>You need to unlock your phone's bootloader if you want to flash a rom into your phone via fastboot method, and your data could be deleted as you choose, please make sure you have backed up your personal data. <a href="https://en.miui.com/unlock/download_en.html" class="milink">Apply for Bootloader Unlock here.</a></li>
+              <li><b class="mdui-text-color-red">Risks：</b>We don't recommend flashing different ROM version out of your region, you may get flash errors, lose vendor data, or even brick your device，please make sure you are able to deal with those situation befor flashing, and flash ROMs on your own risk.</li>
               <li v-for="{ en } in roms.attentions" v-show="en != ''">{{ en }}</li>
             </ol>
           </div>
