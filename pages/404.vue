@@ -11,7 +11,7 @@
 export default {
   data() {
     return {
-      title: "该页面不存在 - MIUI官方ROM仓库"
+      title: "该页面不存在 - 404 Page Not Found"
     }
   },
   created() {
