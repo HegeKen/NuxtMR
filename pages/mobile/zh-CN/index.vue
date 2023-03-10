@@ -30,11 +30,10 @@
             <b>第{{site.latest}}周日志 ：</b><span><a :href="('/mobile/zh-CN/weekly/week-' + site.latest + '-cn')" target="_blank">{{ weeks.titleCn }}</a></span>
             <br />
             <br />
-            <b>上述开发版支持 ：</b><span v-for="(data, index) in weeks.devices">
+            <p v-show="weeks.showdevices != 0"><b>上述开发版支持 ：</b><span v-for="(data, index) in weeks.devices">
               <span v-show="index != weeks.devices.length - 1">{{ data.NameCn }};</span>
               <span v-show="index == weeks.devices.length - 1">{{ data.NameCn }}</span>
-            </span><b>等{{ weeks.devices.length }}款机型。</b>
-            <br />
+            </span><b>等{{ weeks.devices.length }}款机型。</b></p>
           </div>
         </div>
         <div class="mdui-panel-item mdui-panel-item-open">

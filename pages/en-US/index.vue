@@ -30,12 +30,10 @@
             <b>Weekly Changelog ：</b><span><a :href="('/en-US/weekly/week-' + site.latest + '-cn')" target="_blank">{{ weeks.titleEn }}</a></span>
             <br />
             <br />
-            <b>This Weeks China Beta Supports Following {{ weeks.devices.length }} devices ：</b><span v-for="(data, index) in weeks.devices">
+            <p v-show="weeks.showdevices != 0"><b>This Weeks China Beta Supports Following {{ weeks.devices.length }} devices ：</b><span v-for="(data, index) in weeks.devices">
               <span v-show="index != weeks.devices.length - 1">{{ data.NameEn }};</span>
               <span v-show="index == weeks.devices.length - 1">{{ data.NameEn }}</span>
-            </span>
-            <br />
-            <br />
+            </span></p>
           </div>
         </div>
         <div class="mdui-panel-item mdui-panel-item-open">
