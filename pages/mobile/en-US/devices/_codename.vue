@@ -12,6 +12,8 @@
             <ol>
               <li><b>Device Name：</b>{{ roms.enname }}</li>
               <li><b>Codename：</b>{{ roms.codename }}</li>
+              <li v-show="roms.ccshow != ''"><b>Communitys：</b><a :href="('https://www.xiaomi.cn/board/' + roms.cdid)" v-show="roms.cdid != ''">Mi Community(China)&emsp;</a><a :href="('https://new.c.mi.com/global/forum-sub/' + roms.gdid)" v-show="roms.gdid != ''">Xiaomi Community&emsp;</a><a :href="('https://c.po.co/global/circle/circledetail/' + roms.pcid)" v-show="roms.pcid != ''">POCO Community</a></li>
+              <li v-show="roms.cbshow != ''"><b>Apply for test：</b><span v-show="roms.csid.length > 0" v-for="(data) in roms.csid"><a :href="('https://web.vip.miui.com/page/info/mio/mio/testDetails?id=' + data)">China Stable&emsp;</a></span><span v-show="roms.cbid.length > 0" v-for="(data) in roms.cbid"><a :href="('https://web.vip.miui.com/page/info/mio/mio/testDetails?id=' + data)">China Beta&emsp;</a></span></li>
               <li><b>Thanks to：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></li>
               <li><b>Unlock Your Bootloader：</b>You need to unlock your phone's bootloader if you want to flash a rom into your phone via fastboot method, and your data could be deleted as you choose, please make sure you have backed up your personal data. <a href="https://en.miui.com/unlock/download_en.html" class="milink">Apply for Bootloader Unlock here.</a></li>
               <li><b class="mdui-text-color-red">Risks：</b>We don't recommend flashing different ROM version out of your region, you may get flash errors, lose vendor data, or even brick your device，please make sure you are able to deal with those situation befor flashing, and flash ROMs on your own risk.</li>
