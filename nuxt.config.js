@@ -58,6 +58,11 @@ export default {
         async: true,
         src: "https://www.googletagmanager.com/gtag/js?id=UA-153213840-1",
       },
+      {
+        async: true,
+        crossorigin: "anonymous",
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354463786843100",
+      },
     ],
   },
 

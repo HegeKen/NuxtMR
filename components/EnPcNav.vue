@@ -44,6 +44,6 @@ export default {
     path = this.$route.path;
     this.zh = path.replace(/en-US/, "zh-CN");
     this.en = path.replace(/zh-CN/, "en-US");
-  }
+  },
 }
 </script>
