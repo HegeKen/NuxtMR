@@ -8,7 +8,7 @@
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-orange">注意：</div>
           </div>
-          <div class="mdui-panel-item-body">
+          <div class="mdui-panel-item-body devnotice">
             <ol>
               <li><b>机型名称：</b>{{ roms.cnname }}</li>
               <li><b>机型代号：</b>{{ roms.codename }}</li>

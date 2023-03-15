@@ -8,7 +8,7 @@
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-orange">Notes：</div>
           </div>
-          <div class="mdui-panel-item-body">
+          <div class="mdui-panel-item-body devnotice">
             <ol>
               <li><b>Device Name：</b>{{ roms.enname }}</li>
               <li><b>Codename：</b>{{ roms.codename }}</li>
