@@ -3,15 +3,15 @@ body {
   /* filter: grayscale(); */
 }
 .mdui-color-deep-orange-accent {
-  background-color: #fe7700 !important;
+  background-color: #ff6900 !important;
 }
 .mdui-text-color-orange{
-  color:#fe7700 !important;
+  color:#ff6900 !important;
   font-size: 25px !important;
 }
 
 .mdui-ripple-orange{
-  color:#fe7700 !important;
+  color:#ff6900 !important;
 }
 a {
   text-decoration: none;
