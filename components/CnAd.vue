@@ -21,7 +21,7 @@
         <br />
         <div><a href="https://u.jd.com/usH88LQ">在京东选购小米平板5</a></div>
         <br />
-        <div><a href="https://u.jd.com/ubH0EQx">在京东选购Redmi Note 12 Turbo</a></div>
+        <div><a href="https://u.jd.com/szKH3Tm">在京东选购Redmi Note 12 Turbo</a></div>
         <br />
         <div><a href="https://u.jd.com/uuHYAfe">在京东选购Redmi Note 12 Pro</a></div>
         <br />
