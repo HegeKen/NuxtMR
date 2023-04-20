@@ -15,19 +15,23 @@
         <br />
         <div><b>选购手机</b></div>
         <br />
-        <div><a href="https://u.jd.com/uuHSDCZ">在京东选购小米13</a></div>
+        <div><a href="https://u.jd.com/Q82KMf8">在京东选购小米13 Ultra</a></div>
         <br />
         <div><a href="https://u.jd.com/uzHPi3F">在京东选购小米13 Pro</a></div>
         <br />
-        <div><a href="https://u.jd.com/usH88LQ">在京东选购小米平板5</a></div>
+        <div><a href="https://u.jd.com/uuHSDCZ">在京东选购小米13</a></div>
+        <br />
+        <div><a href="https://u.jd.com/Qz2dpfM">在京东选购小米平板6 Pro</a></div>
+        <br />
+        <div><a href="https://u.jd.com/Qb2z6PU">在京东选购小米平板6</a></div>
         <br />
         <div><a href="https://u.jd.com/szKH3Tm">在京东选购Redmi Note 12 Turbo</a></div>
         <br />
         <div><a href="https://u.jd.com/uuHYAfe">在京东选购Redmi Note 12 Pro</a></div>
         <br />
-        <div><a href="https://u.jd.com/uzHvudF">在京东选购Redmi K60</a></div>
-        <br />
         <div><a href="https://u.jd.com/u8HSxVT">在京东选购Redmi K60 Pro</a></div>
+        <br />
+        <div><a href="https://u.jd.com/uzHvudF">在京东选购Redmi K60</a></div>
         <br />
       </div>
     </div>
