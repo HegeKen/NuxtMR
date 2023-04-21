@@ -37,6 +37,8 @@
           </div>
         </div>
       </div>
+      <EnAd />
+      <br />
       <div class="mdui-table-fluid" v-show="week.showdevices != '0'">
         <table class="mdui-table">
           <thead>
@@ -66,7 +68,6 @@
     <EnMobileDisclaimer />
     <EnMobileFooter />
   </div>
-
 </template>
 <script>
 let baseurl = "https://data.miuier.com/data/weekly/week-";

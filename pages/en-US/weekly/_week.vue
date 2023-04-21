@@ -38,6 +38,8 @@
           </div>
         </div>
       </div>
+      <EnAd />
+      <br />
       <div class="mdui-table-fluid" v-show="week.showdevices != '0'">
         <table class="mdui-table">
           <thead>

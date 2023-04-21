@@ -23,6 +23,10 @@
       </div>
     </div>
     <br />
+    <div class="mdui-container-fluid" id="Advertisement">
+      <EnAd />
+      <br />
+    </div>
     <div id="STABLE">
       <div v-for="{ branch, enname, show, links } in roms.branches" class="mdui-container-fluid" v-show="show == 1">
         <div mdui-panel="{accordion: true}" class="mdui-panel mdui-panel-gapless">
