@@ -6,7 +6,7 @@
         <div class="mdui-toolbar-spacer"></div>
         <img src="/assets/logo/Logo-Str-White.png" title="SiteLogo" width="160px">
       </div>
-      <div class="mdui-drawer  mdui-drawer-close mdui-drawer-left mdui-text-color-black-text" id="main-drawer">
+      <div class="mdui-drawer mdui-drawer-close mdui-drawer-left mdui-text-color-black-text" id="main-drawer">
         <ul class="mdui-list">
           <a href="/mobile/en-US/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">home</i><div class="mdui-list-item-content">HomePage</div></li></a>
           <a href="/mobile/en-US/tutorial"><li class="mdui-list-item mdui-hidden"><i class="mdui-list-item-icon mdui-icon material-icons">adb</i><div class="mdui-list-item-content">Tutorial</div></li></a>
