@@ -30,7 +30,7 @@
             <div v-for="{ code, NameEn } in devices.mimax" class="mdui-chip">
               <a :href="('/en-US/devices/' + code)"><span class="mdui-chip-title"> {{ NameEn }}({{ code }}) </span></a>
             </div>
-            <div class="series">小米MIXSeries：</div>
+            <div class="series">Mi MIX Series：</div>
             <div v-for="{ code, NameEn } in devices.mimix" class="mdui-chip">
               <a :href="('/en-US/devices/' + code)"><span class="mdui-chip-title"> {{ NameEn }}({{ code }}) </span></a>
             </div>
@@ -62,7 +62,7 @@
             <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
           </div>
           <div class="mdui-panel-item-body">
-            <div class="series">RedmiSeries：</div>
+            <div class="series">Redmi Series：</div>
             <div v-for="{ code, NameEn } in devices.rm" class="mdui-chip">
               <a :href="('/en-US/devices/' + code)"><span class="mdui-chip-title"> {{ NameEn }}({{ code }}) </span></a>
             </div>
