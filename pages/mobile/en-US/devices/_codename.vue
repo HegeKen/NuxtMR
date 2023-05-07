@@ -24,7 +24,6 @@
     </div>
     <br />
     <div class="mdui-container-fluid" id="Advertisement">
-      <EnAd />
       <br />
     </div>
     <div id="STABLE">
