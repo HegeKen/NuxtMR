@@ -8,30 +8,32 @@
       <div class="mdui-panel-item-body">
         <div><b>进入店铺选购</b></div>
         <br />
-        <div><a href="https://u.jd.com/usHZ8sB">小米手机官方旗舰店</a></div>
+        <div><a href="https://u.jd.com/ObJlZTt">小米手机官方旗舰店</a></div>
         <br />
-        <div><a href="https://u.jd.com/uqHGd41">小米官方旗舰店</a></div>
+        <div><a href="https://u.jd.com/OzJEY7P">小米官方旗舰店</a></div>
+        <br />
+        <div><a href="https://u.jd.com/OzJptRp">小米电视专卖店</a></div>
         <br />
         <br />
         <div><b>选购手机</b></div>
         <br />
-        <div><a href="https://u.jd.com/Q82KMf8">在京东选购小米13 Ultra</a></div>
+        <div><a href="https://u.jd.com/OzJPYbb">在京东选购小米13 Ultra</a></div>
         <br />
-        <div><a href="https://u.jd.com/uzHPi3F">在京东选购小米13 Pro</a></div>
+        <div><a href="https://u.jd.com/OuJpx7e">在京东选购小米13 Pro</a></div>
         <br />
-        <div><a href="https://u.jd.com/uuHSDCZ">在京东选购小米13</a></div>
+        <div><a href="https://u.jd.com/ObJcvep">在京东选购小米13</a></div>
         <br />
-        <div><a href="https://u.jd.com/Qz2dpfM">在京东选购小米平板6 Pro</a></div>
+        <div><a href="https://u.jd.com/OQJcQRk">在京东选购小米平板6 Pro</a></div>
         <br />
-        <div><a href="https://u.jd.com/Qb2z6PU">在京东选购小米平板6</a></div>
+        <div><a href="https://u.jd.com/O8JHo0j">在京东选购小米平板6</a></div>
         <br />
-        <div><a href="https://u.jd.com/szKH3Tm">在京东选购Redmi Note 12 Turbo</a></div>
+        <div><a href="https://u.jd.com/OiJfjjK">在京东选购Redmi Note 12 Turbo</a></div>
         <br />
-        <div><a href="https://u.jd.com/uuHYAfe">在京东选购Redmi Note 12 Pro</a></div>
+        <div><a href="https://u.jd.com/OiJjunR">在京东选购Redmi Note 12 Pro</a></div>
         <br />
-        <div><a href="https://u.jd.com/u8HSxVT">在京东选购Redmi K60 Pro</a></div>
+        <div><a href="https://u.jd.com/OiJXUsh">在京东选购Redmi K60 Pro</a></div>
         <br />
-        <div><a href="https://u.jd.com/uzHvudF">在京东选购Redmi K60</a></div>
+        <div><a href="https://u.jd.com/OqJXGaR">在京东选购Redmi K60</a></div>
         <br />
       </div>
     </div>
