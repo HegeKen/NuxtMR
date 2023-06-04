@@ -6,7 +6,5 @@ $q_urldecode = urldecode($q);
 $miui_key = 'miuiotavalided11';
 $miui_iv = '0102030405060708';
 
-$device_data = openssl_decrypt(base64_decode($q_urldecode), AES_128_CBC, $miui_key, $options=OPENSSL_RAW_DATA, $miui_iv);
-
-print_r ("device_data = $device_data\n\n");
-?>
+$dcode = base64_decode($q_urldecode);
+print($dcode);
