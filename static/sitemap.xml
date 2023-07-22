@@ -1267,7 +1267,7 @@
 		<lastmod>2023-07-14</lastmod>
 	</url>
 	<url>
-		<loc>https://roms.miuier.com/devices/curtana_rf</loc>
+		<loc>https://roms.miuier.com/devices/curtana_in_rf</loc>
 		<priority>0.60</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-07-14</lastmod>
@@ -2881,7 +2881,7 @@
 		<lastmod>2023-07-14</lastmod>
 	</url>
 	<url>
-		<loc>https://roms.miuier.com/zh-CN/devices/curtana_rf</loc>
+		<loc>https://roms.miuier.com/zh-CN/devices/curtana_in_rf</loc>
 		<priority>0.40</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-07-14</lastmod>
@@ -4831,7 +4831,7 @@
 		<lastmod>2023-07-14</lastmod>
 	</url>
 	<url>
-		<loc>https://roms.miuier.com/en-US/devices/curtana_rf</loc>
+		<loc>https://roms.miuier.com/en-US/devices/curtana_in_rf</loc>
 		<priority>0.40</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-07-14</lastmod>
@@ -6439,7 +6439,7 @@
 		<lastmod>2023-07-14</lastmod>
 	</url>
 	<url>
-		<loc>https://roms.miuier.com/mobile/zh-CN/devices/curtana_rf</loc>
+		<loc>https://roms.miuier.com/mobile/zh-CN/devices/curtana_in_rf</loc>
 		<priority>0.20</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-07-14</lastmod>
@@ -8047,7 +8047,7 @@
 		<lastmod>2023-07-14</lastmod>
 	</url>
 	<url>
-		<loc>https://roms.miuier.com/mobile/en-US/devices/curtana_rf</loc>
+		<loc>https://roms.miuier.com/mobile/en-US/devices/curtana_in_rf</loc>
 		<priority>0.20</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-07-14</lastmod>
