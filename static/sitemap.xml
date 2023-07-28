@@ -1506,7 +1506,13 @@
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-04-12</lastmod>
 	</url>
-  	<url>
+	<url>
+		<loc>https://roms.miuier.com/zh-CN/weekly/week-608-cn</loc>
+		<priority>0.40</priority>
+		<changefreq>weekly</changefreq>
+		<lastmod>2023-07-21</lastmod>
+	</url>
+	<url>
 		<loc>https://roms.miuier.com/zh-CN/weekly/week-607-cn</loc>
 		<priority>0.40</priority>
 		<changefreq>weekly</changefreq>
@@ -3114,7 +3120,13 @@
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-07-14</lastmod>
 	</url>
-  	<url>
+	<url>
+		<loc>https://roms.miuier.com/weekly/logs/week-608-cn</loc>
+		<priority>0.40</priority>
+		<changefreq>weekly</changefreq>
+		<lastmod>2023-07-21</lastmod>
+	</url>
+	<url>
 		<loc>https://roms.miuier.com/weekly/logs/week-607-cn</loc>
 		<priority>0.40</priority>
 		<changefreq>weekly</changefreq>
@@ -3457,12 +3469,18 @@
 		<lastmod>2023-07-14</lastmod>
 	</url>
 	<url>
+		<loc>https://roms.miuier.com/en-US/weekly/week-608-cn</loc>
+		<priority>0.40</priority>
+		<changefreq>weekly</changefreq>
+		<lastmod>2023-07-21</lastmod>
+	</url>
+	<url>
 		<loc>https://roms.miuier.com/en-US/weekly/week-607-cn</loc>
 		<priority>0.40</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-07-21</lastmod>
 	</url>
-  	<url>
+	<url>
 		<loc>https://roms.miuier.com/en-US/weekly/week-606-cn</loc>
 		<priority>0.40</priority>
 		<changefreq>weekly</changefreq>
@@ -5065,12 +5083,18 @@
 		<lastmod>2023-07-14</lastmod>
 	</url>
 	<url>
+		<loc>https://roms.miuier.com/mobile/zh-CN/weekly/week-608-cn</loc>
+		<priority>0.20</priority>
+		<changefreq>weekly</changefreq>
+		<lastmod>2023-07-14</lastmod>
+	</url>
+	<url>
 		<loc>https://roms.miuier.com/mobile/zh-CN/weekly/week-607-cn</loc>
 		<priority>0.20</priority>
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-07-14</lastmod>
 	</url>
-  	<url>
+	<url>
 		<loc>https://roms.miuier.com/mobile/zh-CN/weekly/week-606-cn</loc>
 		<priority>0.20</priority>
 		<changefreq>weekly</changefreq>
@@ -6672,7 +6696,13 @@
 		<changefreq>weekly</changefreq>
 		<lastmod>2023-07-14</lastmod>
 	</url>
-  	<url>
+	<url>
+		<loc>https://roms.miuier.com/mobile/en-US/weekly/week-608-cn</loc>
+		<priority>0.20</priority>
+		<changefreq>weekly</changefreq>
+		<lastmod>2023-07-14</lastmod>
+	</url>
+	<url>
 		<loc>https://roms.miuier.com/mobile/en-US/weekly/week-607-cn</loc>
 		<priority>0.20</priority>
 		<changefreq>weekly</changefreq>
