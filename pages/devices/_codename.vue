@@ -64,6 +64,43 @@
           </div>
         </div>
       </div>
+      <div v-for="{ branch, cnname, show, links } in roms.branches" class="mdui-container-fluid mdui-hidden" v-show="show != 1">
+        <div mdui-panel class="mdui-panel mdui-panel-gapless">
+          <div class="mdui-panel-item">
+            <div class="mdui-panel-item-header">
+              <div class="mdui-panel-item-title">{{ cnname }}</div>
+              <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-panel-item-body">
+              <div class="mdui-table-fluid">
+                <table class="mdui-table">
+                  <thead>
+                    <tr>
+                      <th class="mdui-text-center">序号</th>
+                      <th class="mdui-text-center" v-show="branch == 'msap'">版本</th>
+                      <th class="mdui-text-center" v-show="branch != 'msap'">米柚</th>
+                      <th class="mdui-text-center">安卓</th>
+                      <th>卡刷包</th>
+                      <th>线刷包</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(data, index) in links">
+                      <td class="mdui-text-center">{{ links.length - index }}</td>
+                      <td class="mdui-text-center">{{ data.miui }}</td>
+                      <td class="mdui-text-center">{{ data.android }}</td>
+                      <td v-if="data.recovery == ''">未公布</td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
+                      <td v-if="data.fastboot == ''">未公布</td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <br />
     <CnMobileDisclaimer />
