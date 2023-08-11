@@ -30,7 +30,7 @@
             <b>第{{site.latest}}周日志 ：</b><span><a :href="('/zh-CN/weekly/week-' + site.latest + '-cn')" target="_blank">{{ weeks.titleCn }}</a></span>
             <br />
             <br />
-            <p v-show="weeks.showdevices != 0"><b>上述开发版支持 ：</b><span v-for="(data, index) in weeks.devices">
+            <p v-show="weeks.showdevices != 0"><b>本次开发版支持 ：</b><span v-for="(data, index) in weeks.devices">
               <span v-show="index != weeks.devices.length - 1">{{ data.NameCn }};</span>
               <span v-show="index == weeks.devices.length - 1">{{ data.NameCn }}</span>
             </span><b>等{{ weeks.devices.length }}款机型。</b></p>
