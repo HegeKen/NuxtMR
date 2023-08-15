@@ -1,6 +1,6 @@
 {
   "name": "miuiroms",
-  "version": "1.1.8",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
