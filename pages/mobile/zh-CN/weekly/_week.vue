@@ -21,7 +21,6 @@
           </div>
         </div>
       </div>
-      <CnAd />
       <div class="mdui-panel" v-for="(data) in week.logs">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
