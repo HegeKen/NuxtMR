@@ -41,7 +41,7 @@
             <div class="mdui-panel-item-title mdui-text-color-orange">稳定版/正式版更新</div>
           </div>
           <div class="mdui-panel-item-body">
-            <div><b>收录日期 ：</b>{{ site.date }}</div>
+            <div><b>最近更新 ：</b>{{ site.date }}</div>
             <div><b>收录周期 ：</b>{{ site.year }}年第{{ site.week }}周({{ site.period }})</div>
             <div><b>收录内容：</b></div>
             <p v-if="$fetchState.pending">正在读取....</p>

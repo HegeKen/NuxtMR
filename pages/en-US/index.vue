@@ -41,7 +41,7 @@
             <div class="mdui-panel-item-title mdui-text-color-orange">Stable Rom Updates</div>
           </div>
           <div class="mdui-panel-item-body">
-            <div><b>Stable ROM Updated：</b>{{ site.date }}</div>
+            <div><b>Latest Update：</b>{{ site.date }} (GMT+8)</div>
             <div><b>Weekly Period ：</b>Week {{ site.week }} of Year {{ site.year }}({{ site.period }})</div>
             <p v-if="$fetchState.pending">Fetching Data....</p>
             <p v-else-if="$fetchState.error">Fetching Failed.</p>
