@@ -23,8 +23,8 @@
             <div class="mdui-panel-item-title mdui-text-color-orange">开发版更新</div>
           </div>
           <div class="mdui-panel-item-body">
-            <b>开发版更新日期 ：</b>{{ weeks.update }}<br /><br />
-            <b>收录版本 ：</b><span>{{ weeks.versions }}</span>
+            <b>更新时间 ：</b>{{ weeks.update }}<br /><br />
+            <b>更新版本 ：</b><span>{{ weeks.versions }}</span>
             <br />
             <br />
             <b>第{{site.latest}}周日志 ：</b><span><a :href="('/mobile/zh-CN/weekly/week-' + site.latest + '-cn')" target="_blank">{{ weeks.titleCn }}</a></span>

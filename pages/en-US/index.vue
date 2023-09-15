@@ -23,8 +23,8 @@
             <div class="mdui-panel-item-title mdui-text-color-orange">MIUI China Beta Updates</div>
           </div>
           <div class="mdui-panel-item-body">
-            <b>China Beta Updated At : </b>{{ weeks.update }}<br /><br />
-            <b>China Beta Versions ：</b><span>{{ weeks.versions }}</span>
+            <b>Update time : </b>{{ weeks.update }} (GMT+8)<br /><br />
+            <b>This week's Versions ：</b><span>{{ weeks.versions }}</span>
             <br />
             <br />
             <b>Weekly Changelog ：</b><span><a :href="('/en-US/weekly/week-' + site.latest + '-cn')" target="_blank">{{ weeks.titleEn }}</a></span>
