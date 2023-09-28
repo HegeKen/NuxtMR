@@ -4,7 +4,7 @@
     "files.eol": "\r\n",
     "python.analysis.typeCheckingMode": "off",
     "[python]": {
-        "editor.defaultFormatter": "ms-python.autopep8"
+        "editor.defaultFormatter": "ms-python.python"
     },
     "python.formatting.provider": "none"
 }
