@@ -51,9 +51,9 @@
                       <td class="mdui-text-center">{{ data.miui }}</td>
                       <td class="mdui-text-center">{{ data.android }}</td>
                       <td v-if="data.recovery == ''">N/A</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">Recovery</a></td>
+                      <td v-else><a :href="('https://hugeota.d.miui.com/' + data.miui + '/' + data.recovery)">Recovery</a></td>
                       <td v-if="data.fastboot == ''">N/A</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">Fastboot</a></td>
+                      <td v-else><a :href="('https://hugeota.d.miui.com/' + data.miui + '/' + data.fastboot)">Fastboot</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -88,9 +88,9 @@
                       <td class="mdui-text-center">{{ data.miui }}</td>
                       <td class="mdui-text-center">{{ data.android }}</td>
                       <td v-if="data.recovery == ''">N/A</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">Recovery</a></td>
+                      <td v-else><a :href="('https://hugeota.d.miui.com/' + data.miui + '/' + data.recovery)">Recovery</a></td>
                       <td v-if="data.fastboot == ''">N/A</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">Fastboot</a></td>
+                      <td v-else><a :href="('https://hugeota.d.miui.com/' + data.miui + '/' + data.fastboot)">Fastboot</a></td>
                     </tr>
                   </tbody>
                 </table>
