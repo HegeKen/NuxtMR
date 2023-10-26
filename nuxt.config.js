@@ -33,7 +33,7 @@ export default {
       },
       {
         rel: "stylesheet",
-        href: "https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin&display=swap",
+        href: "https://cdn-font.hyperos.mi.com/font/css?family=MiSans_VF:VF:Chinese_Simplify,Latin&display=swap",
       },
       {
         rel: "stylesheet",
