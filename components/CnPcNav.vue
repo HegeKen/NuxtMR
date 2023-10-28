@@ -25,7 +25,7 @@
         <a href="/zh-CN/sitelog" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">update</i><label>站点日志</label></a>
         <a href="/zh-CN/friendly" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">folder_special</i><label>友情链接</label></a>
         <a href="/zh-CN/about" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">perm_identity</i><label>关于本站</label></a>
-        <a href="/mobile/zh-CN" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">smartphone</i><label>转到移动端</label></a>
+        <a  :href="(mo_zh)" class="mdui-ripple mdui-text-capitalize mdui-tab-active"><i class="mdui-icon material-icons">smartphone</i><label>转到移动端</label></a>
       </div>
     </div><br /><br /><br /><br /><br /><br /><br /><br />
   </div>
@@ -44,6 +44,8 @@ export default {
     path = this.$route.path;
     this.zh = path.replace(/en-US/, "zh-CN");
     this.en = path.replace(/zh-CN/, "en-US");
+    this.mo_zh = path.replace(/zh-CN/, "mobile/zh-CN");
+    this.mo_en = path.replace(/en-US/, "mobile/en-US");
   }
 }
 </script>

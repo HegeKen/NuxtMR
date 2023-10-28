@@ -16,7 +16,7 @@
           <a href="/mobile/en-US/thanks"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">favorites</i><div class="mdui-list-item-content">Deeply Thanking</div></li></a>
           <a href="/mobile/en-US/sitelog"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">update</i><div class="mdui-list-item-content">Site Log</div></li></a>
           <a href="/mobile/en-US/friendly"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">folder_special</i><div class="mdui-list-item-content">Friendly Links</div></li></a>
-          <a href="/en-US/"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">desktop_windows</i><div class="mdui-list-item-content">Desktop site</div></li></a>
+          <a :href="(pc_en)"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">desktop_windows</i><div class="mdui-list-item-content">Desktop site</div></li></a>
           <a href="/mobile/en-US/about"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">perm_identity</i><div class="mdui-list-item-content">About US</div></li></a>
           <a :href="(zh)"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon icon-zh-cn fic"></i><div class="mdui-list-item-content">中文</div></li></a>
           <a :href="(en)"><li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon icon-en-us fic"></i><div class="mdui-list-item-content">English</div></li></a>
@@ -39,6 +39,8 @@ export default {
     path = this.$route.path;
     this.zh = path.replace(/en-US/, "zh-CN");
     this.en = path.replace(/zh-CN/, "en-US");
+    this.pc_zh = path.replace("/mobile/zh-CN/", "/zh-CN/");
+    this.pc_en = path.replace("/mobile/en-US/", "/en-US/");
   }
 }
 </script>

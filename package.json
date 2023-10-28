@@ -12,13 +12,12 @@
     "@nuxt/http": "^0.6.4",
     "@nuxt/kit": "^3.0.0",
     "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/i18n": "^7.3.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.25.3",
+    "core-js": "^3.33.1",
     "mdui": "^1.0.2",
-    "nuxt": "^2.15.8",
-    "vue": "^2.7.10",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+    "nuxt": "^2.17.2",
+    "vue": "^2.7.15",
+    "vue-server-renderer": "^2.7.15",
+    "vue-template-compiler": "^2.7.15"
   }
 }
