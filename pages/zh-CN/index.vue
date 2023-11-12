@@ -9,9 +9,8 @@
           </div>
           <div class="mdui-panel-item-body">
             <div style="font-size: 30px;"><a href="https://hyperos.fans" style="text-decoration: none;color: black;font-weight: bolder;">Xiaomi Hyper<span style="color: #155ffe;">OS</span></a></div>
-            <div style="font-size: 20px;font-weight: bold;">小 米 澎 湃 O S</div>
-            <div style="font-size: 20px;font-weight: lighter;">即将到来.....</div>
-            <div style="font-size: 20px;font-weight: lighter;"><a href="https://hyperos.fans" style="text-decoration: none;color: black;font-weight: bolder;">即刻<span style="color: #155ffe;">前往</span></a></div>
+            <div style="font-size: 20px;font-weight: bold;">小 米 澎 湃 <span style="color: #155ffe;">O S</span></div>
+            <div style="font-size: 20px;font-weight: lighter;"><a href="https://hyperos.fans" style="text-decoration: none;color: black;font-weight: bolder;">即刻前往， 与米一起<span style="color: #155ffe;">澎湃</span></a></div>
           </div>
         </div>
         <div class="mdui-panel-item mdui-panel-item-open">

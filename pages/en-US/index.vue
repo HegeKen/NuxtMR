@@ -5,6 +5,15 @@
       <div class="mdui-panel">
         <div class="mdui-panel-item mdui-panel-item-open">
           <div class="mdui-panel-item-header">
+            <div class="mdui-panel-item-title mdui-text-color-orange">New start off</div>
+          </div>
+          <div class="mdui-panel-item-body">
+            <div style="font-size: 30px;"><a href="https://hyperos.fans" style="text-decoration: none;color: black;font-weight: bolder;">Xiaomi Hyper<span style="color: #155ffe;">OS</span></a></div>
+            <div style="font-size: 20px;font-weight: lighter;"><a href="https://hyperos.fans" style="text-decoration: none;color: black;font-weight: bolder;">Start your <span style="color: #155ffe;">New Journey</span> with Mi & get Hyped</a></div>
+          </div>
+        </div>
+        <div class="mdui-panel-item mdui-panel-item-open">
+          <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-orange">Site Version {{ site.ver }}</div>
           </div>
           <div class="mdui-panel-item-body">
