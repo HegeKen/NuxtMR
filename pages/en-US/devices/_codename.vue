@@ -12,6 +12,7 @@
             <ol>
               <li><b>Device Name：</b>{{ roms.enname }}</li>
               <li><b>Codename：</b>{{ roms.codename }}</li>
+              <li><b>下载教程：</b><a href="https://www.hyperos.fans/en/tips/403" class="milink">Fix for 403 error</a></li>
               <li v-show="roms.ismiui == '0'"><b>HyperOS：</b>Available now，<a :href="('https://hyperos.fans/zh/devices/'+roms.codename)">check it out!</a></li>
               <li v-show="roms.ismiui == '1'"><b>HyperOS：</b>Not released yet.</li>
               <li v-show="roms.ismiui == ''"><b>HyperOS：</b>No.</li>
