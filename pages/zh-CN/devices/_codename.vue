@@ -13,9 +13,9 @@
               <li><b>机型名称：</b>{{ roms.cnname }}</li>
               <li><b>机型代号：</b>{{ roms.codename }}</li>
               <li><b>下载教程：</b><a href="https://www.hyperos.fans/zh/tips/403" class="milink">修复403提示</a></li>
-              <li v-show="roms.ismiui == '0'"><b>HyperOS：</b>现已发布，<a :href="('https://hyperos.fans/zh/devices/'+roms.codename)">点击前往</a></li>
-              <li v-show="roms.ismiui == '1'"><b>HyperOS：</b>尚未发布</li>
-              <li v-show="roms.ismiui == ''"><b>HyperOS：</b>暂不支持</li>
+              <li v-show="roms.ismiui == '0'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>现已发布，<a :href="('https://hyperos.fans/zh/devices/'+roms.codename)">点击前往</a></li>
+              <li v-show="roms.ismiui == '1'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>尚未发布</li>
+              <li v-show="roms.ismiui == ''"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>暂不支持</li>
               <li v-show="roms.ccshow != ''"><b>社区圈子：</b><a :href="('https://www.xiaomi.cn/board/' + roms.cdid)" v-show="roms.cdid != ''" target="_blank">小米社区&emsp;</a><a :href="('https://new.c.mi.com/global/forum-sub/' + roms.gdid)" v-show="roms.gdid != ''" target="_blank">国际版社区&emsp;</a><a :href="('https://c.po.co/global/circle/circledetail/' + roms.pcid)" v-show="roms.pcid != ''" target="_blank">POCO 社区</a></li>
               <li><b>感谢网站：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></li>
               <li><b>手机解锁：</b>所有线刷都以解锁Bootloader为前提，并且解锁Bootloader时会清除数据，请提前做好备份工作，<a href="https://www.miui.com/unlock" class="milink">传送门</a></li>

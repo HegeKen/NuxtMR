@@ -13,9 +13,9 @@
               <li><b>Device Name：</b>{{ roms.enname }}</li>
               <li><b>Codename：</b>{{ roms.codename }}</li>
               <li><b>下载教程：</b><a href="https://www.hyperos.fans/en/tips/403" class="milink">Fix for 403 error</a></li>
-              <li v-show="roms.ismiui == '0'"><b>HyperOS：</b>Available now，<a :href="('https://hyperos.fans/zh/devices/'+roms.codename)">check it out!</a></li>
-              <li v-show="roms.ismiui == '1'"><b>HyperOS：</b>Not released yet.</li>
-              <li v-show="roms.ismiui == ''"><b>HyperOS：</b>No.</li>
+              <li v-show="roms.ismiui == '0'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>Available now，<a :href="('https://hyperos.fans/zh/devices/'+roms.codename)">check it out!</a></li>
+              <li v-show="roms.ismiui == '1'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>Not released yet.</li>
+              <li v-show="roms.ismiui == ''"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>No.</li>
               <li v-show="roms.ccshow != ''"><b>Communitys：</b><a :href="('https://www.xiaomi.cn/board/' + roms.cdid)" v-show="roms.cdid != ''" target="_blank">Mi Community(China)&emsp;</a><a :href="('https://new.c.mi.com/global/forum-sub/' + roms.gdid)" v-show="roms.gdid != ''" target="_blank">Xiaomi Community&emsp;</a><a :href="('https://c.po.co/global/circle/circledetail/' + roms.pcid)" v-show="roms.pcid != ''" target="_blank">POCO Community</a></li>
               <li><b>Thanks to：</b><a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a></li>
               <li><b>Unlock Your Bootloader：</b>You need to unlock your phone's bootloader if you want to flash a rom into your phone via fastboot method, and your data could be deleted as you choose, please make sure you have backed up your personal data. <a href="https://en.miui.com/unlock/download_en.html" class="milink">Apply for Bootloader Unlock here.</a></li>
