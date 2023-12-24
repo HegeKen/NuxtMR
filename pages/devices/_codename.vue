@@ -12,7 +12,7 @@
             <ol>
               <li><b>机型名称：</b>{{ roms.cnname }}</li>
               <li><b>机型代号：</b>{{ roms.codename }}</li>
-              <li><b>下载教程：</b><a href="https://www.hyperos.fans/zh/tips/403" class="milink">修复403提示</a></li>
+              <li><b>下载提速：</b><a href="https://www.hyperos.fans/zh/tips/403" class="milink">修复403提示</a></li>
               <li v-show="roms.ismiui == '0'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>现已发布，<a :href="('https://hyperos.fans/zh/devices/'+roms.codename)">点击前往</a></li>
               <li v-show="roms.ismiui == '1'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>尚未发布</li>
               <li v-show="roms.ismiui == ''"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>暂不支持</li>
