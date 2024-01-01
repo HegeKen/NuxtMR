@@ -46,7 +46,7 @@
             </span><b>等{{ weeks.devices.length }}款机型。</b></p>
           </div>
         </div>
-        <div class="mdui-panel-item mdui-panel-item-open">
+        <div class="mdui-panel-item mdui-panel-item-open" v-show="site.stable.length > 0">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-orange">稳定版/正式版更新</div>
           </div>

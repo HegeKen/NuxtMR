@@ -45,7 +45,7 @@
             </span></p>
           </div>
         </div>
-        <div class="mdui-panel-item mdui-panel-item-open">
+        <div class="mdui-panel-item mdui-panel-item-open" v-show="site.stable.length > 0">
           <div class="mdui-panel-item-header">
             <div class="mdui-panel-item-title mdui-text-color-orange">Stable Rom Updates</div>
           </div>
