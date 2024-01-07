@@ -54,9 +54,9 @@
                       <td class="mdui-text-center">{{ data.miui }}</td>
                       <td class="mdui-text-center">{{ data.android }}</td>
                       <td v-if="data.recovery == ''">未公布</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
+                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
                       <td v-if="data.fastboot == ''">未公布</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
+                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -91,9 +91,9 @@
                       <td class="mdui-text-center">{{ data.miui }}</td>
                       <td class="mdui-text-center">{{ data.android }}</td>
                       <td v-if="data.recovery == ''">未公布</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
+                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
                       <td v-if="data.fastboot == ''">未公布</td>
-                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
+                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
                     </tr>
                   </tbody>
                 </table>
