@@ -12,7 +12,7 @@
             <ol>
               <li><b>机型名称：</b>{{ roms.cnname }}</li>
               <li><b>机型代号：</b>{{ roms.codename }}</li>
-              <li><b>下载提速：</b><a href="https://www.hyperos.fans/zh/tips/403" class="milink">修复403提示</a></li>
+              <li><b>下载提速：</b>现有方法均已失效，唉。</li>
               <li v-show="roms.ismiui == '0'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>现已发布，<a :href="('https://hyperos.fans/zh/devices/'+roms.codename)">点击前往</a></li>
               <li v-show="roms.ismiui == '1'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>尚未发布</li>
               <li v-show="roms.ismiui == ''"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>暂不支持</li>
@@ -54,9 +54,9 @@
                       <td class="mdui-text-center">{{ data.miui }}</td>
                       <td class="mdui-text-center">{{ data.android }}</td>
                       <td v-if="data.recovery == ''">未公布</td>
-                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
                       <td v-if="data.fastboot == ''">未公布</td>
-                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -91,9 +91,9 @@
                       <td class="mdui-text-center">{{ data.miui }}</td>
                       <td class="mdui-text-center">{{ data.android }}</td>
                       <td v-if="data.recovery == ''">未公布</td>
-                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">卡刷包</a></td>
                       <td v-if="data.fastboot == ''">未公布</td>
-                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">线刷包</a></td>
                     </tr>
                   </tbody>
                 </table>

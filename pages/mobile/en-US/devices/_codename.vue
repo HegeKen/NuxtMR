@@ -12,7 +12,7 @@
             <ol>
               <li><b>Device Name：</b>{{ roms.enname }}</li>
               <li><b>Codename：</b>{{ roms.codename }}</li>
-              <li><b>Speed up：</b><a href="https://www.hyperos.fans/en/tips/403" class="milink">Fix for 403 error</a></li>
+              <li><b>Speed up：</b>All methods have been fixed, the end.</li>
               <li v-show="roms.ismiui == '0'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>Available now，<a :href="('https://hyperos.fans/zh/devices/'+roms.codename)">check it out!</a></li>
               <li v-show="roms.ismiui == '1'"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>Not released yet.</li>
               <li v-show="roms.ismiui == ''"><b>Hyper<span style="color: #155ffe;">OS</span>：</b>No.</li>
@@ -55,9 +55,9 @@
                       <td class="mdui-text-center">{{ data.miui }}</td>
                       <td class="mdui-text-center">{{ data.android }}</td>
                       <td v-if="data.recovery == ''">N/A</td>
-                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.recovery)">Recovery</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">Recovery</a></td>
                       <td v-if="data.fastboot == ''">N/A</td>
-                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">Fastboot</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">Fastboot</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -92,9 +92,9 @@
                       <td class="mdui-text-center">{{ data.miui }}</td>
                       <td class="mdui-text-center">{{ data.android }}</td>
                       <td v-if="data.recovery == ''">N/A</td>
-                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.recovery)">Recovery</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">Recovery</a></td>
                       <td v-if="data.fastboot == ''">N/A</td>
-                      <td v-else><a :href="('https://orig.bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">Fastboot</a></td>
+                      <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">Fastboot</a></td>
                     </tr>
                   </tbody>
                 </table>
