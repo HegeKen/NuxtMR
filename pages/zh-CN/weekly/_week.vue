@@ -55,9 +55,9 @@
               <td class="mdui-text-center">{{ data.miui }}</td>
               <td class="mdui-text-center">{{ data.android }}</td>
               <td v-if="data.recovery == ''">未公布</td>
-              <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.recovery)">{{ data.recovery }}</a></td>
+              <td v-else><a :href="('https://cdnorg.d.miui.com/' + data.miui + '/' + data.recovery)">{{ data.recovery }}</a></td>
               <td v-if="data.fastboot == ''">未公布</td>
-              <td v-else><a :href="('https://bigota.d.miui.com/' + data.miui + '/' + data.fastboot)">{{ data.fastboot }}</a></td>
+              <td v-else><a :href="('https://cdnorg.d.miui.com/' + data.miui + '/' + data.fastboot)">{{ data.fastboot }}</a></td>
             </tr>
           </tbody>
         </table>
