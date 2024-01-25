@@ -15,7 +15,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.33.1",
     "mdui": "^1.0.2",
-    "nuxt": "^2.17.2",
+    "nuxt": "^2.17.3",
     "vue": "^2.7.15",
     "vue-server-renderer": "^2.7.15",
     "vue-template-compiler": "^2.7.15"
