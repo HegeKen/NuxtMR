@@ -1,0 +1,85 @@
+body {
+  font-family: "MISans";
+  /* filter: grayscale(); */
+}
+.mdui-color-deep-orange-accent {
+  background-color: #ff6900 !important;
+}
+.mdui-panel-item-title{
+  color:#ff6900 !important;
+  font-size: 25px !important;
+  width: 100%;
+}
+.mdui-text-color-black{
+  color:black !important;
+  font-size: 25px !important;
+}
+a{
+  color:#2655ff
+}
+.MRLinks a:visited{
+  color:#2655ff
+}
+.HOS a:visited{
+  color:black !important;
+  font-size: 25px !important;
+}
+
+@media screen and (min-width: 750px){
+  .HOSPanel{
+    background-image: url('/images/logo/hyperlogo.jpeg');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center right;
+  } 
+}
+
+.mdui-ripple-orange{
+  color:#ff6900 !important;
+}
+a {
+  text-decoration: none;
+}
+.mdui-tab a .mdui-icon{
+  opacity: 1;
+}
+.mdui-tab a {
+  opacity: 1;
+}
+.HyperBlue {
+	color: #2655ff!important;
+	text-decoration: none;
+}
+.MRIcons {
+  font-family: 'iconfont';
+  text-align: right;
+}
+.MRIcons label {
+  text-decoration: none;
+  text-align: center;
+}
+.mdui-bottom-nav a.mdui-bottom-nav-active {
+  color: black;
+}
+.mdui-overlay-show{
+  z-index: 0!important;
+}
+.padding-bottom{
+  padding-bottom: 35px;
+}
+.Xiaomi {
+  color: #FF6900!important;
+}
+.Redmi {
+  color: #000000!important;
+}
+.POCO {
+  color: #FFD400!important;
+}
+.mdui-chip a{
+  color:black
+}
+.branch-title{
+  font-size: 20px!important;
+  color: black!important;
+}

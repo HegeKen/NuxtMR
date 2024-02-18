@@ -1,52 +1,41 @@
 <template>
-  <div>
-    <CnPcNav />
-    <div class="mdui-container-fluid" v-for="(data) in weeks.versions">
-      <div v-if="data.version == 'MIUI 14'">
-        <br />
-        <div style="padding-left:15px;">{{ data.version }}</div>
-        <br />
-        <button class="mdui-btn" v-for="(data) in data.weeks">
-          <a :href="('/zh-CN/weekly/week-' + data + '-cn')" v-if="data == weeks.latest"><i class="mdui-icon material-icons">fiber_new</i>第{{ data }}周</a>
-          <a :href="('/zh-CN/weekly/week-' + data + '-cn')" v-else>第{{ data }}周</a>
-        </button>
-      </div>
-
-      <div v-else>
-        <br />
-        <div style="padding-left:15px;">{{ data.version }}</div>
-        <br />
-        <button class="mdui-btn" v-for="(data) in data.weeks">
-          <a :href="('/zh-CN/weekly/week-' + data + '-cn')" target="_blank" v-if="data >= weeks.oldest - 1">第{{ data }}周</a>
-          <a :href="('https://old.miuier.com/weekly/logs/week-' + data + '-cn')" target="_blank" v-else>第{{ data }}周</a>
-        </button>
-      </div>
-    </div>
-    <br />
-    <CnPcDisclaimer />
-    <CnPcFooter />
-  </div>
+	<title>{{ $t('weekly') }} - {{ $t('site') }}</title>
+	<div>
+		<Header></Header>
+		<div class="mdui-container-fluid">
+			<div class="mdui-panel" v-for="bigver in weeks.versions">
+				<div class="mdui-panel-item mdui-panel-item-open">
+					<div class="mdui-panel-item-header">
+						<div class="mdui-panel-item-title">{{ bigver.version }}</div>
+					</div>
+					<div class="mdui-panel-item-body">
+						<span v-for="week in bigver.weeks">	
+							<div class="mdui-chip" v-if="week == weeks.latest">
+							<a :href="'/'+locale+'/weekly/week-'+week+'-cn'">
+								<span class="mdui-chip-icon"><i class="mdui-icon material-icons">fiber_new</i></span>
+							<span class="mdui-chip-title">{{ $t('num') }} {{ week }} {{ $t('week') }}</span></a>
+						</div>
+						<div class="mdui-chip" v-if="week >= weeks.oldest">
+							<a :href="'/'+locale+'/weekly/week-'+week+'-cn'">
+							<span class="mdui-chip-title">{{ $t('num') }} {{ week }} {{ $t('week') }}</span></a>
+						</div>
+						<div class="mdui-chip" v-if="week < weeks.oldest">
+							<a :href="'https://old.miuier.com/weekly/logs/week-'+week+'-cn'" target="_blank">
+							<span class="mdui-chip-title">{{ $t('num') }} {{ week }} {{ $t('week') }}</span></a>
+						</div>
+					</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<Disclaimer></Disclaimer>
+		<Footer></Footer>
+		<NuxtMR></NuxtMR>
+	</div>
 </template>
-<script>
-let url = "https://data.miuier.com/data/weekly.json";
-export default {
-  data() {
-    return {
-      weeks: [],
-      title: "橙色星期五 - MIUI官方ROM仓库"
-    }
-  },
-  async fetch() {
-    this.weeks = await fetch(url).then(res => res.json())
-  },
-  fetchOnServer: true,
-  head() {
-    return {
-      title: this.title,
-      htmlAttrs: {
-        lang: "zh-CN",
-      }
-    }
-  }
-}
+
+<script setup>
+const { locale } = useI18n();
+const weekly = "https://data.miuier.com/data/weekly.json"
+const { data: weeks } = await useFetch(weekly)
 </script>
