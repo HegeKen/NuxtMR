@@ -1,3 +1,4 @@
 [submodule "public/MRData"]
 	path = public/MRData
 	url = https://github.com/HegeKen/MRData.git
+	branch = Nuxt3

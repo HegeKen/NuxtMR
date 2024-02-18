@@ -10,16 +10,16 @@
 					</div>
 					<div class="mdui-panel-item-body">
 						<span v-for="week in bigver.weeks">	
-							<div class="mdui-chip" v-if="week == weeks.latest">
+							<div class="mdui-chip" v-if="parseInt(week) == parseInt(weeks.latest)">
 							<a :href="'/'+locale+'/weekly/week-'+week+'-cn'">
 								<span class="mdui-chip-icon"><i class="mdui-icon material-icons">fiber_new</i></span>
 							<span class="mdui-chip-title">{{ $t('num') }} {{ week }} {{ $t('week') }}</span></a>
 						</div>
-						<div class="mdui-chip" v-if="week >= weeks.oldest">
+						<div class="mdui-chip" v-if="parseInt(week) >= parseInt(weeks.oldest)">
 							<a :href="'/'+locale+'/weekly/week-'+week+'-cn'">
 							<span class="mdui-chip-title">{{ $t('num') }} {{ week }} {{ $t('week') }}</span></a>
 						</div>
-						<div class="mdui-chip" v-if="week < weeks.oldest">
+						<div class="mdui-chip" v-if="parseInt(week) < parseInt(weeks.oldest)">
 							<a :href="'https://old.miuier.com/weekly/logs/week-'+week+'-cn'" target="_blank">
 							<span class="mdui-chip-title">{{ $t('num') }} {{ week }} {{ $t('week') }}</span></a>
 						</div>
