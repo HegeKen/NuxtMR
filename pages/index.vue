@@ -88,6 +88,7 @@
 		</div>
 		<Disclaimer></Disclaimer>
 		<Footer></Footer>
+  <Analystics></Analystics>
 		<NuxtMR></NuxtMR>
 	</div>
 </template>

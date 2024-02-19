@@ -81,9 +81,12 @@
   <br />
   <Disclaimer></Disclaimer>
   <Footer></Footer>
+  <Analystics></Analystics>
   <NuxtMR></NuxtMR>
 </template>
 <script setup>
+import Analystics from '~/components/Analystics.vue';
+
 const route = useRoute();
 const { locale } = useI18n();
 const { data: device } = useFetch("https://data.miuier.com/data/devices/" + route.params.codename + ".json")
