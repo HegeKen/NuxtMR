@@ -3,5 +3,5 @@
 </template>
 <script setup>
 const route = useRoute();
-navigateTo({ path: '/en-us/devices'+route.params.codename })
+navigateTo({ path: '/en-us/devices/'+route.params.codename })
 </script>
