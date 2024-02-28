@@ -24,7 +24,7 @@
     <br /><br /><br /><br /><br /><br /><br /><br />
   </div>
   <div v-else>
-    <div class="mdui-color-deep-orange-accent mdui-text-color-white mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-color-deep-orange-accent mdui-text-color-white">
       <div class="mdui-toolbar">
         <div><a href="javascript:;" class="mdui-btn mdui-btn-icon tri" mdui-drawer="{target:'#main-drawer', swipe: true}" mdui-drawer-close><i class="mdui-icon material-icons">menu</i></a><span class="mdui-typo-title">{{ $t('site') }}</span></div>
         <div class="mdui-toolbar-spacer"></div>
@@ -44,7 +44,7 @@
         </ul>
       </div>
     </div>
-    <br /><br /><br />
+
   </div>
 </template>
 <script setup>
