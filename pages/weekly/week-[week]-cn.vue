@@ -60,13 +60,15 @@
                       <td class="mdui-text-center">{{ device.android }}</td>
                       <td v-if="device.recovery == ''">{{ $t('na') }}</td>
                       <td v-else><a :href="('https://cdnorg.d.miui.com/' + device.miui + '/' + device.recovery)">
-                        <span v-if="$device.isDesktopOrTablet">{{ device.recovery }}</span>
-                        <span v-else></span>
+                        <span>{{ $t('recovery') }}</span>
+                        <!-- <span v-if="$device.isDesktopOrTablet">{{ data.recovery }}</span>
+                        <span v-else></span> -->
                       </a></td>
                       <td v-if="device.fastboot == ''">{{ $t('na') }}</td>
                       <td v-else><a :href="('https://cdnorg.d.miui.com/' + device.miui + '/' + device.fastboot)">
-                        <span v-if="$device.isDesktopOrTablet">{{ device.fastboot }}</span>
-                        <span v-else></span>
+                        <span>{{ $t('fastboot') }}</span>
+                        <!-- <span v-if="$device.isDesktopOrTablet">{{ data.fastboot }}</span>
+                        <span v-else></span> -->
                       </a></td>
                     </tr>
                   </tbody>

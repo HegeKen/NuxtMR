@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   ],
   modules: [
     'nuxt-simple-sitemap',
+    // '@nuxtjs/device',
     '@nuxtjs/i18n',
-    '@nuxtjs/device'
   ],
   i18n: {
     locales: [
