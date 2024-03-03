@@ -1,5 +1,5 @@
 <template>
-		<title>{{ weekly[locale] }} - {{ $t('site') }}</title>
+	<title>{{ weekly[locale] }} - {{ $t('site') }}</title>
 	<div>
 		<Header></Header>
 		<div class="mdui-container-fluid">
@@ -43,46 +43,49 @@
 						<div class="mdui-panel-item-title branch-title">▍{{ $t('package') }}</div>
 					</div>
 					<div class="mdui-panel-item-body">
-						<table class="mdui-table mdui-table-fluid mdui-shadow-0">
-                  <thead>
-                    <tr>
-											<th class="mdui-text-center">{{ $t('device') }}</th>
-                      <th class="mdui-text-center">{{ $t('miui') }}</th>
-                      <th class="mdui-text-center">{{ $t('android') }}</th>
-                      <th>{{ $t('recovery') }}</th>
-                      <th>{{ $t('fastboot') }}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="device in weekly.devices">
-											<td class="mdui-text-center">{{ device[locale] }}({{ device.code }})</td>
-                      <td class="mdui-text-center">{{ device.miui }}</td>
-                      <td class="mdui-text-center">{{ device.android }}</td>
-                      <td v-if="device.recovery == ''">{{ $t('na') }}</td>
-                      <td v-else><a :href="('https://cdn-ota.azureedge.net/' + device.miui + '/' + device.recovery)">
-                        <span>{{ $t('recovery') }}</span>
-                        <!-- <span v-if="$device.isDesktopOrTablet">{{ data.recovery }}</span>
+						<div class="mdui-table-fluid mdui-shadow-0">
+							<table class="mdui-table">
+								<thead>
+									<tr>
+										<th class="mdui-text-center">{{ $t('device') }}</th>
+										<th class="mdui-text-center">{{ $t('miui') }}</th>
+										<th class="mdui-text-center">{{ $t('android') }}</th>
+										<th>{{ $t('recovery') }}</th>
+										<th>{{ $t('fastboot') }}</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr v-for="device in weekly.devices">
+										<td class="mdui-text-center">{{ device[locale] }}({{ device.code }})</td>
+										<td class="mdui-text-center">{{ device.miui }}</td>
+										<td class="mdui-text-center">{{ device.android }}</td>
+										<td v-if="device.recovery == ''">{{ $t('na') }}</td>
+										<td v-else><a :href="('https://cdn-ota.azureedge.net/' + device.miui + '/' + device.recovery)">
+												<span>{{ $t('recovery') }}</span>
+												<!-- <span v-if="$device.isDesktopOrTablet">{{ data.recovery }}</span>
                         <span v-else></span> -->
-                      </a></td>
-                      <td v-if="device.fastboot == ''">{{ $t('na') }}</td>
-                      <td v-else><a :href="('https://cdn-ota.azureedge.net/' + device.miui + '/' + device.fastboot)">
-                        <span>{{ $t('fastboot') }}</span>
-                        <!-- <span v-if="$device.isDesktopOrTablet">{{ data.fastboot }}</span>
+											</a></td>
+										<td v-if="device.fastboot == ''">{{ $t('na') }}</td>
+										<td v-else><a :href="('https://cdn-ota.azureedge.net/' + device.miui + '/' + device.fastboot)">
+												<span>{{ $t('fastboot') }}</span>
+												<!-- <span v-if="$device.isDesktopOrTablet">{{ data.fastboot }}</span>
                         <span v-else></span> -->
-                      </a></td>
-                    </tr>
-                  </tbody>
-                </table>
+											</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<Disclaimer></Disclaimer>
 		<Footer></Footer>
-  <Analystics></Analystics>
+		<Analystics></Analystics>
 		<NuxtMR></NuxtMR>
 	</div>
 </template>
+
 <script setup>
 const route = useRoute();
 const { locale } = useI18n();

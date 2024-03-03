@@ -107,7 +107,7 @@
         </a>
       </ul>
     </div>
-  </div><br /><br /><br /><br />
+  </div><br /><br /><br />
 </template>
 <script setup>
 const { locale, locales } = useI18n();
