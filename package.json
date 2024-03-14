@@ -15,10 +15,10 @@
     "@nuxtjs/i18n": "^8.0.1",
     "nuxt": "^3.10.3",
     "nuxt-simple-sitemap": "^4.4.1",
-    "sass": "^1.71.0",
-    "vite-plugin-vuetify": "^2.0.2"
+    "sass": "^1.72.0",
+    "vite-plugin-vuetify": "^2.0.3"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^5.1.1"
+    "@nuxtjs/sitemap": "^5.1.2"
   }
 }
