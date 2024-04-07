@@ -6,6 +6,7 @@ useHead({
 	script: [
 		{
 			src: "https://data.miuier.com/assets/mdui/js/mdui.min.js",
+			defer: true,
 		},
 		{
 			body: true,
