@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     'assets/miuiroms.css'
   ],
   modules: [
-    'nuxt-simple-sitemap',
+    '@nuxtjs/sitemap',
     // '@nuxtjs/device',
     '@nuxtjs/i18n',
   ],
@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     ],
     strategy: 'prefix_and_default',
     defaultLocale: 'zh-cn',
-    vueI18n: './i18n.config.ts' // if you are using custom path, default 
+    vueI18n: './i18n.config.ts'
   },
   vite: {
     server: {
