@@ -1,4 +1,5 @@
 <template>
+  <html :lang ="locale" ></html>
   <!-- <div v-if="$device.isMobileOrTablet">
     <div class="mdui-color-deep-orange-accent mdui-text-color-white mdui-appbar mdui-appbar-fixed">
       <div class="mdui-toolbar">
