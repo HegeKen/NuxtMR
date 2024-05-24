@@ -1,3 +1,10 @@
 {
-  "nuxt.isNuxtApp": false
+  "nuxt.isNuxtApp": false,
+  "Codegeex.CommitMessageStyle": "Auto",
+  "files.associations": {  
+        "*.txt": "plaintext",
+    },  
+    "[plaintext]": {  
+        "editor.wordWrap": "on"
+    }
 }
