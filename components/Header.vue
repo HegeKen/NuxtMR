@@ -4,7 +4,7 @@
       <div class="mdui-toolbar">
         <div><a href="javascript:;" class="mdui-btn mdui-btn-icon tri" mdui-drawer="{target:'#main-drawer', swipe: true}" mdui-drawer-close><i class="mdui-icon material-icons">menu</i></a><span class="mdui-typo-title">{{ $t('site') }}</span></div>
         <div class="mdui-toolbar-spacer"></div>
-        <img src="/images/logo/Logo-Str-White.png" title="SiteLogo" width="160px">
+        <img src="https://roms.miuier.com/images/logo/Logo-Str-White.png" title="SiteLogo" width="160px">
       </div>
       <div class="mdui-drawer mdui-drawer-close mdui-drawer-left mdui-text-color-black-text" id="main-drawer">
         <ul class="mdui-list">
@@ -27,7 +27,7 @@
       <div class="mdui-toolbar">
         <span class="mdui-typo-title">{{ $t('site') }}</span>
         <div class="mdui-toolbar-spacer"></div>
-        <img src="/images/logo/Logo-Full-White.png" title="SiteLogo" width="170px" />
+        <img src="https://roms.miuier.com/images/logo/Logo-Full-White.png" title="SiteLogo" width="170px" />
         <NuxtLink class="text-capitalize" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
           <i class="mdui-icon material-icons">translate</i>：->
           {{ locale.name }}
@@ -56,7 +56,7 @@
       </a>
       <span class="mdui-typo-title">{{ $t('site') }}</span>
       <div class="mdui-toolbar-spacer"></div>
-      <img src="/images/logo/Logo-Str-White.png" title="SiteLogo" width="160px">
+      <img src="https://roms.miuier.com/images/logo/Logo-Str-White.png" title="SiteLogo" width="160px">
     </div>
     <div class="mdui-drawer mdui-drawer-close mdui-text-color-black-text" id="main-drawer">
       <ul class="mdui-list" mdui-collapse="{accordion: false}" style="padding-top: 70px;">
