@@ -13,11 +13,11 @@
   "devDependencies": {
     "@nuxtjs/device": "^3.1.1",
     "@nuxtjs/i18n": "^8.3.1",
-    "nuxt": "^3.12.2",
+    "nuxt": "^3.12.3",
     "sass": "^1.77.6",
     "vite-plugin-vuetify": "^2.0.3"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^5.2.2"
+    "@nuxtjs/sitemap": "^5.3.2"
   }
 }
