@@ -63,13 +63,13 @@
                   <td class="mdui-text-center">{{ data.miui }}</td>
                   <td class="mdui-text-center">{{ data.android }}</td>
                   <td v-if="data.recovery == ''">{{ $t('na') }}</td>
-                  <td v-else><a :href="('https://bn.d.miui.com/' + data.miui + '/' + data.recovery)">
+                  <td v-else><a :href="('https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/' + data.miui + '/' + data.recovery)">
                       <span>{{ $t('recovery') }}</span>
                       <!-- <span v-if="$device.isDesktopOrTablet">{{ data.recovery }}</span>
                         <span v-else></span> -->
                     </a></td>
                   <td v-if="data.fastboot == ''">{{ $t('na') }}</td>
-                  <td v-else><a :href="('https://bn.d.miui.com/' + data.miui + '/' + data.fastboot)">
+                  <td v-else><a :href="('https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/' + data.miui + '/' + data.fastboot)">
                       <span>{{ $t('fastboot') }}</span>
                       <!-- <span v-if="$device.isDesktopOrTablet">{{ data.fastboot }}</span>
                         <span v-else></span> -->
