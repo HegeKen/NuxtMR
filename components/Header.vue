@@ -1,5 +1,5 @@
 <template>
-  <!-- <div v-if="$device.isMobileOrTablet">
+  <div v-if="$device.isMobileOrTablet">
     <div class="mdui-color-deep-orange-accent mdui-text-color-white mdui-appbar mdui-appbar-fixed">
       <div class="mdui-toolbar">
         <div><a href="javascript:;" class="mdui-btn mdui-btn-icon tri" mdui-drawer="{target:'#main-drawer', swipe: true}" mdui-drawer-close><i class="mdui-icon material-icons">menu</i></a><span class="mdui-typo-title">{{ $t('site') }}</span></div>
@@ -45,9 +45,9 @@
       </div>
     </div>
     <br /><br /><br /><br /><br /><br /><br /><br />
-  </div> -->
+  </div>
 
-  <div class="mdui-color-deep-orange-accent mdui-text-color-white mdui-appbar mdui-appbar-fixed">
+  <!-- <div class="mdui-color-deep-orange-accent mdui-text-color-white mdui-appbar mdui-appbar-fixed">
     <div class="mdui-toolbar">
       <a href="javascript:;">
         <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-yellow" mdui-drawer="{target: '#main-drawer', swipe: true}" mdui-drawer-close>
@@ -107,7 +107,7 @@
         </a>
       </ul>
     </div>
-  </div><br /><br /><br />
+  </div><br /><br /><br /> -->
 </template>
 <script setup>
 const { locale, locales } = useI18n();
