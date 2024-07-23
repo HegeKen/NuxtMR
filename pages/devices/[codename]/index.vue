@@ -94,5 +94,5 @@ import Analystics from '~/components/Analystics.vue';
 
 const route = useRoute();
 const { locale } = useI18n();
-const { data: device } = useFetch("https://data.miuier.com/data/devices/" + route.params.codename + ".json")
+const { data: device } = useFetch("https://data.miuier.com/data/devices/" + route.params.codename.toLowerCase() + ".json")
 </script>

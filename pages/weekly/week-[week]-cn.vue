@@ -89,5 +89,5 @@
 <script setup>
 const route = useRoute();
 const { locale } = useI18n();
-const { data: weekly } = useFetch("https://data.miuier.com/data/weekly/week-" + route.params.week + "-cn.json")
+const { data: weekly } = useFetch("https://data.miuier.com/data/weekly/week-" + route.params.week.toLowerCase() + "-cn.json")
 </script>
