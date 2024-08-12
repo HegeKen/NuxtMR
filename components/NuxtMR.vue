@@ -9,12 +9,6 @@ useHead({
 			defer: true,
 		},
 		{
-			body: true,
-			defer: true,
-			src: "https://static.cloudflareinsights.com/beacon.min.js",
-			"data-cf-beacon": '{"token":"4e0818275b9944a59d625e2df596aaca"}',
-		},
-		{
 			async: true,
 			src: "https://www.googletagmanager.com/gtag/js?id=UA-153213840-1",
 		},
