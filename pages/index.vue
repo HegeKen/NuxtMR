@@ -33,7 +33,7 @@
 
 					</div>
 				</div>
-				<div class="mdui-panel-item mdui-panel-item-open">
+				<!-- <div class="mdui-panel-item mdui-panel-item-open">
 					<div class="mdui-panel-item-header">
 						<div class="mdui-panel-item-title">{{ $t('devupdates') }}</div>
 					</div>
@@ -50,7 +50,7 @@
 							</span>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="mdui-panel-item mdui-panel-item-open" v-show="home.stable.length > 0">
 					<div class="mdui-panel-item-header">
 						<div class="mdui-panel-item-title">{{ $t('stableupdates') }}</div>
