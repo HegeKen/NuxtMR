@@ -11,12 +11,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/device": "^3.1.1",
-    "@nuxtjs/i18n": "^8.5.1",
-    "nuxt": "^3.13.0",
-    "sass": "^1.77.8"
+    "@nuxtjs/device": "^3.2.2",
+    "@nuxtjs/i18n": "^8.5.2",
+    "nuxt": "^3.13.1",
+    "sass": "^1.78.0"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^6.0.0-beta.4"
+    "@nuxtjs/sitemap": "^6.0.1"
   }
 }
