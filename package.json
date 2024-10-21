@@ -14,9 +14,9 @@
     "@nuxtjs/device": "^3.2.4",
     "@nuxtjs/i18n": "^8.5.5",
     "nuxt": "^3.13.2",
-    "sass": "^1.79.4"
+    "sass": "^1.80.3"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^6.1.1"
+    "@nuxtjs/sitemap": "^6.1.2"
   }
 }
