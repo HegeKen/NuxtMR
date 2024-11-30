@@ -33,24 +33,6 @@
 
 					</div>
 				</div>
-				<!-- <div class="mdui-panel-item mdui-panel-item-open">
-					<div class="mdui-panel-item-header">
-						<div class="mdui-panel-item-title">{{ $t('devupdates') }}</div>
-					</div>
-					<div class="mdui-panel-item-body">
-						<div><b>{{ $t('updatetime') }} ：</b>{{ latest.update }}</div><br />
-						<div><b>{{ $t('version') }} ：</b>{{ latest.versions }}</div><br />
-						<div><b>{{ $t('log') }} ：</b>
-							<NuxtLink :to="'/' + locale + '/weekly/week-' + weeks.latest + '-cn'" class="MRLinks">{{ latest[locale] }}</NuxtLink>
-						</div><br />
-						<div v-show="latest.devices.length > 0"><b>{{ $t('supported') }} ：</b>
-							<span v-for="(data, index) in latest.devices">
-								<span v-show="index != latest.devices.length - 1">{{ data[locale] }} ; </span>
-								<span v-show="index == latest.devices.length - 1">{{ data[locale] }}</span>
-							</span>
-						</div>
-					</div>
-				</div> -->
 				<div class="mdui-panel-item mdui-panel-item-open" v-show="home.stable.length > 0">
 					<div class="mdui-panel-item-header">
 						<div class="mdui-panel-item-title">{{ $t('stableupdates') }}</div>
@@ -98,10 +80,7 @@ const { locale } = useI18n()
 const index = "https://data.miuier.com/data/index.json"
 const devices = "https://data.miuier.com/data/devlist.json"
 const site = "https://data.miuier.com/data/sitelog.json"
-const weekly = "https://data.miuier.com/data/weekly.json"
 const { data: home } = await useFetch(index)
 const { data: devlist } = await useFetch(devices)
 const { data: sitelog } = await useFetch(site)
-const { data: weeks } = await useFetch(weekly)
-const { data: latest } = await useFetch('https://data.miuier.com/data/weekly/week-' + weeks.value.latest + '-cn.json')
 </script>
