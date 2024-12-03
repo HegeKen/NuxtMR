@@ -43,7 +43,7 @@
 						<span v-else><div><b>Weekly Period ：</b>Week {{ home.week }} of Year {{ home.year }} ({{ home.period }})</div><br /></span>
 						<div><b>{{ $t('updatetime') }}：</b></div>
 						<ol style="margin-left:-15px;">
-							<li v-for="rom in home.stable"><NuxtLink :to="'/'+locale+'/devices/'+rom.code">{{ rom[locale] }}({{ rom.code }})</NuxtLink>：{{ rom.rom }}</li>
+							<li v-for="rom in home.stable"><a :href="'/'+locale+'/devices/'+rom.code">{{ rom[locale] }}({{ rom.code }})</a>：{{ rom.rom }}</li>
 						</ol>
 					</div>
 				</div>

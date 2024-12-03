@@ -18,7 +18,7 @@ export default defineI18nConfig(() => ({
       'micom': '小米社区',
       'bilibili': 'B站',
       'totop': '返回顶部',
-      'new': '新的',
+      'new': '新',
       'start': '起点',
       'mihyper': '小米澎湃',
       'gethyper': '现已推送，前往获取',
