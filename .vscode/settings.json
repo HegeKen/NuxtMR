@@ -1,10 +1,11 @@
 {
-  "nuxt.isNuxtApp": false,
-  "Codegeex.CommitMessageStyle": "Auto",
-  "files.associations": {  
-        "*.txt": "plaintext",
-    },  
-    "[plaintext]": {  
-        "editor.wordWrap": "on"
-    }
+    "Codegeex.Comment.LanguagePreference": "中文",
+    "Codegeex.SidebarUI.LanguagePreference": "中文",
+	"Codegeex.CommitMessageStyle": "Auto",
+	"files.associations": {
+		"*.txt": "plaintext"
+	},
+	"[plaintext]": {
+		"editor.wordWrap": "on"
+	}
 }
