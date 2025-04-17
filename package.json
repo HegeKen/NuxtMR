@@ -12,11 +12,11 @@
   },
   "devDependencies": {
     "@nuxtjs/device": "^3.2.4",
-    "@nuxtjs/i18n": "^9.4.0",
-    "nuxt": "^3.16.1",
-    "sass": "^1.85.1"
+    "@nuxtjs/i18n": "^9.5.3",
+    "nuxt": "^3.16.2",
+    "sass": "^1.86.3"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^7.2.9"
+    "@nuxtjs/sitemap": "^7.2.10"
   }
 }
