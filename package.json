@@ -13,7 +13,7 @@
   "devDependencies": {
     "@nuxtjs/device": "^3.2.4",
     "@nuxtjs/i18n": "^9.5.4",
-    "nuxt": "^3.17.1",
+    "nuxt": "^3.17.2",
     "sass": "^1.87.0"
   },
   "dependencies": {

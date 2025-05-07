@@ -1,7 +1,8 @@
 {
-    "Codegeex.Comment.LanguagePreference": "中文",
-    "Codegeex.SidebarUI.LanguagePreference": "中文",
+	"Codegeex.Comment.LanguagePreference": "中文",
+	"Codegeex.SidebarUI.LanguagePreference": "中文",
 	"Codegeex.CommitMessageStyle": "Auto",
+	"files.defaultLanguage": "plaintext",
 	"files.associations": {
 		"*.txt": "plaintext"
 	},
