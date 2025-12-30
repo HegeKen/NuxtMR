@@ -1,4 +1,5 @@
 <template>
+
 	<body class="mdui-bottom-nav-fixed padding-bottom"></body>
 </template>
 <script setup>
@@ -36,7 +37,7 @@ useHead({
 		},
 		{
 			rel: "stylesheet",
-			href: "https://cdn-font.hyperos.mi.com/font/css?family=MiSans:100,200,300,400,450,500,600,650,700,900:Chinese_Simplify,Latin&display=swap",
+			href: "https://cdn-font.hyperos.mi.com/font/css?family=MiSans_VF:VF:Chinese_Simplify,Latin&display=swap",
 		}
 	]
 });
