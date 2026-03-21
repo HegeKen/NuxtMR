@@ -65,6 +65,11 @@
             <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('home') }}</div>
           </li>
         </a>
+        <a href="/search.html">
+          <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">search</i>
+            <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('search') }}</div>
+          </li>
+        </a>
         <a :href="'/' + locale + '/weekly'">
           <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">developer_mode</i>
             <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('dev') }}</div>
