@@ -19,9 +19,7 @@
   </div> -->
   <div class="mdui-bottom-nav mdui-color-white">
     <a :href="'/' + locale" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">home</i><label class="mdui-text-capitalize">{{ $t('home') }}</label></a>
-    <a href="search.html" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">search</i><label class="mdui-text-capitalize">{{ $t('search') }}</label></a>
-    <a :href="'/' + locale + '/weekly'" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">developer_mode</i><label class="mdui-text-capitalize">{{ $t('dev') }}</label></a>
-    <a :href="'/' + locale + '/devices'" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">devices</i><label class="mdui-text-capitalize">{{ $t('devices') }}</label></a>
+    <a href="search.html" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">search</i><label class="mdui-text-capitalize">{{ $t('search') }}</label></a> <a :href="'/' + locale + '/devices'" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">devices</i><label class="mdui-text-capitalize">{{ $t('devices') }}</label></a>
     <a :href="'/' + locale + '/tools'" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">laptop_windows</i><label class="mdui-text-capitalize">{{ $t('tools') }}</label></a>
     <a href="#top" class="mdui-bottom-nav-active"><i class="mdui-icon material-icons">arrow_upward</i><label>返回顶部</label></a>
   </div>
