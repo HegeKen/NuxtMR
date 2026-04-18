@@ -17,6 +17,6 @@
     "sass": "^1.99.0"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^8.0.11"
+    "@nuxtjs/sitemap": "^8.0.13"
   }
 }
