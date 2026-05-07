@@ -1,14 +1,22 @@
 <template>
-
-	<body class="mdui-bottom-nav-fixed padding-bottom"></body>
 </template>
 <script setup>
+onMounted(() => {
+	if (process.client) {
+		const mduiScript = document.createElement('script')
+		mduiScript.src = "https://data.miuier.com/assets/mdui/js/mdui.min.js"
+		mduiScript.defer = true
+		mduiScript.onload = () => {
+			if (typeof mdui !== 'undefined') {
+				mdui.mutation()
+			}
+		}
+		document.head.appendChild(mduiScript)
+	}
+})
+
 useHead({
 	script: [
-		{
-			src: "https://data.miuier.com/assets/mdui/js/mdui.min.js",
-			defer: true,
-		},
 		{
 			body: true,
 			defer: true,

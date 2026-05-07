@@ -1,8 +1,19 @@
 <template>
-	<title>{{ weekly[locale] }} - {{ $t('site') }}</title>
 	<div>
 		<Header></Header>
-		<div class="mdui-container-fluid">
+		<div v-if="error" class="mdui-container-fluid">
+			<div class="mdui-panel">
+				<div class="mdui-panel-item mdui-panel-item-open">
+					<div class="mdui-panel-item-header">
+						<div class="mdui-panel-item-title branch-title mdui-text-color-red">{{ $t('error') || '加载失败' }}</div>
+					</div>
+					<div class="mdui-panel-item-body">
+						<p>{{ error }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div v-else-if="weekly" class="mdui-container-fluid">
 			<div class="mdui-panel">
 				<div class="mdui-panel-item mdui-panel-item-open">
 					<div class="mdui-panel-item-header">
@@ -11,8 +22,8 @@
 					<div class="mdui-panel-item-body">
 						<p><b>{{ $t('release') }} ：</b>{{ weekly.update }}</p>
 						<p><b>{{ $t('version') }} ：</b>{{ weekly.versions }}</p>
-						<p v-show="weekly.CnBBSID != ''"><b>{{ $t('mfc') }} ：</b><a :href="('https://www.miui.com/thread-' + weekly.CnBBSID + '-1-1.html')" target="_blank">{{ weekly[locale] }}</a></p>
-						<p v-show="weekly.CnComID != ''"><b>{{ $t('mcc') }} ：</b><a :href="('https://www.xiaomi.cn/post/' + weekly.CnComID)" target="_blank">{{ weekly[locale] }}</a></p>
+						<p v-show="weekly.CnBBSID != ''"><b>{{ $t('mfc') }} ：</b><a :href="buildMiuiThreadLink(weekly.CnBBSID)" target="_blank">{{ weekly[locale] }}</a></p>
+						<p v-show="weekly.CnComID != ''"><b>{{ $t('mcc') }} ：</b><a :href="buildXiaomiPostLink(weekly.CnComID)" target="_blank">{{ weekly[locale] }}</a></p>
 					</div>
 				</div>
 				<div class="mdui-panel-item mdui-panel-item-open" v-for="addon in weekly.addons">
@@ -60,16 +71,12 @@
 										<td class="mdui-text-center">{{ device.miui }}</td>
 										<td class="mdui-text-center">{{ device.android }}</td>
 										<td v-if="device.recovery == ''">{{ $t('na') }}</td>
-										<td v-else><a :href="('https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/' + device.miui + '/' + device.recovery)">
+										<td v-else><a :href="buildDownloadLink(device.miui, device.recovery)">
 												<span>{{ $t('recovery') }}</span>
-												<!-- <span v-if="$device.isDesktopOrTablet">{{ data.recovery }}</span>
-                        <span v-else></span> -->
 											</a></td>
 										<td v-if="device.fastboot == ''">{{ $t('na') }}</td>
-										<td v-else><a :href="('https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/' + device.miui + '/' + device.fastboot)">
+										<td v-else><a :href="buildDownloadLink(device.miui, device.fastboot)">
 												<span>{{ $t('fastboot') }}</span>
-												<!-- <span v-if="$device.isDesktopOrTablet">{{ data.fastboot }}</span>
-                        <span v-else></span> -->
 											</a></td>
 									</tr>
 								</tbody>
@@ -87,7 +94,53 @@
 </template>
 
 <script setup>
-const route = useRoute();
-const { locale } = useI18n();
-const { data: weekly } = useFetch("https://data.miuier.com/data/weekly/week-" + route.params.week.toLowerCase() + "-cn.json")
+import { validateWeekNumber, sanitizeString } from '~/utils/validation'
+import { API_CONFIG } from '~/config/api'
+
+const route = useRoute()
+const { locale } = useI18n()
+const { t } = useI18n()
+
+const buildDownloadLink = (miui, filename) => {
+	return `${API_CONFIG.EXTERNAL_URLS.OSS_BUCKET}/${miui}/${filename}`
+}
+
+const buildMiuiThreadLink = (threadId) => {
+	return `https://www.miui.com/thread-${threadId}-1-1.html`
+}
+
+const buildXiaomiPostLink = (postId) => {
+	return `https://www.xiaomi.cn/post/${postId}`
+}
+
+const weekParam = computed(() => {
+	const param = route.params.week
+	if (Array.isArray(param)) {
+		return param[0]
+	}
+	return param
+})
+
+const { data: weekly, error } = await useAsyncData(
+	'weekly-' + weekParam.value,
+	async () => {
+		const sanitizedWeek = sanitizeString(weekParam.value)
+
+		if (!validateWeekNumber(sanitizedWeek)) {
+			throw new Error(t('invalidWeek') || '无效的周数')
+		}
+
+		const data = await $fetch(`${API_CONFIG.BASE_URL}/weekly/week-${sanitizedWeek}-cn.json`)
+		return data
+	}
+)
+
+useHead({
+	title: computed(() => {
+		if (weekly.value) {
+			return `${weekly.value[locale.value]} - ${t('site')}`
+		}
+		return `${t('site')}`
+	})
+})
 </script>

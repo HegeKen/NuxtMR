@@ -1,5 +1,4 @@
 <template>
-	<title>{{ $t('friendly') }} - {{ $t('site') }}</title>
 	<div>
 		<Header></Header>
 		<div class="mdui-container-fluid">
@@ -31,4 +30,9 @@
 
 <script setup>
 const { locale } = useI18n();
+const { t } = useI18n()
+
+useHead({
+  title: `${t('friendly')} - ${t('site')}`
+})
 </script>

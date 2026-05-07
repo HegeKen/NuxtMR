@@ -1,7 +1,18 @@
 <template>
-  <title>{{ device[locale] }}({{ device.codename }}) {{ $t('download') }} - {{ $t('site') }}</title>
   <Header></Header>
-  <div class="mdui-container-fluid">
+  <div v-if="error" class="mdui-container-fluid">
+    <div class="mdui-panel">
+      <div class="mdui-panel-item mdui-panel-item-open">
+        <div class="mdui-panel-item-header">
+          <div class="mdui-panel-item-title branch-title mdui-text-color-red">{{ $t('error') || '加载失败' }}</div>
+        </div>
+        <div class="mdui-panel-item-body">
+          <p>{{ error }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div v-else-if="device" class="mdui-container-fluid">
     <div class="mdui-panel">
       <div class="mdui-panel-item mdui-panel-item-open">
         <div class="mdui-panel-item-header">
@@ -13,7 +24,7 @@
             <li><b>{{ $t('devcode') }} ：</b>{{ device.codename }}</li><br />
             <li><b>Hyper<span class="HyperBlue">OS</span> ：</b>
               <span v-show="device.ismiui == '0'">
-                <a :href="('https://hyperos.fans/' + locale.slice(0, 2) + '/devices/' + device.codename)" class="HyperBlue">{{ $t('released') }}</a>
+                <a :href="buildHyperOSLink(device.codename)" class="HyperBlue">{{ $t('released') }}</a>
               </span>
               <span v-show="device.ismiui == '1'">{{ $t('notyet') }}</span>
               <span v-show="device.ismiui == ''">{{ $t('notsupported') }}</span>
@@ -53,6 +64,7 @@
                   <th class="mdui-text-center" v-show="branch.branch == 'msap'">{{ $t('version') }}</th>
                   <th class="mdui-text-center" v-show="branch.branch != 'msap'">{{ $t('miui') }}</th>
                   <th class="mdui-text-center">{{ $t('android') }}</th>
+                  <th class="mdui-text-center">{{ $t('release') || '发布时间' }}</th>
                   <th>{{ $t('recovery') }}</th>
                   <th>{{ $t('fastboot') }}</th>
                 </tr>
@@ -62,17 +74,14 @@
                   <td class="mdui-text-center">{{ branch.links.length - index }}</td>
                   <td class="mdui-text-center">{{ data.miui }}</td>
                   <td class="mdui-text-center">{{ data.android }}</td>
+                  <td class="mdui-text-center">{{ data.release || 'N/A' }}</td>
                   <td v-if="data.recovery == ''">{{ $t('na') }}</td>
-                  <td v-else><a :href="('https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/' + data.miui + '/' + data.recovery)">
+                  <td v-else><a :href="buildDownloadLink(data.miui, data.recovery)">
                       <span>{{ $t('recovery') }}</span>
-                      <!-- <span v-if="$device.isDesktopOrTablet">{{ data.recovery }}</span>
-                        <span v-else></span> -->
                     </a></td>
                   <td v-if="data.fastboot == ''">{{ $t('na') }}</td>
-                  <td v-else><a :href="('https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/' + data.miui + '/' + data.fastboot)">
+                  <td v-else><a :href="buildDownloadLink(data.miui, data.fastboot)">
                       <span>{{ $t('fastboot') }}</span>
-                      <!-- <span v-if="$device.isDesktopOrTablet">{{ data.fastboot }}</span>
-                        <span v-else></span> -->
                     </a></td>
                 </tr>
               </tbody>
@@ -90,9 +99,49 @@
 </template>
 
 <script setup>
-import Analystics from '~/components/Analystics.vue';
+import { validateCodename, sanitizeString } from '~/utils/validation'
+import { API_CONFIG } from '~/config/api'
 
-const route = useRoute();
-const { locale } = useI18n();
-const { data: device } = useFetch("https://data.miuier.com/data/devices/" + route.params.codename.toLowerCase() + ".json")
+const route = useRoute()
+const { locale } = useI18n()
+const { t } = useI18n()
+
+const buildDownloadLink = (miui, filename) => {
+  return `${API_CONFIG.EXTERNAL_URLS.OSS_BUCKET}/${miui}/${filename}`
+}
+
+const buildHyperOSLink = (codename) => {
+  return `${API_CONFIG.EXTERNAL_URLS.HYPEROS_FANS}/${locale.value.slice(0, 2)}/devices/${codename}`
+}
+
+const codename = computed(() => {
+  const param = route.params.codename
+  if (Array.isArray(param)) {
+    return param[0]
+  }
+  return param
+})
+
+const { data: device, error } = await useAsyncData(
+  'device-' + codename.value,
+  async () => {
+    const sanitizedCodename = sanitizeString(codename.value)
+
+    if (!validateCodename(sanitizedCodename)) {
+      throw new Error(t('invalidDevice') || '无效的设备代号')
+    }
+
+    const data = await $fetch(`${API_CONFIG.BASE_URL}/devices/${sanitizedCodename}.json`)
+    return data
+  }
+)
+
+useHead({
+  title: computed(() => {
+    if (device.value) {
+      return `${device.value[locale.value]}(${device.value.codename}) ${t('download')} - ${t('site')}`
+    }
+    return `${t('site')}`
+  })
+})
 </script>
