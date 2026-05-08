@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<Header></Header>
+		<br />
 		<div class="mdui-panel mdui-container-fluid" mdui-panel>
 			<div v-if="error" class="mdui-panel-item mdui-panel-item-open">
 				<div class="mdui-panel-item-header">
