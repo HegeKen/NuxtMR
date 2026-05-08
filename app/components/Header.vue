@@ -12,63 +12,73 @@
           <div class="mdui-toolbar-spacer"></div>
           <img src="https://roms.miuier.com/images/logo/Logo-Str-White.png" title="SiteLogo" width="160px">
         </div>
-        <div class="mdui-drawer mdui-drawer-close mdui-text-color-black-text" id="main-drawer">
-          <ul class="mdui-list" mdui-collapse="{accordion: false}" style="padding-top: 70px;">
-            <a :href="'/' + locale">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">home</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('home') }}</div>
-              </li>
+      </div>
+      <div class="mdui-drawer mdui-drawer-close mdui-text-color-black-text" id="main-drawer">
+        <div class="mdui-color-deep-orange-accent mdui-text-color-white">
+          <div class="mdui-toolbar">
+            <a href="javascript:;" mdui-drawer-close>
+              <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-yellow">
+                <i class="mdui-icon material-icons">arrow_back</i>
+              </span>
             </a>
-            <a href="/search.html">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">search</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('search') }}</div>
-              </li>
-            </a>
-            <a :href="'/' + locale + '/weekly'">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">developer_mode</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('dev') }}</div>
-              </li>
-            </a>
-            <a :href="'/' + locale + '/devices'">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">devices</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('devices') }}</div>
-              </li>
-            </a>
-            <a :href="'/' + locale + '/tools'">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">laptop_windows</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('tools') }}</div>
-              </li>
-            </a>
-            <a :href="'/' + locale + '/thanks'">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">favorite_border</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('thanks') }}</div>
-              </li>
-            </a>
-            <a :href="'/' + locale + '/sitelog'">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">update</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('sitelog') }}</div>
-              </li>
-            </a>
-            <a :href="'/' + locale + '/friendly'">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('friendly') }}</div>
-              </li>
-            </a>
-            <a :href="'/' + locale + '/about'">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">perm_identity</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('about') }}</div>
-              </li>
-            </a>
-            <li class="mdui-list-item" @click="toggleDarkMode"><i class="mdui-list-item-icon mdui-icon material-icons">{{ isDark ? 'brightness_5' : 'brightness_3' }}</i>
-              <div class="mdui-list-item-content">{{ isDark ? $t('lightMode') : $t('darkMode') }}</div>
-            </li>
-            <a v-for="loc in availableLocales" :key="loc.code" :href="switchLocalePath(loc.code)">
-              <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">&#xe8e2;</i>
-                <div class="mdui-list-item-content mdui-text-capitalize">{{ loc.name }}</div>
-              </li>
-            </a>
-          </ul>
+            <span class="mdui-typo-title">{{ $t('site') }}</span>
+          </div>
         </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: false}">
+          <a :href="'/' + locale">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('home') }}</div>
+            </li>
+          </a>
+          <a href="/search.html">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">search</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('search') }}</div>
+            </li>
+          </a>
+          <a :href="'/' + locale + '/weekly'">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">developer_mode</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('dev') }}</div>
+            </li>
+          </a>
+          <a :href="'/' + locale + '/devices'">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">devices</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('devices') }}</div>
+            </li>
+          </a>
+          <a :href="'/' + locale + '/tools'">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">laptop_windows</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('tools') }}</div>
+            </li>
+          </a>
+          <a :href="'/' + locale + '/thanks'">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">favorite_border</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('thanks') }}</div>
+            </li>
+          </a>
+          <a :href="'/' + locale + '/sitelog'">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">update</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('sitelog') }}</div>
+            </li>
+          </a>
+          <a :href="'/' + locale + '/friendly'">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('friendly') }}</div>
+            </li>
+          </a>
+          <a :href="'/' + locale + '/about'">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">perm_identity</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('about') }}</div>
+            </li>
+          </a>
+          <li class="mdui-list-item" @click="toggleDarkMode"><i class="mdui-list-item-icon mdui-icon material-icons">{{ isDark ? 'brightness_5' : 'brightness_3' }}</i>
+            <div class="mdui-list-item-content">{{ isDark ? $t('lightMode') : $t('darkMode') }}</div>
+          </li>
+          <a v-for="loc in availableLocales" :key="loc.code" :href="switchLocalePath(loc.code)">
+            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">&#xe8e2;</i>
+              <div class="mdui-list-item-content mdui-text-capitalize">{{ loc.name }}</div>
+            </li>
+          </a>
+        </ul>
       </div>
       <br /><br /><br />
     </div>
