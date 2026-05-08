@@ -43,6 +43,7 @@
 				</div>
 			</template>
 		</div>
+		<br />
 		<Disclaimer></Disclaimer>
 		<Footer></Footer>
 		<Analystics></Analystics>

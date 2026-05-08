@@ -1,6 +1,6 @@
 <template>
   <div v-if="isDesktop">
-    <div class="mdui-bottom-nav mdui-color-white">
+    <div class="mdui-bottom-nav mdui-color-theme">
       <a href="https://github.com/HegeKen" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon icon-GitHub MRIcons"></i><label>GitHub</label></a>
       <a href="https://gitlab.com/HegeKen" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon icon-gitlab MRIcons"></i><label>GitLab</label></a>
       <a href="https://weibo.com/Heliljan" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon icon-weibo MRIcons"></i><label>{{ $t('weibo') }}</label></a>
@@ -13,7 +13,7 @@
     </div>
   </div>
   <div v-else>
-    <div class="mdui-bottom-nav mdui-color-white">
+    <div class="mdui-bottom-nav mdui-color-theme">
       <a :href="'/' + locale" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">home</i><label class="mdui-text-capitalize">{{ $t('home') }}</label></a>
       <a href="/search.html" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">search</i><label class="mdui-text-capitalize">{{ $t('search') }}</label></a>
       <a :href="'/' + locale + '/devices'" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon material-icons">devices</i><label class="mdui-text-capitalize">{{ $t('devices') }}</label></a>
