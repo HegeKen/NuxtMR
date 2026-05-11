@@ -51,7 +51,7 @@ a {
 
 @media screen and (min-width: 750px) {
 	.HOSPanel {
-		background-image: url("/images/logo/hyperlogo.jpeg");
+		background-image: url("/images/logo/hyperlogo.png");
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center right;
@@ -109,8 +109,12 @@ a {
 }
 
 .mdui-typo-title {
-	margin-left: -10px !important;
 	overflow: visible;
+}
+@media (max-width: 768px) {
+	.mdui-typo-title {
+		margin-left: -10px !important;
+	}
 }
 .mdui-overlay-show {
 	z-index: 0 !important;
