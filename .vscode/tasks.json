@@ -1,0 +1,91 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "run-NewBranches",
+			"type": "shell",
+			"command": "python3",
+			"args": ["${workspaceFolder}/public/MRData/scripts/NewBranches.py"],
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "run-OTAFormer",
+			"type": "shell",
+			"command": "python3",
+			"args": ["${workspaceFolder}/public/MRData/scripts/OTAFormer.py"],
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "run-OTAFull",
+			"type": "shell",
+			"command": "python3",
+			"args": ["${workspaceFolder}/public/MRData/scripts/OTAFull.py"],
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "run-XFUFull",
+			"type": "shell",
+			"command": "python3",
+			"args": ["${workspaceFolder}/public/MRData/scripts/XFUFull.py"],
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "run-MGCGetFastboot",
+			"type": "shell",
+			"command": "python3",
+			"args": ["${workspaceFolder}/public/MRData/scripts/MGCGetFastboot.py"],
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "run-getCurrentFastboot",
+			"type": "shell",
+			"command": "python3",
+			"args": [
+				"${workspaceFolder}/public/MRData/scripts/getCurrentFastboot.py"
+			],
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "run-all-jobs",
+			"dependsOn": [
+				"run-NewBranches",
+				"run-OTAFormer",
+				"run-OTAFull",
+				"run-XFUFull",
+				"run-MGCGetFastboot",
+				"run-getCurrentFastboot"
+			],
+			"problemMatcher": []
+		}
+	]
+}
