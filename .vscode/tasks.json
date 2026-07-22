@@ -14,6 +14,18 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "run-findNewBranches",
+			"type": "shell",
+			"command": "python3",
+			"args": ["${workspaceFolder}/public/MRData/scripts/findNewBranches.py"],
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
 			"label": "run-OTAFormer",
 			"type": "shell",
 			"command": "python3",
@@ -83,7 +95,8 @@
 				"run-OTAFull",
 				"run-XFUFull",
 				"run-MGCGetFastboot",
-				"run-getCurrentFastboot"
+				"run-getCurrentFastboot",
+				"run-findNewBranches"
 			],
 			"problemMatcher": []
 		}
