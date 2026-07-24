@@ -31,14 +31,14 @@ const getFlag = (code) => {
 const onLocaleChange = (event) => {
   const targetCode = event.target.value
   const path = switchLocalePath(targetCode)
-  if (process.client) {
+  if (import.meta.client) {
     const finalPath = path || (targetCode === 'zh-cn' ? '/' : `/${targetCode}`)
     window.location.href = finalPath
   }
 }
 
 onMounted(() => {
-  if (process.client && selectRef.value) {
+  if (import.meta.client && selectRef.value) {
     if (typeof mdui !== 'undefined' && mdui.Select) {
       mduiSelect = new mdui.Select(selectRef.value, {
         position: 'top'

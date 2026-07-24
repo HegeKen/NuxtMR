@@ -1,6 +1,14 @@
 export default defineNuxtConfig({
 	css: ["assets/miuiroms.css"],
 
+	ssr: true,
+	components: true,
+	devtools: { enabled: false },
+
+	app: {
+		pageTransition: false,
+	},
+
 	modules: ["@nuxtjs/sitemap", "@nuxtjs/device", "@nuxtjs/i18n"],
 
 	i18n: {

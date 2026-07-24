@@ -24,12 +24,11 @@
 </template>
 <script setup>
 const { locale } = useI18n()
-const isDesktop = ref(true)
+const device = useDevice()
+const isDesktop = computed(() => device.isDesktop)
 
 onMounted(() => {
-  isDesktop.value = !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-
-  if (!isDesktop.value) {
+  if (device.isMobile) {
     document.body.classList.add('mdui-bottom-nav-fixed')
   }
 })

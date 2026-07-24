@@ -1,6 +1,6 @@
 <template>
   <div id="top">
-    <div v-if="isMobile">
+    <div v-if="device.isMobile">
       <div class="mdui-color-deep-orange-accent mdui-text-color-white mdui-appbar mdui-appbar-fixed">
         <div class="mdui-toolbar">
           <a href="javascript:;">
@@ -113,35 +113,10 @@ const switchLocalePath = useSwitchLocalePath()
 const availableLocales = computed(() => {
   return locales.value.filter((i) => i.code !== locale.value)
 })
-const isMobile = ref(false)
-const isDark = ref(false)
+const device = useDevice()
+const { isDark, initDarkMode, toggleDarkMode } = useDarkMode()
 
 onMounted(() => {
-  isMobile.value = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-
-  const savedMode = localStorage.getItem('dark-mode')
-  if (savedMode === 'true') {
-    isDark.value = true
-    document.body.classList.add('mdui-theme-layout-dark')
-  } else if (savedMode === 'false') {
-    isDark.value = false
-    document.body.classList.remove('mdui-theme-layout-dark')
-  } else {
-    isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches
-    if (isDark.value) {
-      document.body.classList.add('mdui-theme-layout-dark')
-    }
-  }
+  initDarkMode()
 })
-
-const toggleDarkMode = () => {
-  isDark.value = !isDark.value
-  if (isDark.value) {
-    document.body.classList.add('mdui-theme-layout-dark')
-    localStorage.setItem('dark-mode', 'true')
-  } else {
-    document.body.classList.remove('mdui-theme-layout-dark')
-    localStorage.setItem('dark-mode', 'false')
-  }
-}
 </script>

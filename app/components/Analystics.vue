@@ -2,7 +2,7 @@
 import { API_CONFIG } from '~/config/api'
 
 onMounted(() => {
-  if (process.client && typeof window !== 'undefined') {
+  if (import.meta.client) {
     const head = document.head || document.getElementsByTagName('head')[0];
 
     const baiduScript = document.createElement('script');
@@ -16,7 +16,7 @@ onMounted(() => {
     head.appendChild(gtagScript);
 
     const inlineScript = document.createElement('script');
-    inlineScript.innerHTML = `
+    inlineScript.textContent = `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
