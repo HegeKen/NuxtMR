@@ -30,7 +30,7 @@
 										<span class="mdui-chip-title">{{ $t('num') }} {{ week }} {{ $t('week') }}</span></a>
 								</div>
 								<div class="mdui-chip" v-if="parseInt(week) < parseInt(weeks.oldest)">
-									<a :href="'https://old.miuier.com/weekly/logs/week-' + week + '-cn'" target="_blank">
+									<a :href="'https://old.miuier.com/weekly/logs/week-' + week + '-CN'" target="_blank">
 										<span class="mdui-chip-title">{{ $t('num') }} {{ week }} {{ $t('week') }}</span></a>
 								</div>
 							</span>
