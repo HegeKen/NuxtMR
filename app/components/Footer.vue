@@ -1,5 +1,5 @@
 <template>
-  <div v-if="device.isDesktop">
+  <div v-if="isDesktop">
     <div class="mdui-bottom-nav mdui-color-theme">
       <a href="https://github.com/HegeKen" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon icon-GitHub MRIcons"></i><label>GitHub</label></a>
       <a href="https://gitlab.com/HegeKen" class="mdui-ripple mdui-bottom-nav-active"><i class="mdui-icon icon-gitlab MRIcons"></i><label>GitLab</label></a>
@@ -24,10 +24,10 @@
 </template>
 <script setup>
 const { locale } = useI18n()
-const device = useDevice()
+const { isDesktop, isMobile } = useDevice()
 
 onMounted(() => {
-  if (device.isMobile) {
+  if (isMobile) {
     document.body.classList.add('mdui-bottom-nav-fixed')
   }
 })

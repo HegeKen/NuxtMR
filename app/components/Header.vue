@@ -1,7 +1,7 @@
 <template>
   <div id="top">
-    <div v-if="device.isMobile">
-      <div class="mdui-color-deep-orange-accent mdui-text-color-white mdui-appbar mdui-appbar-fixed">
+    <div v-if="isMobile">
+      <div class="mdui-color-mi-orange-accent mdui-text-color-white mdui-appbar mdui-appbar-fixed">
         <div class="mdui-toolbar">
           <a href="javascript:;">
             <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-yellow" mdui-drawer="{target: '#main-drawer', swipe: true}" mdui-drawer-close>
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="mdui-drawer mdui-drawer-close mdui-text-color-black-text" id="main-drawer">
-        <div class="mdui-color-deep-orange-accent mdui-text-color-white">
+        <div class="mdui-color-mi-orange-accent mdui-text-color-white">
           <div class="mdui-toolbar">
             <a href="javascript:;" mdui-drawer-close>
               <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-yellow">
@@ -83,7 +83,7 @@
       <br /><br /><br />
     </div>
     <div v-else>
-      <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-color-deep-orange-accent mdui-text-color-white mdui-shadow-0">
+      <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-color-mi-orange-accent mdui-text-color-white mdui-shadow-0">
         <div class="mdui-toolbar">
           <span class="mdui-typo-title">{{ $t('site') }}</span>
           <div class="mdui-toolbar-spacer"></div>
@@ -113,7 +113,7 @@ const switchLocalePath = useSwitchLocalePath()
 const availableLocales = computed(() => {
   return locales.value.filter((i) => i.code !== locale.value)
 })
-const device = useDevice()
+const { isMobile } = useDevice()
 const { isDark, initDarkMode, toggleDarkMode } = useDarkMode()
 
 onMounted(() => {

@@ -1,8 +1,8 @@
 <template>
-	<div>
-		<Header></Header>
-		<div class="mdui-container-fluid">
-			<ClientOnly>
+	<ClientOnly>
+		<div>
+			<Header></Header>
+			<div class="mdui-container-fluid">
 				<div class="mdui-panel">
 					<div class="mdui-panel-item mdui-panel-item-open HOSPanel">
 						<div class="mdui-panel-item-header">
@@ -11,8 +11,8 @@
 							</div>
 						</div>
 						<div class="mdui-panel-item-body HOS">
-							<div style="font-size: 30px;font-weight: bold;"><a href="https://hyperos.fans">Xiaomi Hyper<span class="HyperBlue">OS</span></a></div><br />
-							<div style="font-size: 20px;font-weight: bold;"><a href="https://hyperos.fans">小 米 澎 湃 <span class="HyperBlue">O S</span></a></div><br />
+							<div style="font-size: 30px;font-weight: bold;"><a href="https://hyperos.fans"><span class="mdui-text-color-black">Xiaomi Hyper</span><span class="HyperBlue">OS</span></a></div><br />
+							<div style="font-size: 20px;font-weight: bold;"><a href="https://hyperos.fans"><span class="mdui-text-color-black">小 米 澎 湃 </span><span class="HyperBlue">O S</span></a></div><br />
 							<div style="font-size: 20px;"><a href="https://hyperos.fans">{{ $t('mihyper') }}<span class="HyperBlue">OS</span>{{ $t('gethyper') }}</a></div>
 						</div>
 					</div>
@@ -72,13 +72,13 @@
 						</div>
 					</div>
 				</div>
-			</ClientOnly>
+			</div>
+			<Disclaimer></Disclaimer>
+			<Footer></Footer>
+			<Analystics></Analystics>
+			<NuxtMR></NuxtMR>
 		</div>
-		<Disclaimer></Disclaimer>
-		<Footer></Footer>
-		<Analystics></Analystics>
-		<NuxtMR></NuxtMR>
-	</div>
+	</ClientOnly>
 </template>
 
 <script setup>

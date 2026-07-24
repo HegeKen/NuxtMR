@@ -1,0 +1,105 @@
+body {
+	font-family: "MISans" !important;
+}
+
+a {
+	color: #2655ff;
+	text-decoration: none;
+}
+
+/* ========== 品牌颜色 ========== */
+.Xiaomi { color: #ff6900 !important; }
+.Redmi { color: #000000 !important; }
+.POCO { color: #ffd400 !important; }
+.HyperBlue, .MRLinks a:visited { color: #2655ff !important; }
+
+/* ========== 主题颜色 ========== */
+.mdui-color-mi-orange-accent { background-color: #ff6900 !important; }
+.mdui-ripple-orange { color: #ff6900 !important; }
+
+/* ========== 文本样式 ========== */
+.mdui-text-color-black {
+	color: black !important;
+	font-size: 25px !important;
+}
+.mdui-panel-item-title {
+	color: #ff6900 !important;
+	font-size: 25px !important;
+	width: 100%;
+}
+.branch-title {
+	font-size: 20px !important;
+	color: black !important;
+}
+
+/* ========== 图标 ========== */
+.MRIcons {
+	font-family: "iconfont";
+	text-align: right;
+}
+.MRIcons label {
+	text-decoration: none;
+	text-align: center;
+}
+
+/* ========== 底部导航 ========== */
+.mdui-bottom-nav {
+	background-color: #ffffff !important;
+	z-index: 1000 !important;
+	position: fixed !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	height: 56px !important;
+}
+.mdui-bottom-nav a.mdui-bottom-nav-active {
+	color: black;
+}
+.padding-bottom {
+	padding-bottom: 35px;
+}
+
+/* ========== Typography ========== */
+.mdui-typo-title {
+	overflow: visible;
+}
+@media (max-width: 768px) {
+	.mdui-typo-title {
+		margin-left: -10px !important;
+	}
+}
+
+/* ========== Misc ========== */
+.mdui-overlay-show { z-index: 0 !important; }
+.mdui-chip a { color: black; }
+.mdui-tab a,
+.mdui-tab a .mdui-icon {
+	opacity: 1 !important;
+}
+
+/* ========== 深色主题 ========== */
+.mdui-theme-layout-dark {
+	.mdui-text-color-black,
+	.mdui-list-item-icon,
+	.mdui-list-item-content,
+	.mdui-bottom-nav a.mdui-bottom-nav-active,
+	.mdui-chip a,
+	.branch-title {
+		color: white !important;
+	}
+	.mdui-bottom-nav {
+		background-color: #1a1a1a !important;
+	}
+	.Redmi { color: white !important; }
+	.HOS a:visited { color: white !important; }
+}
+
+/* ========== 响应式 ========== */
+@media screen and (min-width: 750px) {
+	.HOSPanel {
+		background-image: url("/images/logo/hyperlogo.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center right;
+	}
+}

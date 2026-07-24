@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-	css: ["assets/miuiroms.css"],
+	css: ["assets/miuiroms.scss"],
 
 	ssr: true,
 	components: true,
