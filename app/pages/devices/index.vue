@@ -17,7 +17,7 @@
 				<div v-else-if="devices" class="mdui-panel mdui-panel-gapless" mdui-panel="{accordion: true}">
 					<div v-for="brand in devices.brands" class="mdui-panel-item">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title" :class="[brand.brand]">{{ brand[locale] }}</div>
+							<div :class="[brand.brand]" class="mdui-panel-item-title">{{ brand[locale] }}</div>
 							<i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
 						</div>
 						<div class="mdui-panel-item-body" v-for="series in brand.series">

@@ -7,17 +7,10 @@ a {
 	text-decoration: none;
 }
 
-/* ========== 品牌颜色 ========== */
-.Xiaomi { color: #ff6900 !important; }
-.Redmi { color: #000000 !important; }
-.POCO { color: #ffd400 !important; }
-.HyperBlue, .MRLinks a:visited { color: #2655ff !important; }
 
-/* ========== 主题颜色 ========== */
-.mdui-color-mi-orange-accent { background-color: #ff6900 !important; }
-.mdui-ripple-orange { color: #ff6900 !important; }
 
 /* ========== 文本样式 ========== */
+
 .mdui-text-color-black {
 	color: black !important;
 	font-size: 25px !important;
@@ -25,6 +18,7 @@ a {
 .mdui-panel-item-title {
 	color: #ff6900 !important;
 	font-size: 25px !important;
+	overflow: visible !important;	
 	width: 100%;
 }
 .branch-title {
@@ -59,13 +53,16 @@ a {
 	padding-bottom: 35px;
 }
 
+.mdui-toolbar>*{
+	overflow: visible!important;
+}
 /* ========== Typography ========== */
 .mdui-typo-title {
 	overflow: visible;
 }
 @media (max-width: 768px) {
 	.mdui-typo-title {
-		margin-left: -10px !important;
+		margin-left: -15px !important;
 	}
 }
 
@@ -103,3 +100,12 @@ a {
 		background-position: center right;
 	}
 }
+/* ========== 品牌颜色 ========== */
+.Xiaomi { color: #ff6900 !important; }
+.Redmi { color: #000000 !important; }
+.POCO { color: #ffd400 !important; }
+.HyperBlue, .MRLinks a:visited { color: #2655ff !important; }
+
+/* ========== 主题颜色 ========== */
+.mdui-color-mi-orange-accent { background-color: #ff6900 !important; }
+.mdui-ripple-orange { color: #ff6900 !important; }

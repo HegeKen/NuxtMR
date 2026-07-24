@@ -10,7 +10,7 @@
           </a>
           <span class="mdui-typo-title">{{ $t('site') }}</span>
           <div class="mdui-toolbar-spacer"></div>
-          <img src="https://roms.miuier.com/images/logo/Logo-Str-White.png" title="SiteLogo" width="160px">
+          <img src="https://roms.miuier.com/images/logo/Logo-Str-White.png" title="SiteLogo" width="120px">
         </div>
       </div>
       <div class="mdui-drawer mdui-drawer-close mdui-text-color-black-text" id="main-drawer">
