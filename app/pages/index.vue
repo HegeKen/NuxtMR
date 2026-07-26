@@ -40,6 +40,7 @@
 						</div>
 						<div class="mdui-panel-item-body">
 							<div><b>{{ $t('updatetime') }} ：</b>{{ home.date }}</div><br />
+							<div><b>{{ $t('buildtime') }} ：</b>{{ formattedBuildTime }}</div><br />
 							<span v-if="locale == 'zh-cn'">
 								<div><b>收录周期 ：</b>{{ home.year }}年第{{ home.week }}周({{ home.period }})</div><br />
 							</span>
@@ -90,6 +91,16 @@ import { API_CONFIG } from '~/config/api'
 
 const { locale } = useI18n()
 const { t } = useI18n()
+
+const formattedBuildTime = computed(() => {
+	const buildDate = new Date(__BUILD_TIME__)
+	const year = buildDate.getFullYear()
+	const month = String(buildDate.getMonth() + 1).padStart(2, '0')
+	const day = String(buildDate.getDate()).padStart(2, '0')
+	const hours = String(buildDate.getHours()).padStart(2, '0')
+	const minutes = String(buildDate.getMinutes()).padStart(2, '0')
+	return `${year}-${month}-${day} ${hours}:${minutes}`
+})
 
 const { data: home, error: homeError } = await useAsyncData(
 	'home',

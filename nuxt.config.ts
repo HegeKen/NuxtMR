@@ -28,6 +28,9 @@ export default defineNuxtConfig({
 	},
 
 	vite: {
+		define: {
+			__BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+		},
 		server: {
 			hmr: { overlay: false },
 		},

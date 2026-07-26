@@ -76,6 +76,7 @@ export default defineI18nConfig(() => ({
 			search: "搜索",
 			darkMode: "深色模式",
 			lightMode: "浅色模式",
+			buildtime: "生成时间",
 		},
 		"en-us": {
 			site: "MIUI Official ROMS",
@@ -151,6 +152,7 @@ export default defineI18nConfig(() => ({
 			search: "Search",
 			darkMode: "Dark Mode",
 			lightMode: "Light Mode",
+			buildtime: "Build Time",
 		},
 	},
 }));
