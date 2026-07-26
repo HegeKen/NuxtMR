@@ -99,7 +99,8 @@ const formattedBuildTime = computed(() => {
 	const day = String(buildDate.getDate()).padStart(2, '0')
 	const hours = String(buildDate.getHours()).padStart(2, '0')
 	const minutes = String(buildDate.getMinutes()).padStart(2, '0')
-	return `${year}-${month}-${day} ${hours}:${minutes}`
+	const seconds = String(buildDate.getSeconds()).padStart(2, '0')
+	return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 })
 
 const { data: home, error: homeError } = await useAsyncData(
