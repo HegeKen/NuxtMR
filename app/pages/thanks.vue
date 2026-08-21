@@ -2,23 +2,24 @@
 	<ClientOnly>
 		<div>
 			<Header></Header>
+			<main id="main-content" tabindex="-1">
 			<div class="mdui-container-fluid">
 				<div class="mdui-panel">
 					<div v-if="error" class="mdui-panel-item mdui-panel-item-open">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title branch-title mdui-text-color-red">{{ $t('error') || '加载失败' }}</div>
+							<div class="mdui-panel-item-title branch-title mdui-text-color-red" role="heading" aria-level="2">{{ $t('error') || '加载失败' }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<p>{{ error }}</p>
 						</div>
 					</div>
-					<div v-else-if="thanks" class="mdui-panel-item mdui-panel-item-open" v-for="thank in thanks.thanks">
+					<div v-else-if="thanks" class="mdui-panel-item mdui-panel-item-open" v-for="thank in thanks.thanks" :key="thank.name[locale]">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title branch-title">{{ thank.name[locale] }}</div>
+							<div class="mdui-panel-item-title branch-title" role="heading" aria-level="2">{{ thank.name[locale] }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<ol class="mdui-list">
-								<li v-for="info in thank.info">
+								<li v-for="(info, index) in thank.info" :key="index">
 									<span>
 										<span v-if="info.url == ''">
 											<b>{{ info.to[locale] }}</b>
@@ -37,6 +38,7 @@
 					</div>
 				</div>
 			</div>
+			</main>
 			<Disclaimer></Disclaimer>
 			<Footer></Footer>
 			<Analystics></Analystics>

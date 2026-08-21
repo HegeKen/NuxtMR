@@ -2,27 +2,28 @@
 	<ClientOnly>
 		<div>
 			<Header></Header>
+			<main id="main-content" tabindex="-1">
 			<br />
 			<div class="mdui-container-fluid">
 				<div class="mdui-panel mdui-panel-gapless">
 					<div v-if="error" class="mdui-panel-item mdui-panel-item-open">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title mdui-text-color-red">{{ $t('error') || '加载失败' }}</div>
+							<div class="mdui-panel-item-title mdui-text-color-red" role="heading" aria-level="2">{{ $t('error') || '加载失败' }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<p>{{ error }}</p>
 						</div>
 					</div>
-					<div v-else-if="logs" class="mdui-panel-item mdui-panel-item-open" v-for="sitelog in logs">
+					<div v-else-if="logs" class="mdui-panel-item mdui-panel-item-open" v-for="sitelog in logs" :key="sitelog.ver">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title mdui-text-color-orange">{{ $t('version') }} ：{{ sitelog.ver }}</div>
+							<div class="mdui-panel-item-title mdui-text-color-orange" role="heading" aria-level="2">{{ $t('version') }} ：{{ sitelog.ver }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<div><b>{{ $t('updatetime') }} ：</b>{{ sitelog.sudate }}</div><br />
 							<div v-if="sitelog[locale] != ''"><b>{{ $t('newdevices') }} ：</b>{{ sitelog[locale] }}</div><br />
 							<div v-show="sitelog.log.length > 0"><b>{{ $t('log') }} ：</b>
 								<ol style="margin-left:-20px;">
-									<li v-for="log in sitelog.log">{{ log[locale] }}</li>
+									<li v-for="log in sitelog.log" :key="log[locale]">{{ log[locale] }}</li>
 								</ol>
 							</div>
 						</div>
@@ -30,6 +31,7 @@
 				</div>
 			</div>
 			<br />
+			</main>
 			<Disclaimer></Disclaimer>
 			<Footer></Footer>
 			<Analystics></Analystics>

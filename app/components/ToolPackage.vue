@@ -3,7 +3,7 @@
 		<div><b>{{ translations.version }} :</b> {{ packageData.version }}</div><br />
 		<div><b>{{ translations.updatetime }} :</b> {{ packageData.date }}</div><br />
 		<div v-if="packageData.FileName"><b>{{ translations.filename }} :</b> {{ packageData.FileName }}</div><br v-if="packageData.FileName" />
-		<div v-if="packageData.url"><b>{{ translations.dllink }} :</b> <a :href="packageData.url">{{ packageData.FileName }}</a></div><br v-if="packageData.url" />
+		<div v-if="packageData.url"><b>{{ translations.dllink }} :</b> <a :href="packageData.url" rel="noopener noreferrer">{{ packageData.FileName }}</a></div><br v-if="packageData.url" />
 
 		<template v-if="packageData.attentions && packageData.attentions.length">
 			<b>{{ translations.attentions }} : </b>

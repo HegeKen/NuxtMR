@@ -2,11 +2,12 @@
 	<ClientOnly>
 		<div>
 			<Header></Header>
+			<main id="main-content" tabindex="-1">
 			<div class="mdui-container-fluid">
 				<div class="mdui-panel">
 					<div class="mdui-panel-item mdui-panel-item-open">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title branch-title">{{ $t('about') }}</div>
+							<div class="mdui-panel-item-title branch-title" role="heading" aria-level="2">{{ $t('about') }}</div>
 						</div>
 						<div class="mdui-panel-item-body mdui-typo">
 							<span v-if="locale == 'zh-cn'">
@@ -37,6 +38,7 @@
 					</div>
 				</div>
 			</div>
+			</main>
 			<Disclaimer></Disclaimer>
 			<Footer></Footer>
 			<Analystics></Analystics>

@@ -1,6 +1,6 @@
 <template>
   <div class="language-select-wrapper">
-    <select class="mdui-select" mdui-select ref="selectRef" @change="onLocaleChange">
+    <select class="mdui-select" mdui-select ref="selectRef" @change="onLocaleChange" :aria-label="$t('langswitch')">
       <option v-for="loc in availableLocales" :key="loc.code" :value="loc.code" :selected="loc.code === currentLocale">
         {{ getFlag(loc.code) }} {{ loc.name }}
       </option>

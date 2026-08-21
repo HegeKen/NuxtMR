@@ -1,122 +1,142 @@
 <template>
-  <div id="top">
+  <header id="top">
+    <!-- 跳转到主要内容（键盘用户 / 屏幕阅读器） -->
+    <a href="#main-content" class="skip-link">{{ $t('skiptocontent') }}</a>
+
     <div v-if="isMobile">
       <div class="mdui-color-mi-orange-accent mdui-text-color-white mdui-appbar mdui-appbar-fixed">
         <div class="mdui-toolbar">
-          <a href="javascript:;">
-            <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-yellow" mdui-drawer="{target: '#main-drawer', swipe: true}" mdui-drawer-close>
-              <i class="mdui-icon material-icons">menu</i>
-            </span>
-          </a>
-          <span class="mdui-typo-title">{{ $t('site') }}</span>
+          <button
+            type="button"
+            class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-yellow"
+            mdui-drawer="{target: '#main-drawer', swipe: true}"
+            :aria-label="$t('openmenu')"
+            aria-controls="main-drawer"
+            :aria-expanded="menuOpen ? 'true' : 'false'"
+          >
+            <i class="mdui-icon material-icons" aria-hidden="true">menu</i>
+          </button>
+          <span class="mdui-typo-title" role="heading" aria-level="1">{{ $t('site') }}</span>
           <div class="mdui-toolbar-spacer"></div>
-          <img src="https://roms.miuier.com/images/logo/Logo-Str-White.png" title="SiteLogo" width="120px">
+          <img src="https://roms.miuier.com/images/logo/Logo-Str-White.png" alt="" width="120px" />
         </div>
       </div>
       <div class="mdui-drawer mdui-drawer-close mdui-text-color-black-text" id="main-drawer">
         <div class="mdui-color-mi-orange-accent mdui-text-color-white">
           <div class="mdui-toolbar">
-            <a href="javascript:;" mdui-drawer-close>
-              <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-yellow">
-                <i class="mdui-icon material-icons">arrow_back</i>
-              </span>
-            </a>
-            <span class="mdui-typo-title">{{ $t('site') }}</span>
+            <button
+              type="button"
+              class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-yellow"
+              mdui-drawer-close
+              :aria-label="$t('closemenu')"
+            >
+              <i class="mdui-icon material-icons" aria-hidden="true">arrow_back</i>
+            </button>
+            <span class="mdui-typo-title" role="heading" aria-level="2">{{ $t('site') }}</span>
           </div>
         </div>
-        <ul class="mdui-list" mdui-collapse="{accordion: false}">
-          <a :href="'/' + locale">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">home</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('home') }}</div>
+        <nav :aria-label="$t('sitemenu')">
+          <ul class="mdui-list" mdui-collapse="{accordion: false}">
+            <li v-for="item in navItems" :key="item.path">
+              <a
+                :href="item.path"
+                class="mdui-list-item"
+                :aria-current="isCurrent(item.path) ? 'page' : undefined"
+              >
+                <i class="mdui-list-item-icon mdui-icon material-icons" aria-hidden="true">{{ item.icon }}</i>
+                <span class="mdui-list-item-content mdui-text-capitalize">{{ $t(item.label) }}</span>
+              </a>
             </li>
-          </a>
-          <a href="/search.html">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">search</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('search') }}</div>
+            <li
+              class="mdui-list-item"
+              role="button"
+              tabindex="0"
+              @click="toggleDarkMode"
+              @keydown.enter.prevent="toggleDarkMode"
+              @keydown.space.prevent="toggleDarkMode"
+              :aria-pressed="isDark ? 'true' : 'false'"
+            >
+              <i class="mdui-list-item-icon mdui-icon material-icons" aria-hidden="true">{{ isDark ? 'brightness_5' : 'brightness_3' }}</i>
+              <span class="mdui-list-item-content">{{ isDark ? $t('lightMode') : $t('darkMode') }}</span>
             </li>
-          </a>
-          <a :href="'/' + locale + '/weekly'">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">developer_mode</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('dev') }}</div>
+            <li v-for="loc in availableLocales" :key="loc.code">
+              <a :href="switchLocalePath(loc.code)" class="mdui-list-item" :aria-label="loc.name + ' (' + $t('langswitch') + ')'">
+                <i class="mdui-list-item-icon mdui-icon material-icons" aria-hidden="true">&#xe8e2;</i>
+                <span class="mdui-list-item-content mdui-text-capitalize">{{ loc.name }}</span>
+              </a>
             </li>
-          </a>
-          <a :href="'/' + locale + '/devices'">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">devices</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('devices') }}</div>
-            </li>
-          </a>
-          <a :href="'/' + locale + '/tools'">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">laptop_windows</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('tools') }}</div>
-            </li>
-          </a>
-          <a :href="'/' + locale + '/thanks'">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">favorite_border</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('thanks') }}</div>
-            </li>
-          </a>
-          <a :href="'/' + locale + '/sitelog'">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">update</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('sitelog') }}</div>
-            </li>
-          </a>
-          <a :href="'/' + locale + '/friendly'">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('friendly') }}</div>
-            </li>
-          </a>
-          <a :href="'/' + locale + '/about'">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">perm_identity</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ $t('about') }}</div>
-            </li>
-          </a>
-          <li class="mdui-list-item" @click="toggleDarkMode"><i class="mdui-list-item-icon mdui-icon material-icons">{{ isDark ? 'brightness_5' : 'brightness_3' }}</i>
-            <div class="mdui-list-item-content">{{ isDark ? $t('lightMode') : $t('darkMode') }}</div>
-          </li>
-          <a v-for="loc in availableLocales" :key="loc.code" :href="switchLocalePath(loc.code)">
-            <li class="mdui-list-item"><i class="mdui-list-item-icon mdui-icon material-icons">&#xe8e2;</i>
-              <div class="mdui-list-item-content mdui-text-capitalize">{{ loc.name }}</div>
-            </li>
-          </a>
-        </ul>
+          </ul>
+        </nav>
       </div>
       <br /><br /><br />
     </div>
     <div v-else>
       <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-color-mi-orange-accent mdui-text-color-white mdui-shadow-0">
         <div class="mdui-toolbar">
-          <span class="mdui-typo-title">{{ $t('site') }}</span>
+          <span class="mdui-typo-title" role="heading" aria-level="1">{{ $t('site') }}</span>
           <div class="mdui-toolbar-spacer"></div>
-          <img src="https://roms.miuier.com/images/logo/Logo-Full-White.png" title="SiteLogo" width="170px" />
+          <img src="https://roms.miuier.com/images/logo/Logo-Full-White.png" alt="" width="170px" />
           <DarkModeToggle />
           <LanguageSwitcher />
         </div>
-        <div class="mdui-tab mdui-tab-centered mdui-text-color-white">
-          <a :href="'/' + locale"><i class="mdui-icon material-icons">home</i><label class="mdui-text-capitalize">{{ $t('home') }}</label></a>
-          <a href="/search.html"><i class="mdui-icon material-icons">search</i><label class="mdui-text-capitalize">{{ $t('search') }}</label></a>
-          <a :href="'/' + locale + '/weekly'"><i class="mdui-icon material-icons">developer_mode</i><label class="mdui-text-capitalize">{{ $t('dev') }}</label></a>
-          <a :href="'/' + locale + '/devices'"><i class="mdui-icon material-icons">devices</i><label class="mdui-text-capitalize">{{ $t('devices') }}</label></a>
-          <a :href="'/' + locale + '/tools'"><i class="mdui-icon material-icons">laptop_windows</i><label class="mdui-text-capitalize">{{ $t('tools') }}</label></a>
-          <a :href="'/' + locale + '/thanks'"><i class="mdui-icon material-icons">favorite_border</i><label class="mdui-text-capitalize">{{ $t('thanks') }}</label></a>
-          <a :href="'/' + locale + '/sitelog'"><i class="mdui-icon material-icons">update</i><label class="mdui-text-capitalize">{{ $t('sitelog') }}</label></a>
-          <a :href="'/' + locale + '/friendly'"><i class="mdui-icon material-icons">link</i><label class="mdui-text-capitalize">{{ $t('friendly') }}</label></a>
-          <a :href="'/' + locale + '/about'"><i class="mdui-icon material-icons">perm_identity</i><label class="mdui-text-capitalize">{{ $t('about') }}</label></a>
-        </div>
+        <nav :aria-label="$t('mainnav')" class="mdui-tab mdui-tab-centered mdui-text-color-white">
+          <a
+            v-for="item in navItems"
+            :key="item.path"
+            :href="item.path"
+            :aria-current="isCurrent(item.path) ? 'page' : undefined"
+          >
+            <i class="mdui-icon material-icons" aria-hidden="true">{{ item.icon }}</i>
+            <label class="mdui-text-capitalize">{{ $t(item.label) }}</label>
+          </a>
+        </nav>
       </div>
       <br /><br /><br /><br /><br /><br /><br /><br />
     </div>
-  </div>
+  </header>
 </template>
 <script setup>
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
+const route = useRoute()
 const availableLocales = computed(() => {
   return locales.value.filter((i) => i.code !== locale.value)
 })
 const { isMobile } = useDevice()
 const { isDark, initDarkMode, toggleDarkMode } = useDarkMode()
 
+const navItems = computed(() => {
+  const base = '/' + locale.value
+  return [
+    { label: 'home', path: base, icon: 'home' },
+    { label: 'search', path: '/search.html', icon: 'search' },
+    { label: 'dev', path: base + '/weekly', icon: 'developer_mode' },
+    { label: 'devices', path: base + '/devices', icon: 'devices' },
+    { label: 'tools', path: base + '/tools', icon: 'laptop_windows' },
+    { label: 'thanks', path: base + '/thanks', icon: 'favorite_border' },
+    { label: 'sitelog', path: base + '/sitelog', icon: 'update' },
+    { label: 'friendly', path: base + '/friendly', icon: 'link' },
+    { label: 'about', path: base + '/about', icon: 'perm_identity' },
+  ]
+})
+
+const isCurrent = (path) => {
+  if (path === '/search.html') return false
+  const current = route.path.replace(/\/+$/, '')
+  const target = String(path).replace(/\/+$/, '')
+  return current === target
+}
+
+const menuOpen = ref(false)
+
 onMounted(() => {
   initDarkMode()
+  if (import.meta.client) {
+    const drawerEl = document.getElementById('main-drawer')
+    if (drawerEl) {
+      drawerEl.addEventListener('open.mdui.drawer', () => { menuOpen.value = true })
+      drawerEl.addEventListener('close.mdui.drawer', () => { menuOpen.value = false })
+    }
+  }
 })
 </script>

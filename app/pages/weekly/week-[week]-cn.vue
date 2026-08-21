@@ -2,11 +2,12 @@
 	<ClientOnly>
 		<div>
 			<Header></Header>
+			<main id="main-content" tabindex="-1">
 			<div v-if="error" class="mdui-container-fluid">
 				<div class="mdui-panel">
 					<div class="mdui-panel-item mdui-panel-item-open">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title branch-title mdui-text-color-red">{{ $t('error') || '加载失败' }}</div>
+							<div class="mdui-panel-item-title branch-title mdui-text-color-red" role="heading" aria-level="2">{{ $t('error') || '加载失败' }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<p>{{ error }}</p>
@@ -18,56 +19,57 @@
 				<div class="mdui-panel">
 					<div class="mdui-panel-item mdui-panel-item-open">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title branch-title">{{ $t('devdetail') }}</div>
+							<div class="mdui-panel-item-title branch-title" role="heading" aria-level="2">{{ $t('devdetail') }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<p><b>{{ $t('release') }} ：</b>{{ weekly.update }}</p>
 							<p><b>{{ $t('version') }} ：</b>{{ weekly.versions }}</p>
-							<p v-show="weekly.CnBBSID != ''"><b>{{ $t('mfc') }} ：</b><a :href="buildMiuiThreadLink(weekly.CnBBSID)" target="_blank">{{ weekly[locale] }}</a></p>
-							<p v-show="weekly.CnComID != ''"><b>{{ $t('mcc') }} ：</b><a :href="buildXiaomiPostLink(weekly.CnComID)" target="_blank">{{ weekly[locale] }}</a></p>
+							<p v-show="weekly.CnBBSID != ''"><b>{{ $t('mfc') }} ：</b><a :href="buildMiuiThreadLink(weekly.CnBBSID)" target="_blank" rel="noopener noreferrer">{{ weekly[locale] }}</a></p>
+							<p v-show="weekly.CnComID != ''"><b>{{ $t('mcc') }} ：</b><a :href="buildXiaomiPostLink(weekly.CnComID)" target="_blank" rel="noopener noreferrer">{{ weekly[locale] }}</a></p>
 						</div>
 					</div>
-					<div class="mdui-panel-item mdui-panel-item-open" v-for="addon in weekly.addons">
+					<div class="mdui-panel-item mdui-panel-item-open" v-for="addon in weekly.addons" :key="addon[locale]">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title branch-title">▍{{ addon[locale] }}</div>
+							<div class="mdui-panel-item-title branch-title" role="heading" aria-level="2">▍{{ addon[locale] }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<ol style="margin-left:-20px;">
-								<li v-for="detail in addon.details">{{ detail[locale] }}</li>
+								<li v-for="detail in addon.details" :key="detail[locale]">{{ detail[locale] }}</li>
 							</ol>
 						</div>
 					</div>
-					<div class="mdui-panel-item mdui-panel-item-open" v-for="logs in weekly.logs">
+					<div class="mdui-panel-item mdui-panel-item-open" v-for="logs in weekly.logs" :key="logs[locale]">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title branch-title">{{ logs[locale] }}</div>
+							<div class="mdui-panel-item-title branch-title" role="heading" aria-level="2">{{ logs[locale] }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
-							<div v-for="log in logs.log">
+							<div v-for="log in logs.log" :key="log[locale]">
 								<b>{{ log[locale] }}</b><br />
 								<ol class="mdui-list">
-									<li v-for="change in log.changes">{{ change[locale] }}</li>
+									<li v-for="change in log.changes" :key="change[locale]">{{ change[locale] }}</li>
 								</ol>
 							</div>
 						</div>
 					</div>
 					<div class="mdui-panel-item mdui-panel-item-open">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title branch-title">▍{{ $t('package') }}</div>
+							<div class="mdui-panel-item-title branch-title" role="heading" aria-level="2">▍{{ $t('package') }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<div class="mdui-table-fluid mdui-shadow-0">
 								<table class="mdui-table">
+									<caption class="sr-only">{{ $t('package') }}</caption>
 									<thead>
 										<tr>
-											<th class="mdui-text-center">{{ $t('device') }}</th>
-											<th class="mdui-text-center">{{ $t('miui') }}</th>
-											<th class="mdui-text-center">{{ $t('android') }}</th>
-											<th>{{ $t('recovery') }}</th>
-											<th>{{ $t('fastboot') }}</th>
+											<th scope="col" class="mdui-text-center">{{ $t('device') }}</th>
+											<th scope="col" class="mdui-text-center">{{ $t('miui') }}</th>
+											<th scope="col" class="mdui-text-center">{{ $t('android') }}</th>
+											<th scope="col">{{ $t('recovery') }}</th>
+											<th scope="col">{{ $t('fastboot') }}</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr v-for="device in weekly.devices">
+										<tr v-for="device in weekly.devices" :key="device.code">
 											<td class="mdui-text-center">{{ device[locale] }}({{ device.code }})</td>
 											<td class="mdui-text-center">{{ device.miui }}</td>
 											<td class="mdui-text-center">{{ device.android }}</td>
@@ -87,6 +89,7 @@
 					</div>
 				</div>
 			</div>
+			</main>
 			<Disclaimer></Disclaimer>
 			<Footer></Footer>
 			<Analystics></Analystics>

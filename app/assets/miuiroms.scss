@@ -109,3 +109,63 @@ a {
 /* ========== 主题颜色 ========== */
 .mdui-color-mi-orange-accent { background-color: #ff6900 !important; }
 .mdui-ripple-orange { color: #ff6900 !important; }
+
+/* ========== 无障碍辅助样式 (Accessibility) ========== */
+
+/* 仅屏幕阅读器可见（视觉隐藏） */
+.sr-only {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+/* 跳转到主要内容链接：默认移出屏幕，聚焦时显示 */
+.skip-link {
+	position: fixed;
+	top: -100px;
+	left: 16px;
+	z-index: 99999;
+	padding: 10px 18px;
+	background-color: #ff6900;
+	color: #fff !important;
+	border-radius: 0 0 6px 6px;
+	font-weight: bold;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	transition: top 0.2s ease;
+}
+.skip-link:focus-visible {
+	top: 0;
+}
+
+/* 键盘聚焦可见轮廓 */
+:focus-visible {
+	outline: 2px solid #2655ff !important;
+	outline-offset: 2px;
+}
+
+/* 可折叠面板标题（无障碍化处理后的按钮语义） */
+.mdui-panel-item-header[role="button"] {
+	cursor: pointer;
+}
+.mdui-panel-item-header[role="button"]:focus-visible {
+	outline: 2px solid #2655ff;
+	outline-offset: -2px;
+}
+
+/* 尊重“减少动态效果”系统偏好 */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

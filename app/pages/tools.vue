@@ -2,11 +2,12 @@
 	<ClientOnly>
 		<div>
 			<Header></Header>
+			<main id="main-content" tabindex="-1">
 			<br />
 			<div class="mdui-panel mdui-container-fluid" mdui-panel>
 				<div v-if="error" class="mdui-panel-item mdui-panel-item-open">
 					<div class="mdui-panel-item-header">
-						<div class="mdui-panel-item-title branch-title mdui-text-color-red">{{ $t('error') || '加载失败' }}</div>
+						<div class="mdui-panel-item-title branch-title mdui-text-color-red" role="heading" aria-level="2">{{ $t('error') || '加载失败' }}</div>
 					</div>
 					<div class="mdui-panel-item-body">
 						<p>{{ error }}</p>
@@ -14,16 +15,16 @@
 				</div>
 				<template v-else-if="tools">
 					<div v-for="tool in tools.tools" :key="tool.id" class="mdui-panel-item">
-						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title branch-title">{{ tool[locale] }}</div>
-							<i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+						<div class="mdui-panel-item-header" role="button" tabindex="0" v-panel-header>
+							<div class="mdui-panel-item-title branch-title" role="heading" aria-level="2">{{ tool[locale] }}</div>
+							<i class="mdui-panel-item-arrow mdui-icon material-icons" aria-hidden="true">keyboard_arrow_down</i>
 						</div>
 						<div class="mdui-panel-item-body">
 							<template v-for="(packs, index) in tool.packages" :key="index">
 								<div><b>{{ $t('version') }} :</b> {{ packs.version }}</div><br />
 								<div><b>{{ $t('updatetime') }} :</b> {{ packs.date }}</div><br />
 								<div v-if="packs.FileName"><b>{{ $t('filename') }} :</b> {{ packs.FileName }}</div><br v-if="packs.FileName" />
-								<div v-if="packs.url"><b>{{ $t('dllink') }} :</b> <a :href="packs.url">{{ packs.FileName }}</a></div><br v-if="packs.url" />
+								<div v-if="packs.url"><b>{{ $t('dllink') }} :</b> <a :href="packs.url" rel="noopener noreferrer">{{ packs.FileName }}</a></div><br v-if="packs.url" />
 								<template v-if="packs.attentions?.length">
 									<b>{{ $t('attentions') }} : </b>
 									<ol style="margin-left:-20px;">
@@ -45,6 +46,7 @@
 				</template>
 			</div>
 			<br />
+			</main>
 			<Disclaimer></Disclaimer>
 			<Footer></Footer>
 			<Analystics></Analystics>

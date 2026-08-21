@@ -2,11 +2,12 @@
 	<ClientOnly>
 		<div>
 			<Header></Header>
+			<main id="main-content" tabindex="-1">
 			<div class="mdui-container-fluid">
 				<div class="mdui-panel">
 					<div class="mdui-panel-item mdui-panel-item-open HOSPanel">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title HOS">
+							<div class="mdui-panel-item-title HOS" role="heading" aria-level="2">
 								<a href="https://hyperos.fans">{{ $t('new') }}<span class="HyperBlue">{{ $t('start') }}</span></a>
 							</div>
 						</div>
@@ -18,7 +19,7 @@
 					</div>
 					<div v-if="sitelog" class="mdui-panel-item mdui-panel-item-open">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title mdui-text-color-orange">{{ $t('siteupdate') }}</div>
+							<div class="mdui-panel-item-title mdui-text-color-orange" role="heading" aria-level="2">{{ $t('siteupdate') }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<div><b>{{ $t('version') }}：</b>{{ sitelog.log[0].ver }}</div><br />
@@ -29,14 +30,14 @@
 							<span v-else></span>
 							<div v-show="sitelog.log[0].log.length > 0"><b>{{ $t('log') }} ：</b>
 								<ol style="margin-left:-20px;">
-									<li v-for="log in sitelog.log[0].log">{{ log[locale] }}</li>
+									<li v-for="log in sitelog.log[0].log" :key="log[locale]">{{ log[locale] }}</li>
 								</ol>
 							</div>
 						</div>
 					</div>
 					<div v-if="home && home.stable.length > 0" class="mdui-panel-item mdui-panel-item-open">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title">{{ $t('stableupdates') }}</div>
+							<div class="mdui-panel-item-title" role="heading" aria-level="2">{{ $t('stableupdates') }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
 							<div><b>{{ $t('updatetime') }} ：</b>{{ home.date }}</div><br />
@@ -49,19 +50,19 @@
 							</span>
 							<div><b>{{ $t('updatetime') }}：</b></div>
 							<ol style="margin-left:-15px;">
-								<li v-for="rom in home.stable"><a :href="'/' + locale + '/devices/' + rom.code">{{ rom[locale] }}({{ rom.code }})</a>：{{ rom.rom }}</li>
+								<li v-for="rom in home.stable" :key="rom.code"><a :href="'/' + locale + '/devices/' + rom.code">{{ rom[locale] }}({{ rom.code }})</a>：{{ rom.rom }}</li>
 							</ol>
 						</div>
 					</div>
 					<div v-if="devlist" class="mdui-panel-item mdui-panel-item-open">
 						<div class="mdui-panel-item-header">
-							<div class="mdui-panel-item-title">{{ $t('supported') }}</div>
+							<div class="mdui-panel-item-title" role="heading" aria-level="2">{{ $t('supported') }}</div>
 						</div>
 						<div class="mdui-panel-item-body">
-							<div v-for="brand in devlist.brands">
-								<ul v-for="series in brand.series" style="margin-left:-20px;">
+							<div v-for="brand in devlist.brands" :key="brand.brand">
+								<ul v-for="series in brand.series" :key="series.series" style="margin-left:-20px;">
 									<li :id="series.series">{{ series[locale] }} ：
-										<span v-for="(device, index) in series.devices">
+										<span v-for="(device, index) in series.devices" :key="device.code">
 											<a :href="'/' + locale + '/devices/' + device.code">
 												<span v-if="index < series.devices.length - 1"> {{ device[locale] }} / </span>
 												<span v-else>{{ device[locale] }}</span>
@@ -74,6 +75,7 @@
 					</div>
 				</div>
 			</div>
+			</main>
 			<Disclaimer></Disclaimer>
 			<Footer></Footer>
 			<Analystics></Analystics>
