@@ -86,10 +86,8 @@ export default defineI18nConfig(() => ({
 			toggletheme: "切换深色 / 浅色模式",
 			footernav: "底部导航",
 			openinnewtab: "在新窗口打开",
-			hubbeta: "MiROMS HUB 新站上线",
-			hubbetadesc: "全新改版的 ROM 仓库已上线（Beta），更快的搜索与浏览体验",
-			hubbetabtn: "前往体验",
-			hubbetaclose: "关闭提示",
+			hubbeta: "MiROMS HUB",
+			hubbetadesc: "新版 ROM 固件查询网站已上线 Beta，欢迎体验！",
 		},
 		"en-us": {
 			site: "MIUI Official ROMS",
@@ -175,11 +173,9 @@ export default defineI18nConfig(() => ({
 			toggletheme: "Toggle dark / light mode",
 			footernav: "Footer navigation",
 			openinnewtab: "opens in a new tab",
-			hubbeta: "MiROMS HUB is now live",
+			hubbeta: "MiROMS HUB",
 			hubbetadesc:
-				"A brand-new ROM hub (Beta) is here - faster search & browsing",
-			hubbetabtn: "Check it out",
-			hubbetaclose: "Close notice",
+				"New ROM firmware lookup site is now live (Beta) - check it out!",
 		},
 	},
 }));

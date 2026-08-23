@@ -4,19 +4,17 @@
 			<Header></Header>
 			<main id="main-content" tabindex="-1">
 				<div class="mdui-container-fluid">
-					<br />
-					<div v-if="showHubBanner" class="hub-banner" role="status">
-						<div class="hub-banner__text">
-							<span class="hub-banner__badge">Beta</span>
-							<span class="hub-banner__title">{{ $t('hubbeta') }}</span>
-							<span class="hub-banner__desc">{{ $t('hubbetadesc') }}</span>
-						</div>
-						<a class="hub-banner__btn" href="https://hub.miuier.com" target="_blank" rel="noopener">{{ $t('hubbetabtn') }}</a>
-						<button class="hub-banner__close" type="button" :aria-label="$t('hubbetaclose')" @click="dismissHubBanner">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
 					<div class="mdui-panel">
+						<a href="https://hub.miuier.com">
+							<div class="mdui-panel-item mdui-panel-item-open">
+								<div class="mdui-panel-item-header">
+									<div class="mdui-panel-item-title" role="heading" aria-level="2">{{ $t('hubbeta') }}</div>
+								</div>
+								<div class="mdui-panel-item-body">
+									{{ $t('hubbetadesc') }}
+								</div>
+							</div>
+						</a>
 						<div class="mdui-panel-item mdui-panel-item-open HOSPanel">
 							<div class="mdui-panel-item-header">
 								<div class="mdui-panel-item-title HOS" role="heading" aria-level="2">
@@ -117,15 +115,6 @@ const formattedBuildTime = computed(() => {
 	return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 })
 
-const showHubBanner = ref(true)
-if (import.meta.client && localStorage.getItem('hub-banner-dismissed') === '1') {
-	showHubBanner.value = false
-}
-const dismissHubBanner = () => {
-	showHubBanner.value = false
-	localStorage.setItem('hub-banner-dismissed', '1')
-}
-
 const { data: home, error: homeError } = await useAsyncData(
 	'home',
 	() => $fetch(`${API_CONFIG.BASE_URL}/index.json`)
@@ -148,89 +137,29 @@ useHead({
 
 <style scoped>
 .hub-banner {
-	position: relative;
 	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 10px 16px;
+	flex-direction: column;
+	gap: 4px;
+	padding-bottom: 12px;
 	margin-bottom: 16px;
-	padding: 14px 48px 14px 16px;
-	border-radius: 4px;
-	background: linear-gradient(90deg, #2655ff, #4d7cff);
-	color: #fff;
-	font-size: 15px;
-}
-
-.hub-banner__text {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 8px;
-	min-width: 0;
-}
-
-.hub-banner__badge {
-	padding: 2px 8px;
-	border-radius: 4px;
-	background: rgba(255, 255, 255, 0.22);
-	font-size: 12px;
-	font-weight: bold;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
+	border-bottom: 1px solid #ddd;
 }
 
 .hub-banner__title {
+	font-size: 22px;
 	font-weight: bold;
+	color: #ff6900 !important;
+	text-decoration: none !important;
 }
 
 .hub-banner__desc {
-	opacity: 0.92;
-}
-
-.hub-banner__btn {
-	display: inline-block;
-	margin-left: auto;
-	padding: 6px 16px;
-	border-radius: 4px;
-	background: #fff;
+	font-size: 15px;
 	color: #2655ff !important;
-	font-weight: bold;
 	text-decoration: none !important;
-	white-space: nowrap;
-	transition: opacity 0.2s;
 }
 
-.hub-banner__btn:hover {
-	opacity: 0.88;
-}
-
-.hub-banner__close {
-	position: absolute;
-	top: 50%;
-	right: 8px;
-	transform: translateY(-50%);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 32px;
-	height: 32px;
-	border: none;
-	border-radius: 50%;
-	background: transparent;
-	color: #fff;
-	font-size: 22px;
-	line-height: 1;
-	cursor: pointer;
-	transition: background 0.2s;
-}
-
-.hub-banner__close:hover {
-	background: rgba(255, 255, 255, 0.2);
-}
-
-@media (max-width: 768px) {
-	.hub-banner__btn {
-		margin-left: 0;
-	}
+.hub-banner__title:hover,
+.hub-banner__desc:hover {
+	opacity: 0.8;
 }
 </style>
