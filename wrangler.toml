@@ -17,6 +17,3 @@ pages_build_output_dir = "dist"
 # 如需通过环境变量覆盖 runtimeConfig（如 MIUI 数据源地址），在此声明：
 # [vars]
 # MIUI_API_URL = "https://update.miui.com"
-
-[env]
-NODE_VERSION = "25.8.0"
