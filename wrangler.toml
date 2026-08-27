@@ -18,7 +18,5 @@ pages_build_output_dir = "dist"
 # [vars]
 # MIUI_API_URL = "https://update.miui.com"
 
-# 生产环境绑定（如 HyperData 静态资源、KV 缓存等）在此追加：
-# [[kv_namespaces]]
-# binding = "DATA_CACHE"
-# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+[env]
+NODE_VERSION = "25.8.0"
