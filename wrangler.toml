@@ -1,0 +1,24 @@
+# Cloudflare Pages / Workers 部署配置（配合 Nuxt 4 + Nitro cloudflare_pages 预设）
+# 文档：https://developers.cloudflare.com/workers/wrangler/configuration/
+# 构建：pnpm build:cf  →  项目根 dist/（含 _worker.js 与静态资源）
+# 部署：pnpm deploy:cf（等价于 wrangler deploy）
+
+name = "miuiroms"
+
+# Cloudflare 兼容日期：启用该日期前发布的运行时行为（近期日期 = 更新的特性）
+compatibility_date = "2026-05-08"
+
+# 启用 Node.js 兼容层：Nitro cloudflare 运行时依赖 node:path / process 等 shim
+compatibility_flags = ["nodejs_compat"]
+
+# Pages 构建产物目录（nuxt build --preset cloudflare_pages 输出到项目根 dist/）
+pages_build_output_dir = "dist"
+
+# 如需通过环境变量覆盖 runtimeConfig（如 MIUI 数据源地址），在此声明：
+# [vars]
+# MIUI_API_URL = "https://update.miui.com"
+
+# 生产环境绑定（如 HyperData 静态资源、KV 缓存等）在此追加：
+# [[kv_namespaces]]
+# binding = "DATA_CACHE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"

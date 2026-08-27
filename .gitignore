@@ -22,3 +22,10 @@ logs
 .env
 .env.*
 !.env.example
+
+# Cloudflare Wrangler 本地状态
+.wrangler
+.pnpm-store
+
+# Cloudflare Pages 构建产物
+/dist

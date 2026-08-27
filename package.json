@@ -8,13 +8,18 @@
     "generate": "nuxi generate",
     "start": "nuxi preview",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "build:cf": "NITRO_PRESET=cloudflare_pages nuxt build",
+    "deploy:cf": "NITRO_PRESET=cloudflare_pages nuxt build && wrangler deploy",
+    "preview:cf": "NITRO_PRESET=cloudflare_pages nuxt build && wrangler pages dev dist"
   },
   "devDependencies": {
     "@nuxtjs/device": "^4.0.0",
     "@nuxtjs/i18n": "^10.6.0",
+    "@types/node": "^26.3.0",
     "nuxt": "^4.5.2",
-    "sass": "^1.103.1"
+    "sass": "^1.103.1",
+    "wrangler": "^4.126.0"
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^8.4.0"

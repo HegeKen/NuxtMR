@@ -1,0 +1,3 @@
+Sitemap: https://roms.miuier.com/sitemap.xml
+User-agent: *
+Disallow:

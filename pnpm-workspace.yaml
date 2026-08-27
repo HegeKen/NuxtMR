@@ -1,6 +1,7 @@
 allowBuilds:
   '@parcel/watcher': false
   esbuild: false
+  workerd: false
 minimumReleaseAgeExclude:
   - sass@1.101.7
 overrides:
