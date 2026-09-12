@@ -2,6 +2,7 @@
   <footer :aria-label="$t('footernav')">
     <div v-if="isDesktop">
       <div class="mdui-bottom-nav mdui-color-theme">
+        <a href="https://www.helilab.cn/#/" class="mdui-ripple mdui-bottom-nav-active" rel="noopener noreferrer"><img class="mdui-icon helilab-icon" alt="" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230a0a0f'/><text x='50' y='68' font-family='sans-serif' font-weight='700' font-size='56' text-anchor='middle' fill='%2300d4ff'>H</text></svg>" /><label>HeliLab</label></a>
         <a href="https://github.com/HegeKen" class="mdui-ripple mdui-bottom-nav-active" rel="noopener noreferrer"><i class="mdui-icon icon-GitHub MRIcons" aria-hidden="true"></i><label>GitHub</label></a>
         <a href="https://gitlab.com/HegeKen" class="mdui-ripple mdui-bottom-nav-active" rel="noopener noreferrer"><i class="mdui-icon icon-gitlab MRIcons" aria-hidden="true"></i><label>GitLab</label></a>
         <a href="https://weibo.com/Heliljan" class="mdui-ripple mdui-bottom-nav-active" rel="noopener noreferrer"><i class="mdui-icon icon-weibo MRIcons" aria-hidden="true"></i><label>{{ $t('weibo') }}</label></a>
@@ -38,3 +39,10 @@ onUnmounted(() => {
   document.body.classList.remove('mdui-bottom-nav-fixed')
 })
 </script>
+
+<style scoped>
+.helilab-icon {
+  width: 24px;
+  height: 24px;
+}
+</style>
