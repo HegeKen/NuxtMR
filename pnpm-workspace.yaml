@@ -8,6 +8,7 @@ minimumReleaseAgeExclude:
 overrides:
   brace-expansion@>=2.0.0 <2.1.2: '>=2.1.2'
   brace-expansion@>=3.0.0 <5.0.7: '>=5.0.7'
+  devalue@<5.9.1: ^5.9.1
   esbuild@>=0.17.0 <0.28.1: '>=0.28.1'
   esbuild@>=0.27.3 <0.28.1: '>=0.28.1'
   immutable@>=5.0.0-beta.1 <5.1.8: '>=5.1.8'
