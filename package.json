@@ -19,12 +19,12 @@
   "devDependencies": {
     "@nuxtjs/device": "^4.0.0",
     "@nuxtjs/i18n": "^10.6.0",
-    "@types/node": "^26.6.3",
-    "nuxt": "^4.5.2",
-    "sass": "^1.105.0",
-    "wrangler": "^4.143.0"
+    "@types/node": "^26.6.4",
+    "nuxt": "^4.6.0",
+    "sass": "^1.105.1",
+    "wrangler": "^4.148.0"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^8.5.1"
+    "@nuxtjs/sitemap": "^8.6.1"
   }
 }
