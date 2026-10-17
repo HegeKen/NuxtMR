@@ -1,5 +1,5 @@
 export const API_CONFIG = {
-	BASE_URL: "https://data.miuier.com/data",
+	BASE_URL: "https://api.miuier.com/api/v1",
 	EXTERNAL_URLS: {
 		DATA_MIUIER: "https://data.miuier.com",
 		ROMS_MIUIER: "https://roms.miuier.com",

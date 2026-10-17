@@ -5,9 +5,10 @@ import { defineNitroPlugin } from 'nitropack/runtime'
 // 即 zh-cn / en-us 均带语言前缀）。
 const SITEMAP_LOCALES = ['zh-cn', 'en-us']
 
-// 数据源：优先读本地 public/MRData/data（随仓库部署的 MRData 子模块），缺失时回退到线上 API，
+// 数据源：优先读 hub.miuier.com 的本地数据副本，缺失时回退到线上 API，
 // 保证 sitemap 与页面 useFetch 的数据一致。
-const REMOTE_DATA_BASE = 'https://data.miuier.com/data'
+const REMOTE_DATA_BASE = 'https://api.miuier.com/api/v1'
+const LOCAL_DATA_ROOT = '/Users/hegeken/Desktop/Codes/hub.miuier.com/data/api/v1'
 
 // node:fs 仅在 Node 运行时（本地构建 / node-server 自托管）可用；Cloudflare Workers / Pages 等
 // 无文件系统的运行时上动态 import 会失败，自动降级为远程 API，保证 sitemap 在两个环境都可用。
@@ -26,9 +27,8 @@ async function resolveDataRoot(): Promise<string | null> {
   try {
     const cwd = process.cwd()
     const candidates = [
-      resolve(cwd, 'public/MRData/data'),
-      resolve(cwd, '.output/public/MRData/data'),
-      resolve(cwd, '../public/MRData/data'),
+      LOCAL_DATA_ROOT,
+      resolve(cwd, '../hub.miuier.com/data/api/v1'),
     ]
     return candidates.find((c) => fs.existsSync(c)) || candidates[0]!
   } catch {
