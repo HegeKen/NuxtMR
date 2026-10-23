@@ -21,9 +21,9 @@
     "@nuxtjs/device": "^4.0.0",
     "@nuxtjs/i18n": "^10.6.0",
     "@types/node": "^26.6.5",
-    "nuxt": "^4.6.1",
-    "sass": "^1.105.2",
-    "wrangler": "^4.151.0"
+    "nuxt": "^4.6.2",
+    "sass": "^1.106.1",
+    "wrangler": "^4.152.0"
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^9.1.0"
