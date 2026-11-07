@@ -25,11 +25,16 @@
               <li><b>{{ $t('devname') }} ：</b>{{ device[locale] }}</li><br />
               <li><b>{{ $t('devcode') }} ：</b>{{ device.codename }}</li><br />
               <li><b>Hyper<span class="HyperBlue">OS</span> ：</b>
-                <span v-show="device.ismiui == '0'">
+                <span v-if="hyperosStatus === 'released'">
                   <a :href="buildHyperOSLink(device.codename)" class="HyperBlue">{{ $t('released') }}</a>
                 </span>
-                <span v-show="device.ismiui == '1'">{{ $t('notyet') }}</span>
-                <span v-show="device.ismiui == ''">{{ $t('notsupported') }}</span>
+                <span v-else-if="hyperosStatus === 'notyet'">{{ $t('notyet') }}</span>
+                <span v-else>{{ $t('notsupported') }}</span>
+              </li><br />
+              <li><b>{{ $t('devapi') }} ：</b>
+                <span class="devapi-links">
+                  <a v-for="api in deviceApis" :key="api" :href="buildDeviceApiLink(api)" target="_blank" rel="noopener noreferrer">{{ api }}</a>
+                </span>
               </li>
             </ul>
           </div>
@@ -122,6 +127,10 @@ const buildHyperOSLink = (codename) => {
   return `${API_CONFIG.EXTERNAL_URLS.HYPEROS_FANS}/${locale.value.slice(0, 2)}/devices/${codename}`
 }
 
+const buildDeviceApiLink = (api) => {
+  return `${API_CONFIG.DATA_API_BASE}/${api}/devices/${device.value.codename}.json`
+}
+
 const codename = computed(() => {
   const param = route.params.codename
   if (Array.isArray(param)) {
@@ -143,6 +152,23 @@ const { data: device, error } = await useAsyncData(
     return data
   }
 )
+
+// API 返回的 ismiui 可能是数字 0/1，统一转成字符串再判断，避免 0 == '' 之类的宽松比较误判
+const hyperosStatus = computed(() => {
+  const status = String(device.value?.ismiui ?? '')
+  if (status === '0') {
+    return 'released'
+  }
+  if (status === '1') {
+    return 'notyet'
+  }
+  return 'unsupported'
+})
+
+// v1 / v3 为所有机型的数据接口，仅支持 HyperOS 的机型额外提供 v2
+const deviceApis = computed(() => {
+  return hyperosStatus.value === 'released' ? ['v1', 'v2', 'v3'] : ['v1', 'v3']
+})
 
 useHead({
   title: computed(() => {
